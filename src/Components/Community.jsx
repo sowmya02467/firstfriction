@@ -12,7 +12,7 @@ import grouptwo from '../assets/sectionthreetwo.png';
 import groupthree from '../assets/sectionthreethree.png';
 // import closeicon from '../assets/Vector (16).png'; 
 import Footer from "./Footer";
-import closeicon from '../assets/Vectorone.png';
+import closeicon from '../assets/VectorOne.png';
 import searchicon from '../assets/searchicon.png';
 import imageone from '../assets/image 79.png';
 import imagetwo from '../assets/image 79 (1).png';

@@ -25,7 +25,7 @@ import incubation from "../assets/incubation.png";
 // import howhelptwo from "../assets/howhelptwo.png";
 // import howhelpthree from "../assets/howhelpthree.png";
 // import howhelpfour from "../assets/howhelpfour.png";
-import closeicon from '../assets/Vectorone.png';
+import closeicon from '../assets/vectorOne.png';
 import searchicon from '../assets/searchicon.png';
 import Sectionincub from "./SectionIncub";
 
@@ -153,7 +153,7 @@ export default function Incubation() {
       {/* what is incubation */}
       <SectionIncub />
 
-      {/* <div className="w-full h-[898px] mx-auto">
+       <div className="w-full h-[898px] mx-auto"> 
         <h1 className="font-bold text-[40px] text-[#022956] text-center mt-[61px]">
           
           What is Incubation
@@ -170,7 +170,7 @@ export default function Incubation() {
             className="w-[787px] h-[512px]  mt-[98px]"
           ></img>
         </div>
-      </div> */}
+      </div> 
 
 
       {/* how incubation work */}
