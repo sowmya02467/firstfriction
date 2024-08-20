@@ -25,7 +25,7 @@ import incubation from "../assets/incubation.png";
 // import howhelptwo from "../assets/howhelptwo.png";
 // import howhelpthree from "../assets/howhelpthree.png";
 // import howhelpfour from "../assets/howhelpfour.png";
-import closeicon from '../assets/vectorOne.png';
+import closeicon from '../assets/vone.png';
 import searchicon from '../assets/searchicon.png';
 import Sectionincub from "./SectionIncub";
 
