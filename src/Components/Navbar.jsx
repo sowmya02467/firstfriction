@@ -66,18 +66,18 @@ export default function Navbar() {
         <ul className="flex justify-between text-center gap-5 search mt-[-10px]">
 
         <li className="flex flex-col-reverse text-[#1D2228] text-[18px] font-bold ml-[20px] my-[28px]">
-  <a href="Courses" className="flex items-center">
+  <a href="/Courses" className="flex items-center">
     Courses
     <img src={arr} alt="" className="w-[11.13px] h-[7.13px] ml-[10px]" />
   </a>
 </li>
 
           <li className="text-[#1D2228] text-[18px] font-bold mr-[10px] ml-[10px] my-[28px]">
-           <a href="Community"> Communities
+           <a href="/Community"> Communities
             </a>
             </li>
           <li className="text-[#1D2228] text-[18px] font-bold my-[28px]">
-           <a href="Incubation"> Incubation</a></li>
+           <a href="/Incubation"> Incubation</a></li>
 
           <div className="inline-flex items-center bg-white rounded-2xl border border-solid border-cyan-400 opacity-25 w-[328.14px] h-[42px] my-[21px]">
             <img src={searchicon} alt="Search Icon" className="w-[20px] h-[20px] ml-[10px]" />

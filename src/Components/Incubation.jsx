@@ -72,13 +72,13 @@ export default function Incubation() {
                 <div className="relative inline-flex items-center mt-[16px] w-[402px] h-[64px] text-center mx-[32px]  transparent opacity-75">
                   <div className="flex border rounded-md bg-white">
                   <li className="flex flex-col-reverse text-[#1D2228] text-[18px] font-bold ml-[20px] my-[18px]">
-  <a href="Courses" className="flex items-center">
+  <a href="/Courses" className="flex items-center">
     Courses
     <img src={arr} alt="" className="w-[11.13px] h-[7.13px] ml-[10px]" />
   </a>
 </li>
                     <a
-                      href="Community"
+                      href="/Community"
                       className="text-[#1D2228] px-8 py-4 font-bold text-[18px] hover:bg-gray-300"
                     >
                     Communities
@@ -94,7 +94,7 @@ export default function Incubation() {
               </div>
               {/* serach icom */}
 
-              {/* <div className="flex justify-end mt-5   ml-[110px] mr-[-70px]  w-[529px]  ">
+               <div className="flex justify-end mt-5   ml-[110px] mr-[-70px]  w-[529px]  ">
   <div className={`relative flex items-center justify-end ml-[140px] bg-white bg-opacity-75 rounded-md h-[64px] px-4 ${isOpen ? 'w-[529px]' : 'w-[240px]'}`}>
     <div
       className={`flex items-center rounded-2xl border border-solid             transition-all duration-300 mr-[10px] ${isOpen ? 'w-[350px]' : 'w-[40px]'} h-[42px] ml-auto`}
@@ -123,40 +123,9 @@ export default function Incubation() {
     </div>
     <button className=" w-[202px] h-[42px]   px-[20px] py-[10px] bg-[#022956] text-white rounded-md">Join Community</button>
   </div>
-  {/* <button className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md">Join Community</button> */}
-{/* </div> */} 
-<div className="relative mt-5 ml-[110px] mr-[-70px] w-[529px]">
-  <div className="flex items-center justify-end bg-white bg-opacity-75 rounded-md h-[64px] px-4 w-full">
-    <div
-      className={`relative flex items-center rounded-2xl bg-white border border-solid transition-all duration-300 ${isOpen ? 'w-[350px]' : 'w-[40px]'} h-[42px]`}
-    >
-      <img
-        src={searchicon}
-        alt="Search Icon"
-        className="w-[20px] h-[20px] ml-2 cursor-pointer"
-        onClick={handleToggle}
-      />
-      <input
-        type="text"
-        placeholder="Search here"
-        className={`border-none outline-none h-full transition-all duration-300 rounded-full ${isOpen ? 'w-[312px] px-4' : 'w-0 px-0'}`}
-      />
-      <img
-        src={closeicon}
-        alt="Close Icon"
-        className="w-[20px] h-[20px] ml-2 cursor-pointer"
-        onClick={handleToggle}
-        style={{ visibility: isOpen ? 'visible' : 'hidden' }}
-      />
-    </div>
-    <button
-      className="absolute right-4 w-[202px] h-[42px] bg-[#022956] text-white rounded-md"
-      style={{ top: '50%', transform: 'translateY(-50%)' }}
-    >
-      Join Community
-    </button>
-  </div>
-</div>
+  
+ </div> 
+
 
               </div>
             </div>

@@ -67,18 +67,18 @@ export default function Community() {
           <div className="flex items-center bg-white bg-opacity-75 rounded-md w-[402px] h-[62px] ml-[10px] mt-[20px]">
             <ul className="flex justify-between gap-5 search">
             <li className="flex flex-col-reverse text-[#1D2228] text-[18px] font-bold ml-[20px] my-[28px]">
-  <a href="Courses" className="flex items-center">
+  <a href="/Courses" className="flex items-center">
     Courses
     <img src={arr} alt="" className="w-[11.13px] h-[7.13px] ml-[10px]" />
   </a>
 </li>
 
           <li className=" text-[18px] font-bold mr-[10px] ml-[10px] my-[28px]  text-orange-500 ">
-           <a href="Community"> Communities
+           <a href="/Community"> Communities
             </a>
             </li>
           <li className="text-[#1D2228] text-[18px] font-bold my-[28px]">
-           <a href="Incubation"> Incubation</a></li>
+           <a href="/Incubation"> Incubation</a></li>
               
             </ul>
           </div>

@@ -8,7 +8,7 @@ import Courses from "./Components/Courses";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/frictions">
+   
         <div>
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -17,7 +17,7 @@ function App() {
             <Route path="/Incubation" element={<Incubation />} />
           </Routes>
         </div>
-      </BrowserRouter>
+  
     </div>
   );
 }
