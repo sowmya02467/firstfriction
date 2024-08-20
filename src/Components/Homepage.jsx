@@ -3,7 +3,7 @@
 import React,{useState, useRef, useEffect} from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SectionTwo from "./Sectiontwo";
+import SectionTwo from "./SectionTwo";
 // import SectionNine from "./SectionNine";
 import content from '../assets/Content.png';
 // import imgone from '../assets/imgone.png';

@@ -108,21 +108,7 @@
 //       >
 //         <div className="w-full h-full absolute top-0 left-0 overflow-y-scroll scrollbar-hide">
 //           {items.map((item, index) => (
-//             <div key={index} className="w-full h-[189px] mt-[23px] shadow-lg flex">
-//               <img src={item.img} alt="" className="w-[52px] h-[52px] mt-[20px] ml-[44px]" />
-//               <div className="ml-[23px] text-start">
-//                 <h3 className="text-[#F27329] text-[30px] font-semibold mt-[20px]">{item.title}</h3>
-//                 <p className="text-[#1D2228] text-[20px] font-normal mt-[25px]">{item.description}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
+//             
 
 
 
