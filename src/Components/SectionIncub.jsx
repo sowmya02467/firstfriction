@@ -1,0 +1,384 @@
+
+import React, {useEffect} from 'react'
+// import '../index.css';
+
+import img1 from '../assets/numbers.png';
+import img2 from '../assets/numbertwo.png';
+import img3 from '../assets/numberthrees.png';
+
+
+import img4 from '../assets/Group 48095819 (2).png';
+
+
+import img5 from '../assets/Group 48095820 (2).png';
+import img6 from '../assets/Group 48095821 (2).png';
+import img7 from '../assets/Group 48095822 (3).png';
+
+
+import img10 from '../assets/numberfours.png';
+
+
+
+
+
+import contentImg1 from '../assets/incubone.png';
+import contentImg2 from '../assets/incuntwo.png';
+import contentImg3 from '../assets/incubthree.png';
+import contentImg4 from '../assets/incubone.png';
+// import contentImg5 from '../assets/ninefive.png';
+import line from '../assets/line.png';
+// import linetwo from '../assets/linetwo.png';
+// import hori from '../assets/hori.png';
+// import vertical from '../assets/vertical line.png';
+
+const images = {
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    // img8,
+    // img9,
+    img10,
+    contentImg1,
+    contentImg2,
+    contentImg3,
+    contentImg4,
+    // contentImg5,
+};
+
+
+
+
+
+export default function SectionIncub() {
+
+  useEffect(() => {
+    const handleAnimationEnd = () => {
+      const button = document.getElementById('apply-button');
+      if (button) {
+        button.style.backgroundColor = '#FFFFFF'; // White background
+        button.style.color = '#022956'; // Blue text
+      }
+    };
+
+    const animationEndTrigger = document.querySelector('.animate-endanimation');
+    if (animationEndTrigger) {
+      animationEndTrigger.addEventListener('animationend', handleAnimationEnd);
+    }
+
+    return () => {
+      if (animationEndTrigger) {
+        animationEndTrigger.removeEventListener('animationend', handleAnimationEnd);
+      }
+    };
+  }, []);
+
+
+
+
+
+
+
+  return (
+    <div  className='w-full flex flex-col h-[3150px]  mb-[50px]'>
+
+<div className=" flex flex-col justify-center text-center mb-[50px]">
+<h2  className="text-[#022956] mt-[82px] text-[40px] font-semibold ">How Incubation Helps</h2>
+<p  className="text-[27px] text-[#F27329] font-medium mt-[10px]">Discover how incubation accelerates your startup's success with essential support..</p>
+
+</div>
+
+<div className='flex justify-center'></div>
+
+<div className="timeline relative mx-auto after:content-[''] after:absolute after:w-[3px] after:h-[3890px] after:bg-gray-300 after:top-0 after:left-1/2 after:transform after:-translate-x-1/2 after:z-[-1]   after:animate-moveline">
+  {/* one right img */}
+{/* First timeline item - Right aligned */}
+<div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown opacity-0 delay-[0s]">
+  <div className="img absolute left-[-90px] top-[0px] z-10 ">
+    <img src={images.img1} alt="Operational Mechanism" className="w-[100px] h-[100px]" />
+  </div>
+  <div className="text-box  ml-[10px]  ">
+    <div className="content">
+      <h3  className=' text-[#F27329] text-[30px] font-black  text-center mr-[30px]' >Initial Assessment</h3>
+      <img src={images.contentImg1} className="content-imag w-[302px] h-[254px] ml-[100px] mt-[10px]" alt="Content" />
+      <p  className='text-center  text-[#1D2228] text-[18px] mt-[20px]'>Evaluate your startup's potential and<br></br> identify key needs.</p>
+    </div>
+  </div>
+</div>
+
+
+{/* two left img */}
+{/* Second timeline item - Left aligned */}
+<div className="container two right-0 relative py-[10px] pr-[50px]  w-[650px] mr-[350px]   animate-movedown  opacity-0 delay-[1s]">
+  <div className="img absolute right-[40px] top-[32px] z-10">
+    <img src={images.img2} alt="Operational Mechanism" className="w-[100px] h-[100px] mr-[60px] " />
+  </div>
+  <div className="text-box mr-[150px] mt-[35px] ">
+    <div className="content">
+    <h3  className=' text-[#F27329] text-[30px] font-black mr-[40px]  text-center' >Strategic Planning</h3>
+    <img src={images.contentImg2} className="content-imag w-[302px] h-[254px] ml-[50px] mt-[10px] " alt="Content" />
+    <p  className='text-center  text-[#1D2228] text-[18px]  mt-[20px]'>Develop a customized roadmap for your<br></br> startup's growth.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  {/* three right img */}
+{/* First timeline item - Right aligned */}
+
+<div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown opacity-0 delay-[2s]">
+  <div className="img absolute left-[-90px] top-[32px] z-10">
+    <img src={images.img3} alt="Operational Mechanism" className="w-[100px] h-[100px]" />
+  </div>
+  <div className="text-box  ml-[10px] mt-[35px] ">
+    <div className="content">
+      <h3  className=' text-[#F27329] text-[30px] font-black ml-[65px]' >Comprehensive Support</h3>
+      <img src={images.contentImg3} className="content-imag w-[302px] h-[254px] ml-[100px] mt-[10px] " alt="Content" />
+      <p  className='text-center  text-[#1D2228] text-[18px]   mt-[20px]'>Receive resources and guidance across<br></br> critical startup areas.</p>
+    </div>
+  </div>
+</div>
+
+
+<div  className='flex felx-col  ml-[850px] mt-[20px]'><img src={line} alt=""   className='h-[140px] w-[13px] text-center'/></div>
+<div  className='flex felx-row  ml-[730px] mt-[-120px]'><img src={line} alt=""   className='h-[252px] w-[8px] text-center rotate-90 '/></div>
+
+
+
+{/* four left img */}
+{/* Second timeline item - Left aligned */}
+
+
+
+
+{/* <div  className='flex felx-col  ml-[200px]'><img src={line} alt=""   className='h-[94px] w-[12px] text-center'/></div> */}
+
+
+{/* middle content one  */}
+
+
+{/* one left */}
+<div className="container two right-0 relative py-[10px] pr-[50px] mt-[-190px]  w-[650px] mr-[350px]   animate-movedown  opacity-0 delay-[4s]  ">
+  <div className="img absolute right-[40px] top-[0px] z-10">
+    <img src={images.img4} alt="Operational Mechanism" className="w-[100px] h-[100px] mr-[60px] " />
+  </div>
+  <div className="text-box mr-[150px] align-middle  ">
+    <div className="content">
+
+    <h3  className='  text-[22px] font-semibold  text-center' >Mentorship</h3>
+   
+    <p  className='text-center  text-[#1D2228] text-[18px]  mt-[20px]'>Guidance from seasoned industry<br></br> professionals..</p>
+    </div>
+  </div>
+</div>
+
+     
+
+<div  className='flex felx-col  ml-[200px] mt-[-10px]'><img src={line} alt=""   className='h-[150px] w-[13px] text-center'/></div>
+<div  className='flex felx-row  ml-[300px] mt-[-100px]'><img src={line} alt=""   className='h-[192px] w-[8px] text-center -rotate-90 '/></div>
+
+
+
+
+{/* one right */}
+
+<div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown opacity-0  mt-[-150px]   "style={{ animationDelay: '5s' }} >
+  <div className="img absolute left-[-90px]  z-10">
+    <img src={images.img5} alt="Operational Mechanism" className="w-[100px] h-[100px]" />
+  </div>
+  <div className="text-box  ml-[10px]  ">
+    <div className="content">
+      <h3  className='  text-[22px] font-semibold   text-center' >Resources</h3>
+    
+      <p  className='text-center  text-[#1D2228] text-[18px] mt-[20px]'>Access to tools, technologies, and<br></br> workspace..</p>
+    </div>
+  </div>
+</div>
+
+
+<div  className='flex felx-col  ml-[850px] mt-[20px]'><img src={line} alt=""   className='h-[140px] w-[13px] text-center'/></div>
+<div  className='flex felx-row  ml-[730px] mt-[-120px]'><img src={line} alt=""   className='h-[252px] w-[8px] text-center rotate-90 '/></div>
+
+
+
+
+
+{/* two left */}
+
+<div className="container two right-0 relative py-[10px] pr-[50px]  w-[650px] mr-[350px]   animate-movedown  opacity-0 mt-[-210px]  " style={{ animationDelay: '6s' }}>
+  <div className="img absolute right-[40px] top-[32px] z-10">
+    <img src={images.img6} alt="Operational Mechanism" className="w-[100px] h-[100px] mr-[60px] " />
+  </div>
+  <div className="text-box mr-[150px]   ">
+    <div className="content">
+    <h3  className='text-[22px] font-semibold ml-[10px] text-center' >Networking</h3>
+    
+    <p  className='text-center  text-[#1D2228] text-[18px]  mt-[20px]'>Connect with peers, mentors, and<br></br> investors.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div  className='flex felx-col  ml-[200px] mt-[20px] '><img src={line} alt=""   className='h-[150px] w-[13px] text-center'/></div>
+<div  className='flex felx-row  ml-[300px] mt-[-100px]'><img src={line} alt=""   className='h-[192px] w-[8px] text-center -rotate-90 '/></div>
+
+
+
+
+{/* two right */}
+<div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown opacity-0   mb-[100px]  mt-[-170px]"   style={{ animationDelay: '7s' }}>
+  <div className="img absolute left-[-90px] top-[32px] z-10">
+    <img src={images.img7} alt="Operational Mechanism" className="w-[100px] h-[100px]" />
+  </div>
+  <div className="text-box  ml-[20px]  ">
+    <div className="content">
+      <h3  className=' text-[22px] font-semibold  text-center ' >Funding</h3>
+   
+      <p  className='text-center  text-[#1D2228] text-[18px] mt-[20px]'>Expand your startup and reach new<br></br> heights.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div  className='flex felx-col  ml-[850px] mt-[-10px]'><img src={line} alt=""   className='h-[150px] w-[13px] text-center'/></div>
+<div  className='flex felx-row  ml-[760px] mt-[-100px]'><img src={line} alt=""   className='h-[192px] w-[8px] text-center rotate-90 '/></div>
+
+
+
+
+
+
+
+{/* three left */}
+
+{/* <div className="container two right-0 relative py-[10px] pr-[50px] w-[650px] mr-[350px] animate-movedown opacity-0 mb-[100px] mt-[-200px]" style={{ animationDelay: '8s' }}>
+
+
+
+  <div className="img absolute right-[40px] top-[32px] z-10">
+    <img src={images.img9} alt="Operational Mechanism" className="w-[100px] h-[100px] mr-[60px] " />
+  </div>
+  <div className="text-box mr-[150px]   ">
+    <div className="content">
+    <h3  className=' text-[22px] font-semibold ml-[10px]  text-center' >Selection</h3>
+  
+    <p  className='text-center  text-[#1D2228] text-[18px]  mt-[20px]'>Selected startups receive incubation<br></br> support based on potential and<br></br> feasibility.</p>
+    </div>
+  </div>
+</div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {/* five right img */}
+{/* First timeline item - Right aligned */}
+{/* <div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown  opacity-0 " style={{ animationDelay: '9s' }}>
+  <div className="img absolute left-[-90px] top-[32px] z-10">
+    <img src={images.img10} alt="Operational Mechanism" className="w-[100px] h-[100px]" />
+  </div>
+  <div className="text-box  ml-[10px]  ">
+    <div className="content">
+      <h3  className=' text-[#F27329] text-[30px] font-black ml-[105px]' >Incubation Insights</h3>
+      <img src={images.contentImg5} className="content-imag w-[302px] h-[254px] ml-[100px] " alt="Content" />
+      <p  className='text-center  text-[#1D2228] text-[18px] mt-[20px]'>Validate ideas, build prototypes, and prepare for market<br></br> entry through structured mentorship. <br></br>to unlock your startup's potential.</p>
+    </div>
+  </div>
+</div> */}
+
+
+<div className="container two right-0 relative py-[10px] pr-[50px]  w-[650px] mr-[350px] mt-[-190px]  animate-movedown  opacity-0 delay-[3s]">
+  <div className="img absolute right-[40px] top-[32px] z-10">
+    <img src={images.img10} alt="Operational Mechanism" className="w-[100px] h-[100px] mr-[60px] " />
+  </div>
+  <div className="text-box mr-[150px] mt-[35px]   ">
+    <div className="content">
+    <h3  className=' text-[#F27329] text-[30px] font-black ml-[50px]' >How Will You Benefit?</h3>
+    <img src={images.contentImg4} className="content-imag w-[302px] h-[254px] ml-[60px] mt-[10px] text-center" alt="Content" />
+    <p  className='text-center  text-[#1D2228] text-[18px]  mt-[20px]'>Navigate the incubation process with these steps.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{/* <div className="button w-[190px] h-[48px] flex text-center justify-center align-middle ml-[400px] animate-endanimation">
+          <button id="apply-button" className='w-[190px] h-[48px] text-[16px] text-[#FFFFFF] font-bold bg-[#022956]'>Apply Now</button>
+        </div>
+        <div id="animation-end-trigger"></div> */}
+
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  )
+}
