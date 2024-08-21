@@ -100,10 +100,10 @@ import twelvefive from '../assets/twelvefive.png';
 import twelvesix from '../assets/twelvesix.png';
 
 
-import thirteenone from '../assets/Rectangle 15.png';
-import thirteentwo from '../assets/Rectangle 15.png';
-import thirteenthree from'../assets/Rectangle 15.png';
-import thirteenfour from '../assets/Rectangle 15.png';
+import thirteenone from '../assets/fiveperson.png';
+import thirteentwo from '../assets/firstperson.png';
+import thirteenthree from'../assets/threeperson.png';
+import thirteenfour from '../assets/thirteenfour.png';
 import thirteenfive from'../assets/Rectangle 15.png';
 
 
@@ -222,7 +222,7 @@ const testimonials = [
     image: thirteenfour,
   },
   {
-    name: 'k.Priya',
+    name: 'k.Harish',
     role: 'B Tech () at BVRIT',
     text: "FrictionLearn provides the perfect mix of education and practical experience. I'm excited to start the courses and take on the projects that will enhance my skills and prepare me for my future. Let's get started!",
     image: thirteenfive,
@@ -408,15 +408,17 @@ const numberFiveRef = useRef(null);
            
            ">Friction Learn is your gateway to unparalleled growth, connecting you with courses that challenge you, clubs that foster creativity, and communities that<br></br> inspire collaboration. Our incubation program and dynamic student clubs offer hands-on experience, mentorship, and peer support, ensuring you're<br></br> equipped to turn your ambitions into reality.</p>
          </div>
-         <div className="flex justify-center items-center">
-  <img 
-    src={content} 
-    alt=" content image" 
-    className="
-     lg:w-[771px] lg:h-[487px] mt-[50px] 
-      md:w-[400px] md:h-[350px] 
-      sm:w-[358px] sm:h-[288px]
-    " 
+         <div className="flex justify-center align-middle">
+  <img
+    src={content}
+    alt=""
+    className="align-middle mt-[50px] 
+
+               lg:w-[771px] lg:h-[481px] 
+               md:w-[150px] md:h-[250px] 
+               sm:w-[108px] sm:h-[288px] 
+               !sm:w-[108px] !sm:h-[288px] 
+               !md:w-[150px] !md:h-[250px]"
   />
 </div>
 
@@ -1072,7 +1074,7 @@ const numberFiveRef = useRef(null);
       </div>
       <div className=" text-center">
         <h3 className="text-[#1D2228] font-medium text-[20px]">{testimonials[current].name}</h3>
-        <p className="text-[#1D2228] text-[16px] font-light">{testimonials[current].role}</p>
+        <p className="text-[#1D2228] text-[16px] font-medium">{testimonials[current].role}</p>
       </div>
       <div className="mt-[50px] mx-[20px] text-center  font-medium">
         <p className="text-[#1D2228] text-[36px] ml-[100px] mr-[100px] font-light">{testimonials[current].text}</p>
