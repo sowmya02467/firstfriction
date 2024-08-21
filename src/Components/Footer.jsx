@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from '../assets/logo.png';
-import loo from '../assets/logotwo.png';
-import icons from '../assets/icons.png';
+import loo from '../assets/footerlogo.png';
+import icons from '../assets/footericons.png';
 import mailiconone from '../assets/Vector (10).png';
 import mailicontwo from '../assets/Vector (12).png';
 import mailiconthree from '../assets/Vector (13).png';
@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="bg-[#022956] w-[full]   mr-[50px]container mx-auto ">
       <div className="flex justify-between gap-8 items-start w-100% mx-auto px-[104px] py-8 h-[264px] ">
         <div className="flex flex-col items-start">
-          <img src={loo} alt="FrictionLearn Logo" className="mb-4  w-[150px] h-[79px]" />
+          <img src={loo} alt="FrictionLearn Logo" className="mb-4  w-[150px] h-[79px] ml-[30px]" />
           <h5 className="text-white text-[14px] font-medium">Where Skills Meet Opportunity</h5>
           <img src={icons} alt="Social Icons"  className="w-[236px] h-[26px] mt-[20px]"/>
         </div>

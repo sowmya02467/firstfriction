@@ -30,7 +30,7 @@ const slides = [
   },
 ];
 
-export default function Navbar() {
+export default function ResNavbar() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {

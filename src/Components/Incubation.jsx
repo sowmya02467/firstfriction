@@ -151,7 +151,7 @@ export default function Incubation() {
       </div>
 
       {/* what is incubation */}
-      <SectionIncub />
+    
 
        <div className="w-full h-[898px] mx-auto"> 
         <h1 className="font-bold text-[40px] text-[#022956] text-center mt-[61px]">
@@ -175,7 +175,7 @@ export default function Incubation() {
 
       {/* how incubation work */}
 
-
+      <SectionIncub />
  
 
     {/* why incubation section*/}

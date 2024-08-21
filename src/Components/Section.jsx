@@ -44,21 +44,6 @@ const images = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default function Section() {
 
   useEffect(() => {

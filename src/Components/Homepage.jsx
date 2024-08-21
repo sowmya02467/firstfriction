@@ -45,10 +45,10 @@ import sevenimgfour from '../assets/sfivefour.png';
 import sevenimgfive from '../assets/sfivefive.png';
 
 // section six images
-// import sicimgone from '../assets/siximgone.png';
-// import sicimgtwo from '../assets/siximgtwo.png';
-// import sicimgthree from '../assets/siximgthree.png';
-// import sicimgfour from '../assets/siximgfour.png';
+import sicimgone from '../assets/siximgone.png';
+import sicimgtwo from '../assets/siximgtwo.png';
+import sicimgthree from '../assets/siximgthree.png';
+import sicimgfour from '../assets/siximgfour.png';
 
 
 // // import numberone from '../assets/numbers.png'
@@ -134,28 +134,9 @@ import sectionthreeimage5 from '../assets/sectionthreeimgfour.png';
 
 
 
-// import './Style.css'; // Ensure this path is correct and the file exists
 
 
 
-// import img1 from '../assets/numbers.png';
-// import img2 from '../assets/numbers.png';
-// import img3 from '../assets/numbers.png';
-// import img4 from '../assets/numbers.png';
-// import img5 from '../assets/Group 48095819.png';
-// import img6 from '../assets/Group 48095819.png';
-// import img7 from '../assets/Group 48095820.png';
-// import img8 from  '../assets/Group 48095822.png';
-// import img9 from '../assets/Group 48095832.png';
-// import img10 from '../assets/numbersfive.png';
-
-
-// import contentImg1 from '../assets/nineone.png';
-// import contentImg2 from '../assets/nineone.png';
-// import contentImg3 from '../assets/nineone.png';
-// import contentImg4 from  '../assets/nineone.png';
-// import contentImg5 from  '../assets/nineone.png';
-// import SectionTwo from "./SectionTwo";
 import frameone from '../assets/projectframe.png';
 
 import projectone from '../assets/projectone.png'
@@ -775,6 +756,59 @@ const numberFiveRef = useRef(null);
 </div>
 
 {/* section six */}
+
+
+
+<div className="w-[full] h-[583px]  mt-[50px]">
+      <div className="text-center mb-[50px] ">
+        <h2 className="text-[#022956] text-[40px] font-semibold">What Are Events?</h2>
+        <h3 className="text-[27px] text-[#F27329] font-semibold mt-[10px] mb-[90px]">Organize Your Event in 4 Simple Steps</h3>
+      </div>
+
+      <div className="flex flex-row justify-evenly  relative  ">
+        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center">
+          <div><img src={sicimgone} alt="" className="w-[127px] h-[136px] mt-[10px]" /></div>
+          <div className="text-center mt-[10px]">
+            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Join Event</h2>
+            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] w-[246px] h-[44px] text-center">Explore clubs,join events that<br />interest.</p>
+          </div>
+        </div>
+
+        <div className="absolute left-[19%] top-[20%] transform -translate-y-1/2 w-[240px] h-[1px] border-t-2 outline-2 border-dotted  bg-gray-400"></div>
+
+        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative">
+          <div><img src={sicimgtwo} alt="" className="w-[127px] h-[136px]  mb-[20px]" /></div>
+          <div className="text-center ">
+            <h2 className="w-[294px]  text-[#F27329] text-[20px] font-semibold text-center ">Engage with Industry Leaders</h2>
+            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  w-[246px] h-[44px] text-center ml-[18px]">Connect with global leaders in<br />interactive sessions.</p>
+          </div>
+        </div>
+
+        <div className="absolute left-[42%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]   border-t-2 outline-2  border-dotted bg-gray-400"></div>
+
+        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative">
+          <div><img src={sicimgthree} alt="" className="w-[127px] h-[136px] mt-[15px]" /></div>
+          <div className="text-center mt-[10px]">
+            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Network with Peers</h2>
+            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] v">Discuss skills, insights, and<br />collaborate at events.</p>
+          </div>
+        </div>
+
+        <div className="absolute left-[66%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]  border-t-2 outline-2  border-dotted bg-gray-400"></div>
+
+        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative mt-[20px]">
+          <div><img src={sicimgfour} alt="" className="w-[127px] h-[136px] mb-[10px]" /></div>
+          <div className="text-center mt-[10px]">
+            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Host Your Event</h2>
+            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  text-center">Event: Learning and<br />Community Engagement<br />Showcase</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
 
 
 
