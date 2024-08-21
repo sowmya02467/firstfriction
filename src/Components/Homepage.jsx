@@ -416,8 +416,8 @@ const numberFiveRef = useRef(null);
 
                lg:w-[771px] lg:h-[481px] 
                md:w-[150px] md:h-[250px] 
-               sm:w-[108px] sm:h-[288px] 
-               !sm:w-[108px] !sm:h-[288px] 
+               sm:w-[108px] sm:h-[188px] 
+               !sm:w-[108px] !sm:h-[188px] 
                !md:w-[150px] !md:h-[250px]"
   />
 </div>
