@@ -127,16 +127,6 @@ import sectionthreeimage5 from '../assets/sectionthreeimgfour.png';
 // import Slider from 'react-slick';
 
 
-
-
-
-
-
-
-
-
-
-
 import frameone from '../assets/projectframe.png';
 
 import projectone from '../assets/projectone.png'
@@ -153,36 +143,7 @@ import projectlogofive from '../assets/projectlogofive.png'
 
 import eaclipse from '../assets/Ellipse 12.png'
 import lineimg from '../assets/Group 48095925 (1).png'
-
-
-
-
 import passport from '../assets/passport.png';
-// Replace the image paths with actual paths in your project
-
-// const imagesare = {
-//     img1,
-//     img2,
-//     img3,
-//     img4,
-//     img5,
-//     img6,
-//     img7,
-//     img8,
-//     img9,
-//     img10,
-//     contentImg1,
-//     contentImg2,
-//     contentImg3,
-//     contentImg4,
-//     contentImg5,
-
-// };
-
-
-  
-
-
 
 
 
@@ -447,12 +408,18 @@ const numberFiveRef = useRef(null);
            
            ">Friction Learn is your gateway to unparalleled growth, connecting you with courses that challenge you, clubs that foster creativity, and communities that<br></br> inspire collaboration. Our incubation program and dynamic student clubs offer hands-on experience, mentorship, and peer support, ensuring you're<br></br> equipped to turn your ambitions into reality.</p>
          </div>
-          <div  className="flex  justify-center align-middle ">
-          <img src={content} alt="" className="align-middle w-[771px] h-[487px] mt-[50px]  lg:w-[771px] lg:h-[481px]  
-          sm:w-[388px] sm:h-[288px]
-          
-          "/>
-       </div>
+         <div className="flex justify-center items-center">
+  <img 
+    src={content} 
+    alt=" content image" 
+    className="
+     lg:w-[771px] lg:h-[487px] mt-[50px] 
+      md:w-[400px] md:h-[350px] 
+      sm:w-[358px] sm:h-[288px]
+    " 
+  />
+</div>
+
      </div>
      
 {/* section two */}
@@ -563,10 +530,6 @@ const numberFiveRef = useRef(null);
   </div>
 </div>
 
-
-
-
-
     </div>
    </div>
 
@@ -673,15 +636,7 @@ const numberFiveRef = useRef(null);
 </div>
 
 
-
-
-
 </div>
-
-
-
-
-
 
 {/* section five */}
 
@@ -809,12 +764,6 @@ const numberFiveRef = useRef(null);
     </div>
 
 
-
-
-
-
-
-
 {/* sectionseven  */}
 
 <div className="w-full h-[703px]">
@@ -888,12 +837,6 @@ const numberFiveRef = useRef(null);
 
 
 <Section />
-
-
-
-
-
-
 
 
 
