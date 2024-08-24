@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from '../assets/logo.png';
 import searchicon from '../assets/searchicon.png';
 import arr from '../assets/arr.png';
@@ -32,6 +33,7 @@ const slides = [
 
 export default function Navbar() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -88,7 +90,10 @@ export default function Navbar() {
             style={{ display: window.innerWidth <= 390 ? 'none' : 'block' }}
             className="w-[261px] h-[64px] bg-[#FFFFFF] flex transparent opacity-75 rounded-md ml-[30px] hidden sm:flex"
           >
-            <button className="w-[236px] h-[42px] mt-[11px] mb-[11px] mr-[12px] ml-[12px] bg-[#022956] text-[#FFFFFF] text-[16px] font-bold rounded-md">
+            <button
+              className="w-[236px] h-[42px] mt-[11px] mb-[11px] mr-[12px] ml-[12px] bg-[#022956] text-[#FFFFFF] text-[16px] font-bold rounded-md"
+              onClick={() => navigate("/signup")}
+            >
               Get Started
             </button>
           </div>

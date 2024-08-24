@@ -1,6 +1,6 @@
 
 
-import React,{useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SectionTwo from "./SectionTwo";
@@ -14,7 +14,7 @@ import content from '../assets/Content.png';
 // import imgsix from '../assets/imgsix.png';
 
 
-import sectionthreeimage from'../assets/sectionthreeimgone.png';
+import sectionthreeimage from '../assets/sectionthreeimgone.png';
 import groupone from '../assets/group.png';
 import grouponeone from '../assets/groupone.png'
 import grouptwo from '../assets/grouptwo.png';
@@ -102,16 +102,16 @@ import twelvesix from '../assets/twelvesix.png';
 
 import thirteenone from '../assets/fiveperson.png';
 import thirteentwo from '../assets/firstperson.png';
-import thirteenthree from'../assets/threeperson.png';
+import thirteenthree from '../assets/threeperson.png';
 import thirteenfour from '../assets/thirteenfour.png';
-import thirteenfive from'../assets/Rectangle 15.png';
+import thirteenfive from '../assets/Rectangle 15.png';
 
 
 // import { HiArrowSmallLeft } from "react-icons/hi2";
 
 
 
- 
+
 
 // import downarrow from '../assets/down-arrow.png'
 import sectionthreeimage1 from '../assets/sectionthreeimgone.png';
@@ -231,7 +231,7 @@ const testimonials = [
 
 
 
-export default function Homepage(){
+export default function Homepage() {
 
   const [hoveredImageIndex, setHoveredImageIndex] = useState(0);
   const [isFiveReached, setIsFiveReached] = useState(false);
@@ -239,132 +239,132 @@ export default function Homepage(){
 
 
 
-  
 
 
-// nine section
+
+  // nine section
 
   useEffect(() => {
 
 
     const handleAnimationEnd = () => {
-        const button = document.getElementById('apply-button');
-        if (button) {
-            button.style.backgroundColor = '#FFFFFF'; // White background
-            button.style.color = '#022956'; // Blue text
-        }
+      const button = document.getElementById('apply-button');
+      if (button) {
+        button.style.backgroundColor = '#FFFFFF'; // White background
+        button.style.color = '#022956'; // Blue text
+      }
     };
 
     const animationEndTrigger = document.getElementById('animation-end-trigger');
     if (animationEndTrigger) {
-        animationEndTrigger.addEventListener('animationend', handleAnimationEnd);
+      animationEndTrigger.addEventListener('animationend', handleAnimationEnd);
     }
 
     return () => {
-        if (animationEndTrigger) {
-            animationEndTrigger.removeEventListener('animationend', handleAnimationEnd);
-        }
+      if (animationEndTrigger) {
+        animationEndTrigger.removeEventListener('animationend', handleAnimationEnd);
+      }
     };
-}, []);
-   
+  }, []);
 
-  
 
-// second section 
-const scrollContainerRef = useRef(null);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const scrollContainer = scrollContainerRef.current;
-    const scrollY = window.scrollY;
-    scrollContainer.style.transform = `translateY(${-scrollY}px)`;
+
+  // second section 
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollContainer = scrollContainerRef.current;
+      const scrollY = window.scrollY;
+      scrollContainer.style.transform = `translateY(${-scrollY}px)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+  // eleven section condition 
+
+
+  const [isInView, setIsInView] = useState({
+    first: false,
+    second: false,
+    third: false,
+    fourth: false,
+    fifth: false,
+    sixth: false,
+    seventh: false,
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+
+      const firstElement = document.querySelector('.first-element');
+      const secondElement = document.querySelector('.second-element');
+      const thirdElement = document.querySelector('.third-element');
+      const fourthElement = document.querySelector('.fourth-element');
+      const fifthElement = document.querySelector('.fifth-element');
+      const sixthElement = document.querySelector('.sixth-element');
+      const seventhElement = document.querySelector('.seventh-element');
+
+      if (firstElement && scrollPosition >= firstElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, first: true }));
+      }
+      if (secondElement && scrollPosition >= secondElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, second: true }));
+      }
+      if (thirdElement && scrollPosition >= thirdElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, third: true }));
+      }
+      if (fourthElement && scrollPosition >= fourthElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, fourth: true }));
+      }
+      if (fifthElement && scrollPosition >= fifthElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, fifth: true }));
+      }
+      if (sixthElement && scrollPosition >= sixthElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, sixth: true }));
+      }
+      if (seventhElement && scrollPosition >= seventhElement.offsetTop) {
+        setIsInView((prevState) => ({ ...prevState, seventh: true }));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
+
+
+  // section thirteen
+  const [current, setCurrent] = useState(2); // Start with the center image
+
+  // const handlePrevious = () => {
+  //   setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
+
+  // const handleNext = () => {
+  //   setCurrent((prev) => (prev + 1) % testimonials.length);
+  // };
+  const handleMouseEnter = (index) => {
+    setCurrent(index);
   };
 
-  window.addEventListener('scroll', handleScroll);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
 
 
-
-// eleven section condition 
-
-
-const [isInView, setIsInView] = useState({
-  first: false,
-  second: false,
-  third: false,
-  fourth: false,
-  fifth: false,
-  sixth: false,
-  seventh: false,
-});
-
-useEffect(() => {
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-
-    const firstElement = document.querySelector('.first-element');
-    const secondElement = document.querySelector('.second-element');
-    const thirdElement = document.querySelector('.third-element');
-    const fourthElement = document.querySelector('.fourth-element');
-    const fifthElement = document.querySelector('.fifth-element');
-    const sixthElement = document.querySelector('.sixth-element');
-    const seventhElement = document.querySelector('.seventh-element');
-
-    if (firstElement && scrollPosition >= firstElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, first: true }));
-    }
-    if (secondElement && scrollPosition >= secondElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, second: true }));
-    }
-    if (thirdElement && scrollPosition >= thirdElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, third: true }));
-    }
-    if (fourthElement && scrollPosition >= fourthElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, fourth: true }));
-    }
-    if (fifthElement && scrollPosition >= fifthElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, fifth: true }));
-    }
-    if (sixthElement && scrollPosition >= sixthElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, sixth: true }));
-    }
-    if (seventhElement && scrollPosition >= seventhElement.offsetTop) {
-      setIsInView((prevState) => ({ ...prevState, seventh: true }));
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
-
-
-
-
-
-
-// section thirteen
-const [current, setCurrent] = useState(2); // Start with the center image
-
-// const handlePrevious = () => {
-//   setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-// };
-
-// const handleNext = () => {
-//   setCurrent((prev) => (prev + 1) % testimonials.length);
-// };
-const handleMouseEnter = (index) => {
-  setCurrent(index);
-};
-
-
-
-// fifth button 
-const numberFiveRef = useRef(null);
+  // fifth button 
+  const numberFiveRef = useRef(null);
   const applyButtonRef = useRef(null);
 
   const handleScroll = () => {
@@ -392,433 +392,485 @@ const numberFiveRef = useRef(null);
 
 
 
-    return(
-   
-        <div class="w-full mx-auto "> 
+  return (
 
-<Navbar />
-   {/* section one */}
-       <div  className="w-full h-[856px]  second-section">
-        <div className=" flex flex-col text-center justify-center"> 
-          <h2  className="text-[#022956] mt-[82px] text-[40px] font-semibold 
+    <div class="w-full mx-auto ">
+
+      <Navbar />
+      {/* section one */}
+      <div className="w-full h-[856px]  second-section">
+        <div className=" flex flex-col text-center justify-center">
+          <h2 className="text-[#022956] mt-[82px] text-[40px] font-semibold 
            
           "> What We Offers</h2>
-           <p  className="text-[15px] font-medium text-[#1D2228] mt-[20px] text-center px-1 
+          <p className="text-[15px] font-medium text-[#1D2228] mt-[20px] text-center px-1 
+
            sm:text-[12] sm:font-medium  lg:text-[18px] sm:text-center sm:px-10
            
            ">Friction Learn is your gateway to unparalleled growth, connecting you with courses that challenge you, clubs that foster creativity, and communities that<br></br> inspire collaboration. Our incubation program and dynamic student clubs offer hands-on experience, mentorship, and peer support, ensuring you're<br></br> equipped to turn your ambitions into reality.</p>
-         </div>
-         <div className="flex justify-center align-middle">
-  <img
-    src={content}
-    alt=""
-    className="align-middle mt-[50px] 
-
+        </div>
+        <div className="flex justify-center align-middle">
+          <img
+            src={content}
+            alt=""
+            className="align-middle mt-[50px] 
+       w-[471px] h-[381px] 
                lg:w-[771px] lg:h-[481px] 
-               md:w-[150px] md:h-[250px] 
-               sm:w-[108px] sm:h-[188px] 
-               !sm:w-[108px] !sm:h-[188px] 
-               !md:w-[150px] !md:h-[250px]"
-  />
-</div>
-
-     </div>
-     
-{/* section two */}
+                 sm:w-[90px] sm:h-[150px] 
+               md:w-[150px] md:h-[150px] 
+              "
+          />
+        </div>
 
 
-
-<SectionTwo />
-
-
-
-  
-
-{/* section three */}
-
-
-
-<div className="w-[full] h-[780px] mb-[20px] mx-[104px]">
-      <div className="mt-[82px]  flex justify-center text-center">
-        <h2 className="text-[#022956]  text-[40px] font-semibold">
-          Training designed to meet your goals.
-        </h2>
       </div>
-      <div className="mt-[49px] flex">
-        <div className="left section">
-          {contents.map((content, index) => (
-            <div
-              key={index}
-              className={`w-[498px] h-[119px] shadow-lg flex cursor-pointer ${index === hoveredImageIndex ? 'border-2 border-orange-500' : ''} ${index > 0 ? 'mt-[23px]' : ''}`}
-              onMouseEnter={() => setHoveredImageIndex(index)}
-            >
-              <img src={content.img} alt="" className="w-[48px] h-[48px] justify-center mt-[38px] ml-[32px]" />
-              <div className="ml-[23px] text-start">
-                <h3 className="text-[#F27329] text-[18px] font-semibold mt-[15px] font-lato,sans">{content.title}</h3>
-                <p className="text-[#1D2228] text-[14px] font-normal mt-[8px]">{content.description}</p>
+
+      {/* section two */}
+
+
+
+      <SectionTwo />
+
+
+
+
+
+      {/* section three */}
+
+
+
+      <div className="w-[full] h-[780px] mb-[20px] mx-[104px]  ">
+        <div className="mt-[82px]  flex justify-center text-center md:flex-initial ">
+          <h2 className="text-[#022956]  font-bold  lg:text-start 
+      md:text-start  text-[22px] text-center      lg:text-[40px] mb-[20px]
+ ">
+            Training designed to meet your goals.
+          </h2>
+        </div>
+        <div className="mt-[49px] flex">
+          <div className="left section">
+            {contents.map((content, index) => (
+              <div
+                key={index}
+                className={`w-[498px] h-[119px] shadow-lg flex cursor-pointer ${index === hoveredImageIndex ? 'border-2 border-orange-500' : ''} ${index > 0 ? 'mt-[23px]' : ''}`}
+                onMouseEnter={() => setHoveredImageIndex(index)}
+              >
+                <img src={content.img} alt="" className="w-[48px] h-[48px] justify-center mt-[38px] ml-[32px]" />
+                <div className="ml-[23px] text-start">
+                  <h3 className="text-[#F27329] text-[18px] font-semibold mt-[15px] font-lato,sans">{content.title}</h3>
+                  <p className="text-[#1D2228] text-[14px] font-normal mt-[8px]">{content.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div>
+            <img src={images[hoveredImageIndex]} alt="Selected" className="w-[707px] h-[697px] ml-[26px]" />
+          </div>
+        </div>
+      </div>
+
+
+      {/* section four */}
+
+      <div className="lg:w-full lg:h-[2019px] lg:ml-[100px] lg:mr-[100px] lg:mt-[82px]  md:w-[390px] md:h-[2500px] ">
+
+        <div className=" flex flex-col  justify-center  text-center   ">
+          <h2 className="text-[#022956] mt-[52px] text-[40px] font-semibold  text-center"> Hear the Structure, Feel the Success</h2>
+          <h3 className="text-[27px] text-[#F27329] font-semibold  mt-[10px]  text-center">Three Pillars of Success in One Place <span className="text-[#022956] text-[30px] font-semibold"> “FrictionLearn”</span></h3>
+        </div>
+
+        <div className="lg:mr-[166px] lg:ml-[104px]  md:ml-6 md:mr-6 md:space-x-5">
+
+
+          <div className="lg:w-[1108px] lg:h-[304px] lg:flex  justify-evenly lg:mt-[50px] lg:mb-[160px] md:mt-[50px]
+          
+          space-x-9 
+lg:flex-row 
+md:flex-col
+md:space-x-0
+md:h-[366px]
+
+md:ml-[0px]
+       ">
+            <div className="leftside content flex flex-col justify-center  text-center  ">
+              <h2 className="text-[#F27329] lg:text-[40px]  md:text-[32px]    font-semibold font-sans font-lato  lg:w-[616px]">  1. Engaging Learning Experience</h2>
+              <p className="lg:text-[20px]  md:text-[16px] font-medium text-[#1D2228] mt-[31px]  md:w-[390px]">"FrictionLearn” transforms traditional education into an <br></br>engaging, fun, and motivating gamified learning <br></br>journey".</p>
+            </div>
+            <div > <img src={sectionFourimgone} alt="" className="w-[500px] lg:h-[304px]  " /></div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div className="lg:w-[1108px] lg:h-[304px]  lg:flex   justify-evenly mt-[50px]  mb-[160px]  lg:space-x-9 lg:ml-[50px]
+    lg:flex-row 
+md:flex-col
+    md:space-x-0
+    md:ml-[0px]
+    md:h-[399px]
+
+    ">
+            <div className=" order-2 lg:order-1">
+              <img src={sectionFourimgtwo} alt="" className="w-[500px] lg:h-[304px] " />
+            </div>
+
+            <div className="content flex flex-col justify-center text-center mb-[150px] mt-[130px] lg:mr-[-110px]  order-1 lg:order-2  md:mt-[20px] ">
+              <h2 className="text-[#F27329]   text-[40px] md:text-[22px] font-semibold font-sans-serif-[lato] lg:w-[616px]  md:w-[337px] md:h-[103px]  md">
+                2. Structured Course Levels:
+              </h2>
+              <p className="lg:text-[22px] font-medium text-[#1D2228] mt-[31px] md:ml-[16px]">
+                Our 24-level courses, spanning 1st to 3rd year, <br></br>guide students in exploring career paths<br></br> and offer welcome kits.</p>
+            </div>
+          </div>
+
+
+
+
+          <div className="lg:w-[1108px] lg:h-[304px]  lg:flex  justify-evenly mt-[50px] mb-[160px] lg:flex-row 
+md:flex-col
+md:space-x-0
+md:h-full
+
+    ">
+            <div className="leftside content flex flex-col justify-center  text-center ">
+              <h2 className="text-[#F27329] text-[40px]  font-semibold font-sans font-lato  lg:w-[616px]    md:w-[337px] md:h-[103px] ">  3. AI-Focused Learning Support:</h2>
+              <p className="text-[20px] font-medium text-[#1D2228] mt-[31px]">FrictionLearn uses dedicated own AI to clarify doubts<br></br> and offer personalized support, enhancing students'<br></br> learning experience..</p>
+            </div>
+            <div > <img src={sectionFourimgone} alt="" className="w-[500px] lg:h-[304px] mt-[20px] lg:ml-[80px] " />
+            </div>
+          </div>
+
+
+
+
+          <div className="lg:w-[1108px] lg:h-[304px] lg:flex   justify-evenly mt-[50px]    space-x-9  lg:flex-row 
+md:flex-col
+md:space-x-0
+md:h-[366px]
+md:mb-[100px]
+">
+            <div>
+              <img src={sectionFourimgtwo} alt="" className="w-[500px] lg:h-[304px]  lg:ml-[-20px]" />
+            </div>
+
+            <div className="content flex flex-col justify-center text-center ml-[200px] lg:w-[572px] lg:h-[219px] mt-[50px]">
+              <h2 className="text-[#F27329] text-[40px] font-semibold font-sans w-[616px]">
+                4. Incubation for Idea Generators:
+              </h2>
+              <p className="text-[20px] font-medium text-[#1D2228] mt-[31px]">
+                Starting in the second year, our Incubation programs offer mentorship and resources to turn students' innovative ideas into reality.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      {/* project section */}
+      <div className="parentdiv  lg:w-full lg:h-[1287px] md:h-[1934px] lg:mt-[200px] md:mt-[1000px] md:w-[390px]">
+        <div className=" flex flex-col  justify-center  text-center mt-[22px]" >
+          <h2 className="text-[#022956] text-[40px] font-semibold"> Explore our Projects</h2>
+        </div>
+
+
+        <div className=" lg:flex lg:flex-row lg:justify-evenly md:flex-col">
+
+
+
+
+
+
+          <div className="divright  mt-[80px]">
+            <img src={frameone} alt="" className="w-[584px] h-[995px]" />
+          </div>
+
+
+          {/* <div>
+            <img src={eaclipse} alt="" className="w-[2px] h-[970px] " />
+          </div> */}
+
+          <div className="divleft  lg:grid lg:grid-cols-2 lg:gap-9  md:grid-cols-1 lg:mt-[80px]  md:mt-[300px] md:ml-[20px] ">
+
+
+
+            <div className="parentone lg:w-[267px] lg:h-[310px] border shadow-lg transform transition-transform duration-300 lg:hover:scale-110 md:w-[350px]  md:h-[550px]  ">
+              <img src={projectone} alt="" />
+              <img src={lineimg} alt="" className="h-[9px] lg:w-[89px] items-center justify-center lg:ml-[90px] md:w-[120px] md:mr-[-40px] md:left-40" />
+              <h3 className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Courses</h3>
+              <p className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn offers interactive courses<br></br> with quizzes, flashcards, simulations, and<br></br> gamified learning paths.</p>
+              <img src={projectlogoone} alt="" className="w-[66px] h-[66px] ml-[100px] mt-[10px]" />
+            </div>
+
+            <div className="parentone lg:w-[267px] lg:h-[310px] border shadow-lg transform transition-transform duration-300 lg:hover:scale-110 md:w-[350px]  md:h-[550px]   ">
+              <img src={projecttwo} alt="" />
+              <img src={lineimg} alt="" className="h-[9px] w-[89px] ml-[80px]" />
+              <h3 className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px]">Projects</h3>
+              <p className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn provides hands-on projects for<br></br> practical experience and skill application.</p>
+              <img src={projectlogotwo} alt="" className="w-[66px] h-[66px] ml-[100px]  mt-[25px] " />
+            </div>
+
+
+
+            <div className="parentone lg:w-[267px] lg:h-[310px] border shadow-lg transform transition-transform duration-300 lg:hover:scale-110 md:w-[350px]  md:h-[550px]   ">
+              <img src={projectthree} alt="" />
+              <img src={lineimg} alt="" className="h-[9px] w-[89px] ml-[80px] " />
+              <h3 className=" text-center text-[#1D2228] font-bold text-[18px]  mt-[16px] ">Incubation</h3>
+              <p className=" text-[#1D2228] text-center  font-medium text-[12px]">The platform hosts clubs and events for<br></br> networking, collaboration, and skill<br></br> development..</p>
+              <img src={projectlogothree} alt="" className="w-[66px] h-[66px] ml-[100px]  mt-[10px]" />
+            </div>
+
+            <div className="parentone lg:w-[267px] lg:h-[310px] border shadow-lg transform transition-transform duration-300 lg:hover:scale-110 md:w-[350px]  md:h-[550px]   ">
+              <img src={projectfour} alt="" />
+              <img src={lineimg} alt="" className="h-[9px] w-[89px] ml-[80px]" />
+              <h3 className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Clubs and Events</h3>
+              <p className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn offers interactive courses<br></br> with quizzes, flashcards, simulations, and<br></br> gamified learning paths.</p>
+              <img src={projectlogofour} alt="" className="w-[66px] h-[66px] ml-[100px]  mt-[10px] " />
+            </div>
+
+            <div className="flex justify-center items-center lg:col-span-2">
+            <div className="parentone lg:w-[267px] lg:h-[310px] border shadow-lg transform transition-transform duration-300 lg:hover:scale-110 md:w-[350px]  md:h-[550px]   ">
+
+                <img src={projectfive} alt="" />
+                <img src={lineimg} alt="" className="h-[9px] w-[89px] ml-[80px] " />
+                <h3 className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Communities</h3>
+                <p className=" text-[#1D2228] text-center  font-medium text-[12px]">Vibrant groups fostering networking,<br></br> collaboration, and shared learning experiences..</p>
+                <img src={projectlogofive} alt="" className="w-[66px] h-[66px] ml-[100px]  mt-[25px]" />
               </div>
             </div>
-          ))}
+          </div>
         </div>
-        <div>
-          <img src={images[hoveredImageIndex]} alt="Selected" className="w-[707px] h-[657px] ml-[26px]" />
-        </div>
-      </div>
-    </div>
 
-
-{/* section four */}
-
-<div className="w-[full] h-[2019px] ml-[100px] mr-[100px] mt-[82px]">
-
-    <div   className=" flex flex-col  justify-center  text-center ">
-    <h2  className= "text-[#022956] mt-[52px] text-[40px] font-semibold  text-center"> Hear the Structure, Feel the Success</h2>
-     <h3  className="text-[27px] text-[#F27329] font-semibold  mt-[10px]  text-center">Three Pillars of Success in One Place <span  className="text-[#022956] text-[30px] font-semibold"> “FrictionLearn”</span></h3>
-    </div>
-
-<div  className="mr-[166px] ml-[104px]">
-
-
-<div className="w-[1108px] h-[304px]  flex  justify-evenly mt-[50px] mb-[160px]  space-x-9">
-        <div className="leftside content flex flex-col justify-center  text-center">
-            <h2  className="text-[#F27329] text-[40px] font-semibold font-sans font-lato  w-[616px]">  1. Engaging Learning Experience</h2>
-           <p  className="text-[20px] font-medium text-[#1D2228] mt-[31px]">"FrictionLearn” transforms traditional education into an <br></br>engaging, fun, and motivating gamified learning <br></br>journey".</p>
-        </div>
-        <div > <img src={sectionFourimgone} alt=""  className="w-[500px] h-[304px] ml-[50px] mt-[20px] "/></div>
-    </div>
-
-
-    <div className="w-[1108px] h-[304px] flex   justify-evenly mt-[50px]  mb-[160px]  space-x-9  ml-[50px]">
-  <div>
-    <img src={sectionFourimgtwo} alt="" className="w-[500px] h-[304px] " />
-  </div>
-
-  <div className="content flex flex-col justify-center text-center mb-[150px]  mt-[130px] mr-[-110px] ">
-    <h2 className="text-[#F27329] text-[40px] font-semibold font-sans-serif-[lato] w-[616px]">
-  2. Structured Course Levels:
-    </h2>
-    <p className="text-[22px] font-medium text-[#1D2228] mt-[31px]">
-    Our 24-level courses, spanning 1st to 3rd year, <br></br>guide students in exploring career paths<br></br> and offer welcome kits.</p>
-  </div>
-</div>
-
-
-
-  
-    <div className="w-[1108px] h-[304px]  flex  justify-evenly mt-[50px] mb-[160px] ">
-        <div className="leftside content flex flex-col justify-center  text-center ">
-            <h2  className="text-[#F27329] text-[40px] font-semibold font-sans font-lato  w-[616px]">  3. AI-Focused Learning Support:</h2>
-           <p  className="text-[20px] font-medium text-[#1D2228] mt-[31px]">FrictionLearn uses dedicated own AI to clarify doubts<br></br> and offer personalized support, enhancing students'<br></br> learning experience..</p>
-        </div>
-        <div > <img src={sectionFourimgone} alt=""  className="w-[500px] h-[304px] mt-[20px] ml-[80px] "/>
-        </div>
-    </div>
-
-
-
-
-    <div className="w-[1108px] h-[304px] flex   justify-evenly mt-[50px]    space-x-9">
-  <div>
-    <img src={sectionFourimgtwo} alt="" className="w-[500px] h-[304px]  ml-[-20px]" />
-  </div>
-
-  <div className="content flex flex-col justify-center text-center ml-[200px] w-[572px] h-[219px] mt-[50px]">
-    <h2 className="text-[#F27329] text-[40px] font-semibold font-sans w-[616px]">
-4. Incubation for Idea Generators:
-    </h2>
-    <p className="text-[20px] font-medium text-[#1D2228] mt-[31px]">
-    Starting in the second year, our Incubation programs offer mentorship and resources to turn students' innovative ideas into reality.
-    </p>
-  </div>
-</div>
-
-    </div>
-   </div>
-
-
-
-{/* project section */}
-
-<div className="parentdiv  w-[full] h-[1287px]">
-<div  className=" flex flex-col  justify-center  text-center mt-[22px]" >
-    <h2  className="text-[#022956] text-[40px] font-semibold"> Explore our Projects</h2>
-</div>
-
-
-<div  className=" flex flex-row justify-evenly">
-
-
-
-
-
-
-<div className="divright  mt-[80px]">
-<img src={frameone} alt="" className="w-[584px] h-[995px]"   />
-</div>
-
-
-<div>
-  <img src={eaclipse} alt=""  className="w-[2px] h-[970px]" />
-</div>
-
-<div className="divleft  grid grid-cols-2 gap-9  mt-[80px]">
- 
-
-
- <div className="parentone w-[267px] h-[310px] border shadow-lg transform transition-transform duration-300 hover:scale-110 ">
-  <img src={projectone} alt="" />
-  <img src={lineimg} alt=""   className="h-[9px] w-[89px] ml-[80px]"/>
-  <h3   className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Courses</h3>
-  <p    className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn offers interactive courses<br></br> with quizzes, flashcards, simulations, and<br></br> gamified learning paths.</p>
-  <img src={projectlogoone} alt=""  className="w-[66px] h-[66px] ml-[100px] mt-[10px]" />
-  </div>
- 
-  <div className="parentone w-[267px] h-[310px] border shadow-lg   transform transition-transform duration-300 hover:scale-110">
-  <img src={projecttwo} alt="" />
-  <img src={lineimg} alt=""   className="h-[9px] w-[89px] ml-[80px]"/>
-  <h3    className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px]">Projects</h3>
-  <p    className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn provides hands-on projects for<br></br> practical experience and skill application.</p>
-  <img src={projectlogotwo} alt=""  className="w-[66px] h-[66px] ml-[100px]  mt-[25px] "/>
-  </div>
- 
-
-
-  <div className="parentone w-[267px] h-[310px] border shadow-lg   transform transition-transform duration-300 hover:scale-110">
-  <img src={projectthree} alt="" />
-  <img src={lineimg} alt=""   className="h-[9px] w-[89px] ml-[80px] "/>
-  <h3    className=" text-center text-[#1D2228] font-bold text-[18px]  mt-[16px] ">Incubation</h3>
-  <p      className=" text-[#1D2228] text-center  font-medium text-[12px]">The platform hosts clubs and events for<br></br> networking, collaboration, and skill<br></br> development..</p>
-  <img src={projectlogothree} alt=""   className="w-[66px] h-[66px] ml-[100px]  mt-[10px]"/>
-  </div>
- 
-  <div className="parentone w-[267px] h-[310px] border shadow-lg  transform transition-transform duration-300 hover:scale-110">
-  <img src={projectfour} alt="" />
-  <img src={lineimg} alt=""   className="h-[9px] w-[89px] ml-[80px]"/>
-  <h3    className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Clubs and Events</h3>
-  <p      className=" text-[#1D2228] text-center  font-medium text-[12px]">FrictionLearn offers interactive courses<br></br> with quizzes, flashcards, simulations, and<br></br> gamified learning paths.</p>
-  <img src={projectlogofour} alt=""  className="w-[66px] h-[66px] ml-[100px]  mt-[10px] "/>
-  </div>
- 
-  <div className="flex justify-center items-center col-span-2">
-    <div className="w-[267px] h-[310px] border shadow-lg  transform transition-transform duration-300 hover:scale-110">
-      <img src={projectfive} alt="" />
-      <img src={lineimg} alt=""   className="h-[9px] w-[89px] ml-[80px] "/>
-      <h3    className=" text-center text-[#1D2228] font-bold text-[18px] mt-[16px] ">Communities</h3>
-      <p     className=" text-[#1D2228] text-center  font-medium text-[12px]">Vibrant groups fostering networking,<br></br> collaboration, and shared learning experiences..</p>
-      <img src={projectlogofive} alt=""  className="w-[66px] h-[66px] ml-[100px]  mt-[25px]" />
-    </div>
- </div>
-</div>
-</div>
-
-</div>
-
-
-
-{/* passport section */}
-
-<div className="passport  w-[full] h-[692px] mx-[116px] ">
-
-<div  className=" flex flex-col  justify-center  text-center mt-[22px]" >
-    <h2  className="text-[#022956] text-[40px] font-semibold"> Professional Certification Passport</h2>
-</div>
-
-<div className="parentdiv flex flex-row justify-center gap-16 ">
-<div className="leftside-term w-[full]  justify-items-start align-middle mt-[228px] ">
-
-<h2   className=" text-[#F27329] text-[32px] font-medium font-sans-serif-[lato] text-center">Validate skills, earn recognized<br></br> credentials, unlock job<br></br> opportunities </h2>
-<button  className="text-[#022956]  border border-zinc-950 px-5  items-center  ml-[150px] mt-[50px]   text-[16px] font-bold w-[190] h-[48px]   transform transition-transform duration-300 hover:scale-125">Get it Now</button>
-</div>
-
-
-
-<div className="rightside-item w-[580px] h-[580px]  mt-[50px]">
-  <img src={passport} alt="" className="" />
-</div>
-</div>
-
-
-</div>
-
-{/* section five */}
-
-
-<div className="w-[full] h-[739px]">
-
-
-<div  className=" flex flex-col  justify-center  text-center mt-[22px]" >
-    <h2  className="text-[#022956] text-[40px] font-semibold"> What Are Clubs?</h2>
-     <h3  className="text-[27px] text-[#F27329] font-semibold  mt-[2px]">Create your Club in just 5 Simple Steps</h3>
-    
-    </div>
-     
-  <div  className="flex justify-center flex-row gap-[150px] ">
-     <div className="w-[246px] h-[241px] flex flex-col items-center mt-[54px]">
-  <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  text-center ">
-    1
-  </div>
-  <div className="leftside content text-center mt-[10px]">
-    <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Create Your Club</h2>
-    <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Register on FrictionLearn to <br></br>establish club</p>
-  </div>
-</div>
-
-
-    <div className="w-[246px] h-[241px]  flex flex-col  justify-center items-center mt-[36px]">
-    <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold ">
-    2
-  </div> 
-        <div className="leftside content mt-[10px] text-center ">
-            <h2  className="text-[#F27329] text-[22px] font-semibold font-sans font-lato mt-[5px] " >Name Your Club</h2>
-           <p  className="text-[16px] font-medium text-[#1D2228]  mt-[15px] text-center "> Choose a meaningful club name<br></br>reflecting its purpose</p>  </div>
-       
-    </div>
-
-
-    <div className="w-[246px] h-[241px] flex flex-col items-center mt-[54px]">
-  <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
-    3
-  </div>
-  <div className="leftside content text-center mt-[10px]">
-    <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Invite Peer Members</h2>
-    <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  text-center">Invite friends and classmates<br></br>to join your club.</p>
-  </div>
-</div>
-
-     </div>
-
-     <div className="flex justify-center gap-[192px]  mt-[30px] ">
-  <div className="w-[246px] h-[241px] flex flex-col items-center mt-[24px]">
-    <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
-      4
-    </div>
-    <div className="leftside content text-center mt-[5px]">
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Plan and Discuss</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Regularly meet to discuss,<br></br>share skills, and plan</p>
-    </div>
-  </div>
-
-  <div className="w-[246px] h-[241px] flex flex-col items-center mt-[24px]">
-    <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
-      5
-    </div>
-    <div className="leftside content text-center mt-[5px]">
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Create Your Club</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Organize events, workshops,<br></br>and study sessions</p>
-    </div>
-  </div>
-</div>
-
-
-</div>
-
-{/* section six */}
-
-
-
-<div className="w-[full] h-[583px]  mt-[50px]">
-      <div className="text-center mb-[50px] ">
-        <h2 className="text-[#022956] text-[40px] font-semibold">What Are Events?</h2>
-        <h3 className="text-[27px] text-[#F27329] font-semibold mt-[10px] mb-[90px]">Organize Your Event in 4 Simple Steps</h3>
       </div>
 
-      <div className="flex flex-row justify-evenly  relative  ">
-        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center">
-          <div><img src={sicimgone} alt="" className="w-[127px] h-[136px] mt-[10px]" /></div>
-          <div className="text-center mt-[10px]">
-            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Join Event</h2>
-            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] w-[246px] h-[44px] text-center">Explore clubs,join events that<br />interest.</p>
-          </div>
+
+
+      {/* passport section */}
+
+      <div className="passport  lg:w-full lg:h-[692px] 
+       md:w-[390px] md:h-[707px]  ">
+
+        <div className=" flex flex-col  justify-center  text-center mt-[22px] md:mt-0" >
+          <h2 className="text-[#022956] text-[40px] font-semibold"> Professional Certification Passport</h2>
         </div>
 
-        <div className="absolute left-[19%] top-[20%] transform -translate-y-1/2 w-[240px] h-[1px] border-t-2 outline-2 border-dotted  bg-gray-400"></div>
+        <div className="parentdiv lg:flex lg:flex-row justify-center gap-16         md:flex-col  ">
+          <div className="leftside-term w-[full]  justify-items-start align-middle lg:mt-[228px] ">
 
-        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative">
-          <div><img src={sicimgtwo} alt="" className="w-[127px] h-[136px]  mb-[20px]" /></div>
-          <div className="text-center ">
-            <h2 className="w-[294px]  text-[#F27329] text-[20px] font-semibold text-center ">Engage with Industry Leaders</h2>
-            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  w-[246px] h-[44px] text-center ml-[18px]">Connect with global leaders in<br />interactive sessions.</p>
+            <h2 className=" text-[#F27329] text-[32px] font-medium font-sans-serif-[lato] text-center">Validate skills, earn recognized<br></br> credentials, unlock job<br></br> opportunities </h2>
+            <button className="text-[#022956]  border border-zinc-950 px-5  items-center  ml-[150px] mt-[50px]   text-[16px] font-bold w-[190] h-[48px]   transform transition-transform duration-300 hover:scale-125">Get it Now</button>
           </div>
-        </div>
 
-        <div className="absolute left-[42%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]   border-t-2 outline-2  border-dotted bg-gray-400"></div>
 
-        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative">
-          <div><img src={sicimgthree} alt="" className="w-[127px] h-[136px] mt-[15px]" /></div>
-          <div className="text-center mt-[10px]">
-            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Network with Peers</h2>
-            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] v">Discuss skills, insights, and<br />collaborate at events.</p>
-          </div>
-        </div>
 
-        <div className="absolute left-[66%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]  border-t-2 outline-2  border-dotted bg-gray-400"></div>
-
-        <div className="w-[246px] h-[241px] flex flex-col justify-center items-center relative mt-[20px]">
-          <div><img src={sicimgfour} alt="" className="w-[127px] h-[136px] mb-[10px]" /></div>
-          <div className="text-center mt-[10px]">
-            <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Host Your Event</h2>
-            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  text-center">Event: Learning and<br />Community Engagement<br />Showcase</p>
+          <div className="rightside-item w-[580px] h-[580px]  mt-[50px]">
+            <img src={passport} alt="" className="" />
           </div>
         </div>
 
 
       </div>
-    </div>
+
+      {/* section five */}
 
 
-{/* sectionseven  */}
-
-<div className="w-full h-[703px]">
-  <div className="flex flex-col justify-center text-center mt-[40px]">
-    <h2 className="text-[#022956] text-[40px] font-semibold">Join Our Community Page</h2>
-    <h3 className="text-[27px] text-[#F27329] font-semibold mt-[10px]">Discover Communities with 5 Key Steps</h3>
-  </div>
-
-  <div className="flex flex-wrap justify-evenly  space-x-4">
-    <div className="w-full sm:w-auto h-[241px] flex flex-col justify-center items-center mt-[54px]">
-      <img src={sevenimgone} alt="" className="w-[120px] h-[120px] mt-[20px]" />
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Join Interest Groups</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Connect with communities for<br />tailored networking and career<br />growth</p>
-    </div>
-
-    <div className="w-full sm:w-auto h-[241px] flex flex-col justify-center items-center mt-[54px]">
-      <img src={sevenimgtwo} alt="" className="w-[120px] h-[120px] mt-[20px]" />
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Engage in Incubation Discussions</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Engage in Startup incubation<br />discussions for entrepreneurial<br />feedback</p>
-    </div>
-
-    <div className="w-full sm:w-auto h-[241px] flex flex-col justify-center items-center mt-[54px]">
-      <img src={sevenimgthree} alt="" className="w-[120px] h-[120px] mt-[20px]" />
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Explore Career Opportunities</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Career paths, community<br />opportunities, guided by<br />experienced mentors</p>
-    </div>
-    </div>
-
-<div  className="flex flex-wrap justify-evenly   space-x-4"> 
+      <div className="lg:w-full lg:h-[739px]  ">
 
 
-    <div className="w-full sm:w-auto h-[241px] flex flex-col justify-center items-center mt-[54px]">
-      <img src={sevenimgfour} alt="" className="w-[120px] h-[120px] mt-[25px]" />
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Collaborate on Projects</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Collaborate on projects to<br />achieve shared goals together</p>
-    </div>
+        <div className=" flex flex-col  justify-center  text-center mt-[22px]" >
+          <h2 className="text-[#022956] text-[40px] font-semibold"> What Are Clubs?</h2>
+          <h3 className="text-[27px] text-[#F27329] font-semibold  mt-[2px]">Create your Club in just 5 Simple Steps</h3>
 
-    <div className="w-full sm:w-auto h-[241px] flex flex-col justify-center items-center mt-[54px]">
-      <img src={sevenimgfive} alt="" className="w-[120px] h-[120px] mt-[25px]" />
-      <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[49px]">Attend Exclusive Events</h2>
-      <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Participate in community<br />events to learn, connect, grow.</p>
-    </div>
+        </div>
 
-    </div>
-
-</div>
-
-
-
-{/* section eight */}
+        <div className="lg:flex justify-center lg:flex-row lg:gap-[150px] md:flex-col md:justify-center  ">
+          <div className="lg:w-[246px] h-[241px] flex flex-col items-center mt-[54px]">
+            <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  text-center ">
+              1
+            </div>
+            <div className="leftside content text-center mt-[10px]">
+              <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Create Your Club</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Register on FrictionLearn to <br></br>establish club</p>
+            </div>
+          </div>
 
 
-{/* <div className="w-[full] h-[800px] ">
+          <div className="lg:w-[246px] h-[241px]  flex flex-col  justify-center items-center mt-[36px]">
+            <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold ">
+              2
+            </div>
+            <div className="leftside content mt-[10px] text-center ">
+              <h2 className="text-[#F27329] text-[22px] font-semibold font-sans font-lato mt-[5px] " >Name Your Club</h2>
+              <p className="text-[16px] font-medium text-[#1D2228]  mt-[15px] text-center "> Choose a meaningful club name<br></br>reflecting its purpose</p>  </div>
+
+          </div>
+
+
+          <div className="lg:w-[246px] h-[241px] flex flex-col items-center mt-[54px]">
+            <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
+              3
+            </div>
+            <div className="leftside content text-center mt-[10px]">
+              <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Invite Peer Members</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  text-center">Invite friends and classmates<br></br>to join your club.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="lg:flex   lg:flex-row justify-center gap-[192px]  mt-[30px]  md:flex-col ">
+          <div className="lg:w-[246px] h-[241px] flex flex-col items-center mt-[24px]">
+            <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
+              4
+            </div>
+            <div className="leftside content text-center mt-[5px]">
+              <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Plan and Discuss</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Regularly meet to discuss,<br></br>share skills, and plan</p>
+            </div>
+          </div>
+
+          <div className="lg:w-[246px] h-[241px] flex flex-col items-center mt-[24px]">
+            <div className="w-[38px] h-[88px] flex items-center justify-center text-[#022956] text-[70px] font-semibold  ">
+              5
+            </div>
+            <div className="leftside content text-center mt-[5px]">
+              <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[5px]">Create Your Club</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Organize events, workshops,<br></br>and study sessions</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      {/* section six */}
+
+
+
+      <div className="lg:w-full lg:h-[583px]  md:w-[390] md:-[759px] mt-[50px]">
+        <div className="text-center mb-[50px] ">
+          <h2 className="text-[#022956] text-[40px] font-semibold">What Are Events?</h2>
+          <h3 className="text-[27px] text-[#F27329] font-semibold mt-[10px] mb-[90px]">Organize Your Event in 4 Simple Steps</h3>
+        </div>
+
+        <div className="lg:flex lg:flex-row  md:flex-col    justify-evenly  relative  ">
+
+          <div className="lg:w-[246px] lg:h-[241px] flex lg:flex-col      md:w-[323px] md:h-[121px]   md:flex-row  justify-center items-center">
+            <div><img src={sicimgone} alt="" className="w-[127px] h-[136px] mt-[10px]" /></div>
+            <div className="lg:text-center lg:mt-[10px] lg:mb-[50px]">
+              <h2 className="  lg:w-[104px] text-[#F27329] text-[20px] font-semibold text-center">Join Event</h2>
+              <p className="   lg:w-[246px]   text-[16px] font-medium text-[#1D2228] mt-[15px] w-[246px] h-[44px] text-center">Explore clubs,join events that<br />interest.</p>
+            </div>
+          </div>
+
+          <div className="absolute left-[19%] top-[20%] transform -translate-y-1/2 w-[240px] h-[1px] border-t-2 outline-2 border-dotted  bg-gray-400"></div>
+          <div className="lg:w-[246px] lg:h-[241px] flex lg:flex-col      md:w-[323px] md:h-[121px]   md:flex-row  justify-center items-center">
+            <div><img src={sicimgtwo} alt="" className="w-[127px] h-[136px]  mb-[20px]" /></div>
+            <div className="text-center ">
+              <h2 className="w-[294px]  text-[#F27329] text-[20px] font-semibold text-center ">Engage with Industry Leaders</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  w-[246px] h-[44px] text-center ml-[18px]">Connect with global leaders in<br />interactive sessions.</p>
+            </div>
+          </div>
+
+          <div className="absolute left-[42%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]   border-t-2 outline-2  border-dotted bg-gray-400"></div>
+
+          <div className="lg:w-[246px] lg:h-[241px] flex lg:flex-col      md:w-[323px] md:h-[121px]   md:flex-row  justify-center items-center">
+            <div><img src={sicimgthree} alt="" className="w-[127px] h-[136px] mt-[15px]" /></div>
+            <div className="text-center mt-[10px]">
+              <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Network with Peers</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] v">Discuss skills, insights, and<br />collaborate at events.</p>
+            </div>
+          </div>
+
+          <div className="absolute left-[66%] top-[20%] transform -translate-y-1/2 w-[250px] h-[1px]  border-t-2 outline-2  border-dotted bg-gray-400"></div>
+
+          <div className="lg:w-[246px] lg:h-[241px] flex lg:flex-col      md:w-[323px] md:h-[121px]   md:flex-row  justify-center items-center">
+            <div><img src={sicimgfour} alt="" className="w-[127px] h-[136px] mb-[10px]" /></div>
+            <div className="text-center mt-[10px]">
+              <h2 className="text-[#F27329] text-[20px] font-semibold text-center">Host Your Event</h2>
+              <p className="text-[16px] font-medium text-[#1D2228] mt-[15px]  text-center">Event: Learning and<br />Community Engagement<br />Showcase</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      {/* sectionseven  */}
+
+      <div className="lg:w-full lg:h-[703px]">
+        <div className="flex flex-col justify-center text-center mt-[40px]">
+          <h2 className="text-[#022956] text-[40px] font-semibold">Join Our Community Page</h2>
+          <h3 className="text-[27px] text-[#F27329] font-semibold mt-[10px]">Discover Communities with 5 Key Steps</h3>
+        </div>
+
+        <div className="flex  flex-wrap justify-evenly  lg:space-x-4  md:space-x-4">
+
+          <div className="w-full sm:w-auto h-[241px] flex lg:flex-col   md:flex-row justify-center items-center mt-[54px]  ">
+            <img src={sevenimgone} alt="" className="w-[120px] h-[120px] mt-[20px]" />
+           <div>
+           <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Join Interest Groups</h2>
+           <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Connect with communities for<br />tailored networking and career<br />growth</p>
+           </div>
+          </div>
+
+
+
+          <div className="w-full sm:w-auto h-[241px] flex lg:flex-col  md:flex-row justify-center items-center mt-[54px]">
+            <img src={sevenimgtwo} alt="" className="w-[120px] h-[120px] mt-[20px]" />
+          <div>
+          <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Engage in Incubation Discussions</h2>
+          <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Engage in Startup incubation<br />discussions for entrepreneurial<br />feedback</p>
+          </div>
+          </div>
+
+
+
+          <div className="w-full sm:w-auto h-[241px] flex  lg:flex-col   md:flex-row justify-center items-center mt-[54px]">
+            <img src={sevenimgthree} alt="" className="w-[120px] h-[120px] mt-[20px]" />
+           <div>
+           <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Explore Career Opportunities</h2>
+           <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Career paths, community<br />opportunities, guided by<br />experienced mentors</p>
+           </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-evenly   lg:space-x-4 md:space-x-4 ">
+
+
+          <div className="w-full sm:w-auto h-[241px] flex lg:flex-col   md:flex-row  justify-center items-center mt-[54px]">
+            <img src={sevenimgfour} alt="" className="w-[120px] h-[120px] mt-[25px]" />
+          <div>
+          <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[37px]">Collaborate on Projects</h2>
+          <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Collaborate on projects to<br />achieve shared goals together</p>
+          </div>
+          </div>
+
+          <div className="w-full sm:w-auto h-[241px] flex lg:flex-col   md:flex-row justify-center items-center mt-[54px]">
+            <img src={sevenimgfive} alt="" className="w-[120px] h-[120px] mt-[25px]" />
+            <div>
+            <h2 className="text-[#F27329] text-[22px] font-semibold font-sans mt-[49px]">Attend Exclusive Events</h2>
+            <p className="text-[16px] font-medium text-[#1D2228] mt-[15px] text-center">Participate in community<br />events to learn, connect, grow.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      {/* section eight */}
+
+
+      {/* <div className="w-[full] h-[800px] ">
 
 <div  className=" flex flex-col  justify-center  text-center mt-[40px]" >
 
@@ -834,119 +886,119 @@ const numberFiveRef = useRef(null);
 
 
 
-{/* section nine */}
+      {/* section nine */}
 
 
 
-<Section />
+      <Section />
 
 
 
-{/* section ten */}
+      {/* section ten */}
 
-<div className="w-full h-[2-93px]">
-<div  className=" flex flex-col  justify-center  text-center mt-[182px]"  >
-<h2  className="text-[#022956]  text-[40px] font-semibold "> Our Valued Collaborators</h2>
-</div>
-<div className="overflow-hidden whitespace-nowrap  mt-[100px]">
-      <div className="inline-block animate-scroll ">
-        {collaborators.map((logo, index) => (
-          <img 
-            key={index} 
-            src={logo} 
-            alt={`logo ${index + 1}`} 
-            className="inline-block mx-4"
-            style={{ height: '80px', width: 'auto' , margin:'0 100px' }} // Adjust size as needed
-          />
-        ))}
+      <div className="w-full h-[2-93px]">
+        <div className=" flex flex-col  justify-center  text-center mt-[182px]"  >
+          <h2 className="text-[#022956]  text-[40px] font-semibold "> Our Valued Collaborators</h2>
+        </div>
+        <div className="overflow-hidden whitespace-nowrap  mt-[100px]">
+          <div className="inline-block animate-scroll ">
+            {collaborators.map((logo, index) => (
+              <img
+                key={index}
+                src={logo}
+                alt={`logo ${index + 1}`}
+                className="inline-block mx-4"
+                style={{ height: '80px', width: 'auto', margin: '0 100px' }} // Adjust size as needed
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
-    </div>
 
-</div>
+      {/* section eleven */}
 
-{/* section eleven */}
+      <div className="eleventhsection lg:w-full">
 
-<div className="eleventhsection  w-[full]">
+        <div className="mt-[100px] mb-[62px] flex justify-center text-center">
+          <h1 className="text-[#022956] text-[40px] font-medium  font-sans-serif-[lato]">Guidance from the Best</h1>
+        </div>
 
-  <div  className="mt-[100px] mb-[62px] flex justify-center text-center">
-    <h1  className="text-[#022956] text-[40px] font-medium  font-sans-serif-[lato]">Guidance from the Best</h1>
-  </div>
+        <div class="flex flex-col items-center  ">
 
-<div class="flex flex-col items-center">
+          <div className={`first-element flex items-center lg:space-x-20  md:space-x-10    bg-[#E7F2FF] lg:h-[182px] lg:p-6 mb-[85px] lg:w-[1333px]    md:h-[161px] ${isInView.first ? 'animate-fadeInLeft' : ''}`}>
 
-<div  className={`first-element flex items-center space-x-20 bg-[#E7F2FF]  h-[182px] p-6 mb-[85px] w-[1300px]  ${isInView.first ? 'animate-fadeInLeft' : ''}`}>
+            <div class="relative lg:w-[283px] lg:h-[282px] transform rotate-90 overflow-hidden rounded-[10%]  md:h-[127px]  md:w-[127px]">
+              <img src={elevenone} alt="Mentor" class="lg:w-full lg:h-full object-cover transform -rotate-90 rounded-[10%]" />
+            </div>
 
-    <div class="relative w-[283px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
-    <img src={elevenone} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]" />
-  </div>
+            <div class="lg:ml-[227px] mb-[104px] mt-[104px]  lg:w-[1194px] lg:h-[160px] md:h-[62px] md:w-[171px]">
+              <h2 class="text-[30px] font-bold text-[#022956]">Johnson</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Advisor</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px] ">Guiding entrepreneurs with strategic insights<br /> and practical business solutions.</p>
+            </div>
 
-  <div class="ml-[227px] mb-[104px] mt-[104px]">
-    <h2 class="text-[30px] font-bold text-[#022956]">Johnson</h2>
-    <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Advisor</p>
-    <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px] ">Guiding entrepreneurs with strategic insights<br /> and practical business solutions.</p>
-  </div>
- 
-</div>
-
-  
-  <div   className={`second-element flex items-center justify-end space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.second ? 'animate-fadeInRight' : ''}`}>
-    
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px] text-right">
-      <h2 class="text-[30px] font-bold text-[#022956]">Rekha</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Web Design Professiona</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato]  mt-[20px] ">Crafting visually appealing and user-friendly<br></br>websites for impactful online presence..</p>
-    </div>
-
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={eleventwo} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
-    </div>
-  </div>
+          </div>
 
 
-  <div className={`third-element flex items-center space-x-20 bg-[#E7F2FF]  h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.third ? 'animate-fadeInLeft' : ''}`}>
-    
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={eleventhree} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
-    </div>
+          <div className={`second-element flex items-center justify-end lg:space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] lg:w-[1333px]   ${isInView.second ? 'animate-fadeInRight' : ''}`}>
 
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px]">
-      <h2 class="text-[30px] font-bold text-[#022956]">David Martinez</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Cybersecurity Specialist</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Securing digital assets by identifying<br></br> vulnerabilities and implementing robust defenses..</p>
-    </div>
-  </div>
+            <div className=" lg:ml-[227px] mb-[104px]  mt-[104px] text-right    lg:w-[1194px] lg:h-[160px] ]">
+              <h2 class="text-[30px] font-bold text-[#022956]">Rekha</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Web Design Professiona</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato]  mt-[20px] ">Crafting visually appealing and user-friendly<br></br>websites for impactful online presence..</p>
+            </div>
+
+            <div class="relative w-[283px]  lg:h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={eleventwo} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
+            </div>
+          </div>
+
+
+          <div className={`third-element flex items-center space-x-20 bg-[#E7F2FF]  h-[182px] p-6 mb-[85px] lg:w-[1333px] ${isInView.third ? 'animate-fadeInLeft' : ''}`}>
+
+            <div class="relative lg:w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={eleventhree} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
+            </div>
+
+            <div className=" ml-[227px] mb-[104px]  mt-[104px]">
+              <h2 class="text-[30px] font-bold text-[#022956]">David Martinez</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Cybersecurity Specialist</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Securing digital assets by identifying<br></br> vulnerabilities and implementing robust defenses..</p>
+            </div>
+          </div>
 
 
 
 
 
-  <div className={`fourth-element flex items-center justify-end space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.fourth ? 'animate-fadeInRight' : ''}`}>
-    
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px] text-right">
-      <h2 class="text-[30px] font-bold text-[#022956]">Spandana</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Marketing Strategist</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px] ">Designing innovative marketing strategies to <br></br>drive brand growth and engagement..</p>
-    </div>
+          <div className={`fourth-element flex items-center justify-end space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] lg:w-[1994px] ${isInView.fourth ? 'animate-fadeInRight' : ''}`}>
 
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={elevenfour} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
-    </div>
-  </div>
+            <div className=" ml-[227px] mb-[104px]  mt-[104px] text-right">
+              <h2 class="text-[30px] font-bold text-[#022956]">Spandana</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Marketing Strategist</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px] ">Designing innovative marketing strategies to <br></br>drive brand growth and engagement..</p>
+            </div>
+
+            <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={elevenfour} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
+            </div>
+          </div>
 
 
 
-  <div   className={`fifth-element flex items-center space-x-20 bg-[#E7F2FF] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.fifth ? 'animate-fadeInLeft' : ''}`}>
-    
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={elevenfive} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
-    </div>
+          <div className={`fifth-element flex items-center space-x-20 bg-[#E7F2FF] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.fifth ? 'animate-fadeInLeft' : ''}`}>
 
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px]">
-      <h2 class="text-[30px] font-bold text-[#022956]">Sara Singh</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Analytics Guru</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Transforming data into actionable insights to<br></br> drive business decisions..</p>
-    </div>
-  </div>
+            <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={elevenfive} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
+            </div>
+
+            <div className=" ml-[227px] mb-[104px]  mt-[104px]">
+              <h2 class="text-[30px] font-bold text-[#022956]">Sara Singh</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Analytics Guru</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Transforming data into actionable insights to<br></br> drive business decisions..</p>
+            </div>
+          </div>
 
 
 
@@ -957,51 +1009,40 @@ const numberFiveRef = useRef(null);
 
 
 
-  <div  className={`sixth-element flex items-center justify-end space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.sixth ? 'animate-fadeInRight' : ''}`}>
-    
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px] text-right">
-      <h2 class="text-[30px] font-bold text-[#022956]">Radhika</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Graphic Design Professional</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Creating compelling visual designs to enhance brand<br></br> identity and communication..</p>
-    </div>
+          <div className={`sixth-element flex items-center justify-end space-x-20 bg-[#FBEBE1] h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.sixth ? 'animate-fadeInRight' : ''}`}>
 
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={elevensix} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
-    </div>
-  </div>
+            <div className=" ml-[227px] mb-[104px]  mt-[104px] text-right">
+              <h2 class="text-[30px] font-bold text-[#022956]">Radhika</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Graphic Design Professional</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Creating compelling visual designs to enhance brand<br></br> identity and communication..</p>
+            </div>
 
-
-  <div  className={`seventh-element flex items-center space-x-20 bg-blue-100 h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.seventh ? 'animate-fadeInLeft' : ''}`}>
-    
-    <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
-      <img src={elevenseven} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
-    </div>
-
-    <div  className=" ml-[227px] mb-[104px]  mt-[104px]">
-      <h2 class="text-[30px] font-bold text-[#022956]">Santhosh Ram</h2>
-      <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Advisor</p>
-      <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Providing strategic guidance and practical<br></br> solutions for business growth and success..</p>
-    </div>
-  </div>
-
-</div>
+            <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={elevensix} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%]  " />
+            </div>
+          </div>
 
 
+          <div className={`seventh-element flex items-center space-x-20 bg-blue-100 h-[182px] p-6 mb-[85px] w-[1333px] ${isInView.seventh ? 'animate-fadeInLeft' : ''}`}>
 
+            <div class="relative w-[283px]  h-[282px] transform rotate-90 overflow-hidden  rounded-[10%]">
+              <img src={elevenseven} alt="Mentor" class="w-full h-full object-cover transform -rotate-90 rounded-[10%] " />
+            </div>
 
+            <div className=" ml-[227px] mb-[104px]  mt-[104px]">
+              <h2 class="text-[30px] font-bold text-[#022956]">Santhosh Ram</h2>
+              <p class="text-[16px] text-[#1D2228] font-medium font-sans-serif-[lato]">Business Advisor</p>
+              <p class="text-[14px] text-[#1D2228] font-medium font-sans-serif-[lato] mt-[20px]">Providing strategic guidance and practical<br></br> solutions for business growth and success..</p>
+            </div>
+          </div>
 
+        </div>
 
-</div>
+      </div>
 
+      {/* section twelve */}
 
-
-
-
-
-
-{/* section twelve */}
-
-{/* <div  className="w-[full] h-[477px] ">
+      {/* <div  className="w-[full] h-[477px] ">
 <div   className=" flex flex-col  justify-center  text-center mt-[40px]">
 <h2  className="text-[#022956]  text-[40px] font-semibold font-sans font-lato"> Our Growth at a Glance</h2>
 </div>
@@ -1017,81 +1058,80 @@ const numberFiveRef = useRef(null);
 </div>
 </div> */}
 
-<div className="w-full h-[377px]">
-  <div className="flex flex-col justify-center text-center mt-[20px]">
-    <h2 className="text-[#022956] text-[40px] font-semibold font-sans font-lato">Our Growth at a Glance</h2>
-  </div>
-  <div>
-    <div className="flex flex-row justify-between mt-[102px] mx-[30px] gap-[37px]">
-      <img src={twelveone} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-      <img src={twelvetwo} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-      <img src={twelvethree} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-      <img src={twelvefour} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-      <img src={twelvefive} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-      <img src={twelvesix} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
-    </div>
-  </div>
-</div>
-
-
-{/* thirteen section */}
-{/* this is correct code */}
-
-<div className="relative w-[full] h-[798px]">
-      <div   className=" flex flex-col  justify-center  text-center mt-[80px]">
-        <h2 className="text-[#022956] text-[40px] font-semibold font-sans font-lato">
-          Experience Our Impact Through Their Words
-        </h2>
+      <div className="w-full h-[377px]">
+        <div className="flex flex-col justify-center text-center mt-[20px]">
+          <h2 className="text-[#022956] text-[40px] font-semibold font-sans font-lato">Our Growth at a Glance</h2>
+        </div>
+        <div>
+          <div className="flex flex-row justify-between mt-[102px] mx-[30px] gap-[37px]">
+            <img src={twelveone} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+            <img src={twelvetwo} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+            <img src={twelvethree} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+            <img src={twelvefour} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+            <img src={twelvefive} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+            <img src={twelvesix} alt="" className="w-[165px] h-[174px] transform transition-transform duration-300 hover:scale-125" />
+          </div>
+        </div>
       </div>
-      <div className="flex overflow-hidden justify-center items-center  w-[full] h-[380px]  space-x-7">
-        {testimonials.map((testimonial, index) => {
-          const isActive = index === current;
 
-          return (
-            <div
-              key={index}
-              className={`transition-all duration-500 ease-in-out gap-[90px] ${isActive ? 'scale-110' : 'scale-75 blur-sm'} ${
-                isActive ? 'opacity-100' : 'opacity-50'
-              }`}
-              style={{
-                transform: isActive ? 'scale(1.1)' : 'scale(0.75)',
-                opacity: isActive ? 1 : 0.5,
-                width: isActive ? '186px' : '150px',
-                height: isActive ? '205px' : '150px',
-              }}
-              onMouseEnter={() => handleMouseEnter(index)}
-            >
-              <div className="rounded-lg gap-[50px] mx-2 flex flex-col items-center w-[195px] h-[205px]">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className={`${isActive ? 'filter-none' : 'filter grayscale'}`}
-                />
+
+      {/* thirteen section */}
+      {/* this is correct code */}
+
+      <div className="relative w-[full] h-[798px]">
+        <div className=" flex flex-col  justify-center  text-center mt-[80px]">
+          <h2 className="text-[#022956] text-[40px] font-semibold font-sans font-lato">
+            Experience Our Impact Through Their Words
+          </h2>
+        </div>
+        <div className="flex overflow-hidden justify-center items-center  w-[full] h-[380px]  space-x-7">
+          {testimonials.map((testimonial, index) => {
+            const isActive = index === current;
+
+            return (
+              <div
+                key={index}
+                className={`transition-all duration-500 ease-in-out gap-[90px] ${isActive ? 'scale-110' : 'scale-75 blur-sm'} ${isActive ? 'opacity-100' : 'opacity-50'
+                  }`}
+                style={{
+                  transform: isActive ? 'scale(1.1)' : 'scale(0.75)',
+                  opacity: isActive ? 1 : 0.5,
+                  width: isActive ? '186px' : '150px',
+                  height: isActive ? '205px' : '150px',
+                }}
+                onMouseEnter={() => handleMouseEnter(index)}
+              >
+                <div className="rounded-lg gap-[50px] mx-2 flex flex-col items-center w-[195px] h-[205px]">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className={`${isActive ? 'filter-none' : 'filter grayscale'}`}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div className=" text-center">
+          <h3 className="text-[#1D2228] font-medium text-[20px]">{testimonials[current].name}</h3>
+          <p className="text-[#1D2228] text-[16px] font-medium">{testimonials[current].role}</p>
+        </div>
+        <div className="mt-[50px] mx-[20px] text-center  font-medium">
+          <p className="text-[#1D2228] text-[36px] ml-[100px] mr-[100px] font-light">{testimonials[current].text}</p>
+        </div>
       </div>
-      <div className=" text-center">
-        <h3 className="text-[#1D2228] font-medium text-[20px]">{testimonials[current].name}</h3>
-        <p className="text-[#1D2228] text-[16px] font-medium">{testimonials[current].role}</p>
-      </div>
-      <div className="mt-[50px] mx-[20px] text-center  font-medium">
-        <p className="text-[#1D2228] text-[36px] ml-[100px] mr-[100px] font-light">{testimonials[current].text}</p>
-      </div>
+
+
+
+
+
+
+
+
+      <Footer />
+
+
+
     </div>
-
-
-
-
-
-
-
-
-<Footer/>
-
-
-
-    </div>
-)
+  )
 }

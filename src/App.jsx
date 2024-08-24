@@ -4,6 +4,7 @@ import Homepage from "./Components/Homepage";
 import Incubation from "./Components/Incubation";
 import Navbar from "./Components/Navbar";
 import Courses from "./Components/Courses";
+import Signup from "./Components/Signup";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
             <Route path="/Courses" element={<Courses />} />
             <Route path="/Community" element={<Community />} />
             <Route path="/Incubation" element={<Incubation />} />
+            <Route path="/Signup" element={<Signup />} />
           </Routes>
         </div>
-  
+ 
     </div>
   )
 }

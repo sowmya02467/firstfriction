@@ -49,7 +49,7 @@ module.exports = {
 
 
 
-        
+
         moveline: {
           '0%': { height: '0' },
           '100%': { height: '100%' },
@@ -92,11 +92,11 @@ module.exports = {
         '9s': '9s',
       },
       screens: {
-        'sm-max': {'max': '390px'},
+        'sm-max': {'max': '360px'},
         // 'sm': '390px',  // Custom width for small screens
         'md': '390px',  // Standard value for medium screens
-        'lg': '1024px', // Standard value for large screens
-        'xl': '1280px', // Standard value for extra large screens
+        'lg': '1204px', // Standard value for large screens
+        // 'xl': '1280px', // Standard value for extra large screens
       },
     },
   },
