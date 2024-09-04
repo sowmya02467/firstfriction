@@ -91,13 +91,13 @@ module.exports = {
         '8s': '8s',
         '9s': '9s',
       },
-      screens: {
-        'sm-max': {'max': '360px'},
-        // 'sm': '390px',  // Custom width for small screens
-        'md': '390px',  // Standard value for medium screens
-        'lg': '1204px', // Standard value for large screens
-        // 'xl': '1280px', // Standard value for extra large screens
-      },
+      // screens: {
+      //   'sm-max': {'max': '360px'},
+      //   // 'sm': '390px',  // Custom width for small screens
+      //   'md': '390px',  // Standard value for medium screens
+      //   'lg': '1204px', // Standard value for large screens
+      //   // 'xl': '1280px', // Standard value for extra large screens
+      // },
     },
   },
   variants: {

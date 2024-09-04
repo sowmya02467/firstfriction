@@ -7,6 +7,7 @@ import backgroundImage1 from '../assets/backgroundimgone.png';
 import backgroundImage2 from '../assets/backgroundimgfour.png';
 import backgroundImage3 from '../assets/backgroundimgthree.png';
 import backgroundImage4 from '../assets/backgroundimgtwo.png';
+import Header from "./Header";
 
 const slides = [
   {
@@ -32,6 +33,7 @@ const slides = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
@@ -49,8 +51,9 @@ export default function Navbar() {
         className="w-full h-[769px] bg-cover bg-center align-middle transition-all duration-1000"
         style={{ backgroundImage: `url(${slides[currentSlide].backgroundImage})` }}
       >
+        {/* <Header /> */}
         <nav className="h-[95px] flex items-center">
-          <div className="ml-[146px] mr-[47px] w-[157px] h-[64px]">
+          <div className="ml-[146px] mr-[47px] w-[157px] h-[64px]  hidden sm:block md:visible lg:visible">
             <img
               src={logo}
               alt="friction learn logo"
@@ -98,6 +101,48 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
+
+
+        <nav className="bg-gray-800 p-4  block  sm:hidden">
+      <div className="flex items-center justify-between">
+        <div className="text-white text-xl">
+          {/* <img src={} alt="" /> */}
+          {/* <img src={} alt="" /> */}
+        </div>
+        <div className="hidden md:block">
+          <ul className="flex space-x-4">
+            <li><a href="#home" className="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="#about" className="text-white hover:text-gray-400">About</a></li>
+            <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
+            <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>
+          </ul>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
+            </svg>
+          </button>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden">
+          <ul className="flex flex-col space-y-2 mt-4">
+            <li><a href="#home" className="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="#about" className="text-white hover:text-gray-400">About</a></li>
+            <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
+            <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>
+          </ul>
+        </div>
+      )}
+    </nav>
+
+
+
+
+
+
 
         <div className="relative text-center mt-[201px]">
           <h2 className="text-[#FFFFFF] text-[40px] font-semibold sm:text-[20px] lg:text-[70px]">

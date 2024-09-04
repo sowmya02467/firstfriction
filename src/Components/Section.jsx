@@ -84,7 +84,7 @@ export default function Section() {
 
 <div className='flex justify-center'></div>
 
-<div className="timeline relative mx-auto after:content-[''] after:absolute after:w-[3px] after:h-[3890px] after:bg-gray-300 after:top-0 after:left-1/2 after:transform after:-translate-x-1/2 after:z-[-1]   after:animate-moveline">
+<div className="timeline relative mx-auto after:content-[''] after:absolute after:w-[3px] after:h-[3890px] after:bg-gray-300 after:top-0 after:left-1/2 after:transform after:-translate-x-1/2 after:z-[-1]   after:animate-moveline      ">
   {/* one right img */}
 {/* First timeline item - Right aligned */}
 <div className="container one left-1/2 relative py-[10px] px-[50px] ml-[40px] w-[650px]  animate-movedown opacity-0 delay-[0s]">

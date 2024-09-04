@@ -48,7 +48,7 @@ export default function Community() {
 
         {/* section one */}
       <div
-        className="h-[729px] w-[full] bg-cover bg-center"
+        className="h-[729px] w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
       >
         {/* nav bar Content goes here */}
@@ -64,7 +64,7 @@ export default function Community() {
 
           </div>
 
-          <div className="flex items-center bg-white bg-opacity-75 rounded-md w-[402px] h-[62px] ml-[10px] mt-[20px]">
+          <div className="flex items-center bg-white bg-opacity-75 rounded-md w-[402px] h-[62px] ml-[10px] mt-[20px] hidden sm:block  md:visible">
             <ul className="flex justify-between gap-5 search">
             <li className="flex flex-col-reverse text-[#1D2228] text-[18px] font-bold ml-[20px] my-[28px]">
   <a href="/Courses" className="flex items-center">
@@ -88,7 +88,7 @@ export default function Community() {
           {/* search bar */}
         
 
-<div className="flex justify-end mt-5   ml-[30px]  w-[529px]  ">
+<div className="flex justify-end mt-5   ml-[30px]  w-[529px]  hidden sm:block  ">
   <div className={`relative flex items-center justify-end ml-[140px] bg-white bg-opacity-75 rounded-md h-[64px] px-4 ${isOpen ? 'w-[529px]' : 'w-[240px]'}`}>
     <div
       className={`flex items-center rounded-2xl border border-solid             transition-all duration-300 mr-[10px] ${isOpen ? 'w-[350px]' : 'w-[40px]'} h-[42px] ml-auto`}
@@ -143,12 +143,16 @@ export default function Community() {
       </div>
 
 
+
+
+
+
 {/* section two */}
 
 
-<div   className="h-[1053px]">
+<div   className="  w-full h-[1053px]   ">
 
-  <div className="childOne  mt-[67px]  flex flex-row justify-center gap-[67px]">
+  <div className="childOne  mt-[67px]  xl:flex xl:flex-row justify-center gap-[67px]  sm:flex  sm:flex-col  md:flex-row  lg:flex-row">
 
   <div  className="w-[356px] h-[370px] border border-shadow  shadow-md shadow-gray-300 flex flex-col text-center justify-center      transform transition-transform duration-300 hover:scale-110">
    <div>
@@ -242,12 +246,12 @@ export default function Community() {
 {/* section three */}
 
 
-<div className='w-full h-[678px] mx-auto p-4 flex flex-col items-center '>
+<div className=' 2xl:h-[678px] mx-auto p-4 flex flex-col sm:flex-col  md:flex-col lg:flex-col items-center 2xl:mt-10   '>
             <div className='text-center '>
                 <h1 className='text-[40px] text-[#022956] font-sans font-lato font-black '>Why Communities?</h1>
                 <p className='text-[28px] font-lato font-sans font-semibold text-[#F27329] mt-[10px]'>Boost your growth through active and supportive community engagement and <br></br> collaboration.</p>
             </div>
-            <div className='flex justify-center align-middle gap-[155px] mt-[155px]'>
+            <div className='2xl:flex 2xl:flex-row justify-center align-middle gap-[155px] mt-[155px] sm:flex-col md:flex-row  lg:flex-row '>
 
                 <div className='flex flex-col items-center'>
                     <img src={groupone} alt='groupone' className='w-[318px] h-[190px] mb-4' />
@@ -270,7 +274,7 @@ export default function Community() {
 
 {/* section four */}
 
-<div  className="h-[592px]">
+<div  className=" w-full  h-[592px]">
     
    <div    className="flex flex-col text-center justify-center  ">
 <h1  className="text-[#022956] text-[40px] font-black font-sans font-lato mt-[61px] mb-[16px]">Our History by the Numbers</h1>
