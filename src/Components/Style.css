@@ -1,0 +1,156 @@
+/* @media screen and(max-width: 600px){
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after{
+        right: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+        
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container img, .right-container img {
+        left: 10px;
+
+    }
+} */
+
+
+
+/* Mobile view styles */
+/* Mobile screen styles only */
+@media (max-width: 640px) {
+  /* Adjusting timeline vertical line */
+  .timeline::after {
+    left: 5%; /* Adjusted to keep the vertical line in place */
+  }
+
+  /* Adjust container alignment for mobile */
+  .container {
+    width: 100%; /* Full width for mobile */
+    padding: 10px;
+    margin: 0;
+    position: relative; /* For absolute positioning of child elements */
+  }
+
+  /* Adjust container.one for mobile */
+  .container.one {
+    margin-left: -300px; /* Move the container slightly left */
+    margin-right: -60px;
+    display: flex;
+    /* Add margin-bottom to create space between containers */
+    margin-bottom: 100px; /* Adjust the gap as needed */
+  }
+
+  /* Adjust container.two for mobile */
+  .container.two {
+    margin-left: 10px; /* No left margin */
+    margin-right: 0; /* No right margin */
+    display: flex;
+    position: relative;
+    /* Add margin-top to create space above this container */
+    /* margin-top: 20px; Ensure there's a gap if needed */
+  }
+
+  /* Ensure the image aligns with the timeline */
+  .container .img {
+    position: absolute; /* Absolute positioning for precise alignment */
+    top: 0; /* Align at the top */
+    left: 0; 
+    
+     margin-left: -10px;
+  }
+
+  /* Adjust the image size */
+  .container .img img {
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px;
+    /* margin-left: 20px; */
+  }
+
+  /* Adjust text box styling for mobile */
+  .container .text-box {
+    width: 100%; /* Full width for mobile */
+    text-align: left;
+    margin-top: -40px;
+  }
+
+  /* Hide specific elements on mobile */
+  .hide-on-mobile {
+    display: none;
+  }
+
+
+
+
+
+
+  /* General container styling */
+.container {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Ensure .text-box is aligned to the left */
+.container .text-box {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: flex-start; /* Horizontally align to the left */
+  text-align: left; /* Ensure text is aligned to the left */
+  margin-left: 0; /* Remove any right alignment */
+  margin-right: auto; /* Make sure it doesn't move to the right */
+  padding-left: 10px; /* Add some padding for alignment */
+
+}
+
+/* Ensure h3 and p are aligned properly inside the content */
+.container .text-box .content h3,
+.container .text-box .content p {
+  margin-left: 0; /* Make sure there's no margin pushing it to the right */
+  margin-right: auto;
+  text-align: left; /* Left-align the text */
+  font-size: 14px;
+  width: 259px;
+  height: 33px;
+  text-align: start; 
+  
+}
+
+
+.container .text-box .content img {
+  width: 215px;
+  height: 179px;
+  align-items: center;
+  /* margin-left: 40px; */
+  margin-right: -40px;
+}
+
+/* Adjust individual margins */
+.container .text-box .content h3 {
+  margin-top: 30px;
+  margin-left: 110px;
+  font-size: 16px;
+}
+
+.container .text-box .content p {
+  margin-top: 15px;
+  font-size: 14px;
+  
+  margin-left: 60px;
+  text-align: center;
+}
+
+}
+
+

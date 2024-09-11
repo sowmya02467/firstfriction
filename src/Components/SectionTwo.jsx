@@ -82,7 +82,7 @@ export default function SectionTwo() {
   };
 
   return (
-//     <div className="w-full flex flex-col max-w-screen-lg
+//     <div className="w-full flex flex-row 
 //      shadow-md  px-4 md:px-0">
 //       <div className="sticky top-[100px] self-start w-[491px] h-auto text-start mb-[40px] mt-[40px] md:ml-[104px]  ">
 //       <h2 className="font-bold text-[#022956] 
@@ -118,45 +118,80 @@ export default function SectionTwo() {
 //       </div>
 //     </div>
 
+<div className="w-full flex flex-row shadow-md px-4 md:px-0">
+  <div className="sticky top-[100px] self-start w-[491px] h-auto text-start mb-[40px] mt-[40px] md:ml-[104px]">
+    <h2 className="font-bold text-[#022956] lg:text-start md:text-center text-[18px] sm:text-[20px] md:text-[30px] lg:text-[40px] text-center mb-[20px]">
+      What Sets FrictionLearn Apart From Other Platforms
+    </h2>
 
-
-
-
-
-        <div className="grid md:grid-cols-2 gap-4 ">
-          <div className="  w-[564px]  h-[249px] m-auto max-w-screen-lg lg:py-16  ">
-            <h2 className=" text-[40px] font-bold text-[#F27329] mb-4 text-start  ml-[60px]">
-            What Sets FrictionLearn<br></br> Apart From Other<br></br> Platforms
-            </h2>
-            <p className="text-[18px] text-center ml-[20px]">
-            Empowering students with real-world skills through industry collaboration, practical projects, and dynamic communities.
-            </p>
-          </div>
-          <div className="overflow-y-scroll pr-4 sm:pr-6 lg:pr-10 scrollbar-hide py-4 h-[500px] sm:h-[600px] md:h-[650px] lg:h-[729px]">
-            <div className="space-y-4">
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center bg-white rounded-lg shadow-md p-4 sm:p-3 lg:p-5"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-[48px] h-[48px] sm:w-[64px] sm:h-[64px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] object-cover rounded-lg"
-                  />
-                  <div className="ml-4 sm:ml-6">
-                    <h3 className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] text-[#F27329] font-semibold">
-                      {item.title}
-                    </h3>
-                    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#1D2228]">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    <p className="lg:text-[20px] lg:text-start mt-4 md:text-center text-[14px] sm:text-[16px] md:text-[18px] text-center mb-[20px]">
+      Discover the unique features and benefits that make FrictionLearn the best platform for your learning needs.
+    </p>
+  </div>
+  <div
+    ref={scrollContainerRef}
+    className="w-full max-w-[654px] lg:overflow-y-auto md:overflow-y-visible md:mt-[100px] md:mr-[50px] lg:static"
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+  >
+    {items.map((item, index) => (
+      <div key={index} className="flex items-center bg-white rounded-lg shadow-md w-full h-auto mb-[30px] p-4">
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-[52px] h-[52px] object-cover mb-4 md:mb-0 md:ml-[10px]"
+        />
+        <div className="flex flex-col md:ml-[24px]">
+          <h3 className="text-[12px] sm:text-[15px] md:text-[18px] lg:text-[25px] text-[#F27329] font-semibold text-start mb-2 ml-4">
+            {item.title}
+          </h3>
+          <p className="text-[10px] sm:text-[12px] md:text-[15px] lg:text-[20px] text-[#1D2228] font-normal text-start ml-4">
+            {item.description}
+          </p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+        // <div className="flex md:grid-cols-2 gap-4 mt-[120px]">
+        //   <div className="  w-[564px]  h-[249px] m-auto max-w-screen-lg lg:py-16  ">
+        //     <h2 className=" text-[40px] font-bold text-[#FF5C00] mb-4 text-start  ml-[60px]">
+        //     What Sets FrictionLearn<br></br> Apart From Other<br></br> Platforms
+        //     </h2>
+        //     <p className="text-[18px] text-center ml-[20px] text-[#241443]">
+        //     Empowering students with real-world skills through industry collaboration, practical projects, and dynamic communities.
+        //     </p>
+        //   </div>
+        //   <div className="lg:overflow-y-scroll pr-4 sm:pr-6 lg:pr-10 scrollbar-hide py-4 sm:h-auto md:h-[650px] lg:h-[729px]">
+        //     <div className="space-y-4">
+        //       {items.map((item, index) => (
+        //         <div
+        //           key={index}
+        //           className="flex items-center bg-white rounded-lg shadow-md p-4 sm:p-8 sm:h-auto lg:p-5"
+        //         >
+        //           <img
+        //             src={item.img}
+        //             alt={item.title}
+        //             className="w-[48px] h-[48px] sm:w-[64px] sm:h-[64px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] object-cover rounded-lg"
+        //           />
+        //           <div className="ml-4 sm:ml-6">
+        //             <h3 className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] text-[#241443] font-semibold">
+        //               {item.title}
+        //             </h3>
+        //             <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#1D2228]">
+        //               {item.description}
+        //             </p>
+        //           </div>
+        //         </div>
+        //       ))}
+        //     </div>
+        //   </div>
+        // </div>
   
   );
 }
