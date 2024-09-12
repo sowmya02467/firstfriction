@@ -33,12 +33,13 @@
     left: 5%; /* Adjusted to keep the vertical line in place */
   }
 
-  /* Adjust container alignment for mobile */
+  /* Adjust container alignment for mobile */     
   .container {
     width: 100%; /* Full width for mobile */
     padding: 10px;
     margin: 0;
     position: relative; /* For absolute positioning of child elements */
+    margin-bottom: 40px; /* Equal gap between all containers */
   }
 
   /* Adjust container.one for mobile */
@@ -46,34 +47,44 @@
     margin-left: -300px; /* Move the container slightly left */
     margin-right: -60px;
     display: flex;
-    /* Add margin-bottom to create space between containers */
-    margin-bottom: 100px; /* Adjust the gap as needed */
+    margin-bottom: 40px; /* Equal gap between containers */
   }
 
-  /* Adjust container.two for mobile */
   .container.two {
     margin-left: 10px; /* No left margin */
-    margin-right: 0; /* No right margin */
+    margin-right: -20px; /* Adjust the right margin */
     display: flex;
     position: relative;
-    /* Add margin-top to create space above this container */
-    /* margin-top: 20px; Ensure there's a gap if needed */
+    margin-bottom: 40px; /* Equal gap between containers */
+    
+    /* Add a gap between the number image and the content image */
+    justify-content: space-between; /* Ensures gap between child elements */
   }
+  
+  /* Adjust the number image inside .container.two */
+  .container.two .number-img {
+    margin-right: 190px; /* Adds a gap to the right of the number image */
+  }
+  
+  /* Adjust the content image inside .container.two */
+  .container.two .content-imag {
+    margin-left: 100px; /* Adds a gap to the left of the content image */
+  }
+  
+
 
   /* Ensure the image aligns with the timeline */
   .container .img {
     position: absolute; /* Absolute positioning for precise alignment */
     top: 0; /* Align at the top */
-    left: 0; 
-    
-     margin-left: -10px;
+    left: 0;
+    margin-left: -10px;
   }
 
   /* Adjust the image size */
   .container .img img {
     width: 80px; /* Smaller image size for mobile */
     height: 80px;
-    /* margin-left: 20px; */
   }
 
   /* Adjust text box styling for mobile */
@@ -83,74 +94,50 @@
     margin-top: -40px;
   }
 
+ 
+
+  /* Ensure equal gap between text elements */
+  .container .text-box .content h3,
+  .container .text-box .content p {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+    font-size: 14px;
+    width: 259px;
+    height: 33px;
+    text-align: start;
+    margin-bottom: 20px; /* Equal gap between headings and paragraphs */
+  }
+
+  /* Adjust image size inside text box */
+  .container .text-box .content img {
+    width: 215px;
+    height: 179px;
+    align-items: center;
+    margin-right: -40px;
+  }
+
+  /* Adjust individual margins */
+  .container .text-box .content h3 {
+    margin-top: 30px;
+    margin-left: 110px;
+    font-size: 16px;
+  }
+
+  .container .text-box .content p {
+    margin-top: 15px;
+    font-size: 14px;
+    margin-left: 60px;
+    text-align: center;
+    margin-bottom: 20px; /* Equal gap between text elements */
+  }
+  .middle-content h3{
+    text-align: center; /* Move text to the right side */
+    margin-left: 90px; /* Optional: Adjust spacing to the right */
+  }
   /* Hide specific elements on mobile */
   .hide-on-mobile {
     display: none;
   }
-
-
-
-
-
-
-  /* General container styling */
-.container {
-  width: 100%;
-  padding: 10px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
-
-/* Ensure .text-box is aligned to the left */
-.container .text-box {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Vertically center content */
-  align-items: flex-start; /* Horizontally align to the left */
-  text-align: left; /* Ensure text is aligned to the left */
-  margin-left: 0; /* Remove any right alignment */
-  margin-right: auto; /* Make sure it doesn't move to the right */
-  padding-left: 10px; /* Add some padding for alignment */
-
-}
-
-/* Ensure h3 and p are aligned properly inside the content */
-.container .text-box .content h3,
-.container .text-box .content p {
-  margin-left: 0; /* Make sure there's no margin pushing it to the right */
-  margin-right: auto;
-  text-align: left; /* Left-align the text */
-  font-size: 14px;
-  width: 259px;
-  height: 33px;
-  text-align: start; 
-  
-}
-
-
-.container .text-box .content img {
-  width: 215px;
-  height: 179px;
-  align-items: center;
-  /* margin-left: 40px; */
-  margin-right: -40px;
-}
-
-/* Adjust individual margins */
-.container .text-box .content h3 {
-  margin-top: 30px;
-  margin-left: 110px;
-  font-size: 16px;
-}
-
-.container .text-box .content p {
-  margin-top: 15px;
-  font-size: 14px;
-  
-  margin-left: 60px;
-  text-align: center;
-}
-
-}
-
 

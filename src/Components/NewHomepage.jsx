@@ -1502,7 +1502,7 @@ export default function NewHomepage() {
           <h2 className="text-[#241443]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  font-bold text-center font-poppines">
             From The FrictionLearn Community Mentors
           </h2>
-          <p className="text-[#24144399] w-[869px] h-[48] text-[20px] font-medium font-poppines line-height-[32px] text-center mt-[20px] sm:w-full sm:px-4 md:w-[80%] md:px-8">
+          <p className="text-[#24144399] lg:w-[869px] h-[48] px-1 sm:px-4 text-[12px] sm:text-[30px] lg:text-[20px]  font-medium font-poppines line-height-[32px] text-center mt-[20px] sm:w-full  md:w-[80%] md:px-8">
             Expert mentors guiding you with personalized insights, real-world experience, and industry connections.
           </p>
         </div>
@@ -1687,7 +1687,7 @@ export default function NewHomepage() {
       <section className="main w-full h-[800px] sm:h-auto sm:mr-0  ">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[60px] md:mt-[90px]">
-          <h2 className="text-[#FF5C00] text-[30px] font-semibold text-center font-poppines">
+          <h2 className="text-[#FF5C00] px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px] font-semibold text-center font-poppines">
             Become an Instructor/Mentor
           </h2>
         </div>
@@ -1695,14 +1695,14 @@ export default function NewHomepage() {
         <div className="parent flex flex-col sm:flex-col md:flex-row  mt-[100px] sm:mt-[40px] md:mt-[60px]">
 
           <div className="childleft  sm:px-4 sm:text-center md:ml-0 ">
-            <h2 className="text-[#022956] text-[30px] md:text-[40px] font-bold text-start  font-poppines">
+            <h2 className="text-[#022956] px-1 sm:px-4 text-[22px] sm:text-[30px] lg:text-[40px]  font-bold text-start  font-poppines">
               Let's Join Us & Spread Your<br /> Knowledge
             </h2>
 
-            <h6 className="text-[#FF5C00] text-[18px] md:text-[21px] font-bold font-poppines line-height-[32px] text-start">
+            <h6 className="text-[#FF5C00] px-1 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px]  font-bold font-poppines line-height-[32px] text-start">
               Welcome to FrictionLearn's Mentor Program!
             </h6>
-            <p className="text-[#6B7083] w-full md:w-[689px] h-auto text-[16px] md:text-[20px] font-medium font-poppines line-height-[32px] text-start mt-[20px]">
+            <p className="text-[#6B7083] w-full lg:w-[689px] h-auto px-1 sm:px-4 text-[12px] sm:text-[30px] lg:text-[25px] font-medium font-poppines line-height-[32px] text-start mt-[20px]">
               Empower the next generation by sharing your expertise. Guide learners through personalized insights and real-world experiences. Expand your network by connecting with ambitious students and professionals. Join us in shaping careers and making a meaningful impact on future talent.
             </p>
 
@@ -1762,10 +1762,10 @@ export default function NewHomepage() {
         <div className="parent w-full sm:w-[90%] md:w-[80%] lg:w-[70%] h-[626px] bg-[#241443E5] mx-auto mt-[34px]  rounded-2xl">
 
           <div className='mr-[60px] sm:ml-[200px] md:ml-[100px] lg:ml-[150px] flex flex-col  justify-center'>
-            <h2 className='text-[40px]  text-center sm:text-center md:text-center      sm:text-[50px] md:text-[60px] lg:text-[70px] text-[#FFFFFF] font-black mt-[50px] sm:mt-[100px] md:mt-[140px] lg:mt-[190px]'>
+            <h2 className='px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  text-center sm:text-center md:text-center      sm:text-[50px] md:text-[60px] lg:text-[70px] text-[#FFFFFF] font-black mt-[50px] sm:mt-[100px] md:mt-[140px] lg:mt-[190px]'>
               Ready to Start Learning?
             </h2>
-            <p className=' ml-0 mr-40  sm:ml-[100px] md:ml-[100px]  sm:text-center md:text-center        text-[16px] sm:text-[18px] md:text-[20px] lg:text-[23px] text-[#FFFFFF] font-light mt-[10px] sm:mt-[15px] md:mt-[20px]'>
+            <p className=' ml-0 mr-40  sm:ml-[100px] md:ml-[100px]  sm:text-center md:text-center        px-1 sm:px-4 text-[18px] sm:text-[30px] lg:text-[25px] text-[#FFFFFF] font-light mt-[10px] sm:mt-[15px] md:mt-[20px]'>
               Dive into our Comprehensive course catalog and begin your Gamified e-Learning Journey
             </p>
           </div>

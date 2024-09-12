@@ -80,7 +80,7 @@ export default function Section() {
 
 <div className=" flex flex-col justify-center text-center mb-[50px]">
 <h2  className="text-[#FF5C00] mt-[82px] text-[30px] font-bold ">Our Instructor/Mentors</h2>
-<p  className="text-[40px] text-[#241443] font-bold mt-[40px]">Find Your Idea to get Life in Real World with Our<span className='text-[40px] font-bold  text-[#FF5C00]  '>  Friction</span>Learn 
+<p  className="px-1 sm:px-4 text-[22px] sm:text-[30px] lg:text-[40px]  text-[#241443] font-bold mt-[40px]">Find Your Idea to get Life in Real World with Our<span className='px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  font-bold  text-[#FF5C00]  '>  Friction</span>Learn 
 <br></br>Dynamic Incubation Program</p>
 
 </div>
@@ -119,7 +119,7 @@ export default function Section() {
   <div className="text-box mr-[150px] mt-[35px] ">
     <div className="content">
     <h3  className='  text-[#241443] text-[30px] font-black ml-[10px]' >Advantages of Incubation</h3>
-    <img src={images.contentImg2} className="content-imag w-[302px] h-[254px] ml-[50px] mt-[10px] " alt="Content" />
+    <img src={images.contentImg2} className="content-imag  w-[302px] h-[254px] ml-[50px] mt-[10px] " alt="Content" />
     <p  className='text-center  text-[#FF5C00] text-[18px]  mt-[20px]'>It sharpens your business ideas, offers expert guidance,<br></br> and provides resources to accelerate startup growth..</p>
     </div>
   </div>
@@ -181,9 +181,9 @@ export default function Section() {
   <div className="text-box mr-[150px] align-middle  ">
     <div className="content">
 
-    <h3  className='  text-[22px] font-semibold  text-center  text-[#241443]' >Join</h3>
+    <h3  className=' middle-content text-[22px] font-semibold  text-center  text-[#241443]' >Join</h3>
    
-    <p  className='text-center  text-[#FF5C00] text-[18px]  mt-[20px]'>Join the incubation program to start your<br></br> entrepreneurial journey.</p>
+    <p  className=' text-center  text-[#FF5C00] text-[18px]  mt-[20px]'>Join the incubation program to start your<br></br> entrepreneurial journey.</p>
     </div>
   </div>
 </div>
@@ -204,7 +204,7 @@ export default function Section() {
   </div>
   <div className="text-box  ml-[10px]  ">
     <div className="content">
-      <h3  className='  text-[22px] font-semibold text-[#241443]  text-center' >Interview by Mentors</h3>
+      <h3  className=' middle-content  text-[22px] font-semibold text-[#241443]  text-center' >Interview by Mentors</h3>
     
       <p  className='text-center  text-[#FF5C00] text-[18px] mt-[20px]'>Engage in one-on-one sessions with<br></br> industry mentors to refine your<br></br> business model..</p>
     </div>
@@ -227,7 +227,7 @@ export default function Section() {
   </div>
   <div className="text-box mr-[150px]   ">
     <div className="content">
-    <h3  className='text-[22px] font-semibold ml-[10px] text-center   text-[#241443]' >Evaluation Process</h3>
+    <h3  className='     middle-content    text-[22px] font-semibold ml-[10px] text-center   text-[#241443]' >Evaluation Process</h3>
     
     <p  className='text-center  text-[#FF5C00] text-[18px]  mt-[20px]'>Receive feedback and guidance during <br></br>the evaluation of your business idea.</p>
     </div>
@@ -249,7 +249,7 @@ export default function Section() {
   </div>
   <div className="text-box  ml-[20px]  ">
     <div className="content">
-      <h3  className=' text-[22px] font-semibold  text-center  text-[#241443] ' >Finalizing</h3>
+      <h3  className='  middle-content    text-[22px] font-semibold  text-center  text-[#241443] ' >Finalizing</h3>
    
       <p  className='text-center  text-[#FF5C00] text-[18px] mt-[20px]'>Finalize your business plan and prepare<br></br> for presentation.</p>
     </div>
@@ -279,7 +279,7 @@ export default function Section() {
   </div>
   <div className="text-box mr-[150px]   ">
     <div className="content">
-    <h3  className=' text-[22px] font-semibold ml-[10px] text-[#241443] text-center' >Selection</h3>
+    <h3  className='  middle-content text-[22px] font-semibold ml-[10px] text-[#241443] text-center' >Selection</h3>
   
     <p  className='text-center  text-[#FF5C00] text-[18px]  mt-[20px]'>Selected startups receive incubation<br></br> support based on potential and<br></br> feasibility.</p>
     </div>
