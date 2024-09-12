@@ -1153,7 +1153,7 @@ export default function NewHomepage() {
 
           <div className="childleft sm:w-full md:w-1/2 px-[10px]  lg:ml-[50px] sm:ml-[20px] ">
             <h6 className="text-[#FF5C00] text-[22px] font-bold font-poppines line-height-[32px] text-start">Benefits of Passport/License</h6>
-            <p className=" lg:text-center mb-6 sm:mb-8 text-[12px] sm:text-[18px] lg:text-[20px] font-Regular text-Poppins text-[#6C6A6F]">
+            <p className=" lg:text-center mb-6 sm:mb-8 text-[12px] sm:text-[18px] lg:text-[20px] font-Regular text-Poppins text-[#000000]">
               FrictionLearn’s Career Passport empowers students by validating their skills through a 4-level assessment. Upon completion, students receive a digital license with a QR code linking to their resume and a personalized job page, streamlining job opportunities and enhancing visibility within the platform
             </p>
 
@@ -1222,7 +1222,7 @@ export default function NewHomepage() {
 
             <div className="mt-[103px] text-center">
               <h6 className="text-[#F27329] text-[13px]  ml-[20px] font-bold font-poppines line-height-[32px] text-start">Apply for Passport/License</h6>
-              <div className="flex flex-row justify-center items-center gap-3 mr-[500px]  mt-[20px] ">
+              <div className="flex flex-row justify-center items-center gap-8 ml-[-30px]   mt-[20px] ">
                 <button className="w-[264px] h-[62px] bg-[#241443] rounded-full text-[#ffffff] text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
                   <span>Get Your License</span>
                   <img src={arrow} alt="" className="w-[26px] h-[18px] ml-2" />
@@ -1499,7 +1499,7 @@ export default function NewHomepage() {
           <h2 className="text-[#FF5C00] text-[30px] font-bold text-center font-poppines">
             Our Instructor/Mentors
           </h2>
-          <h2 className="text-[#241443] text-[40px] font-bold text-center font-poppines">
+          <h2 className="text-[#241443]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  font-bold text-center font-poppines">
             From The FrictionLearn Community Mentors
           </h2>
           <p className="text-[#24144399] w-[869px] h-[48] text-[20px] font-medium font-poppines line-height-[32px] text-center mt-[20px] sm:w-full sm:px-4 md:w-[80%] md:px-8">
@@ -1507,7 +1507,7 @@ export default function NewHomepage() {
           </p>
         </div>
 
-        <div className="parent flex flex-col sm:flex-row sm:flex-wrap sm:justify-center md:justify-evenly mt-[90px]">
+        {/* <div className="parent flex flex-col sm:flex-row sm:flex-wrap sm:justify-center md:justify-evenly mt-[90px]">
 
           <div className="one flex flex-col w-[389px] h-[527px] mt-[90px] bg-[#F4F4F4] border-gray-950 shadow-md rounded-lg sm:w-full sm:max-w-[90%] sm:mx-auto md:w-[30%]">
             <div className="relative w-[283px] mx-auto mt-[61px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
@@ -1563,7 +1563,63 @@ export default function NewHomepage() {
             </div>
           </div>
 
-        </div>
+        </div> */}
+
+<div className="parent flex sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:flex-nowrap sm:scroll-smooth mt-[90px]">
+  <div className="one flex-shrink-0 w-[389px] h-[527px] mt-[90px] bg-[#F4F4F4] border-gray-950 shadow-md rounded-lg sm:w-[100%] sm:snap-center sm:mx-4 md:w-[30%]">
+    <div className="relative w-[283px] mx-auto mt-[61px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
+      <img src={elevenone} alt="Mentor" className="w-full h-full object-cover transform -rotate-90 rounded-[10%]" />
+    </div>
+    <div className="subchild w-[428px] text-center mt-[50px] mx-auto sm:w-full sm:px-4">
+      <h2 className="text-[#241443] text-[35px] font-bold text-center font-poppines">Johnson</h2>
+      <h2 className="text-[#FF5C00] text-[18px] font-bold text-center font-poppines">Business Advisor</h2>
+      <p className="text-[#6B7083] text-[12px] font-medium font-poppines line-height-[32px] text-center mt-[10px]">
+        Guiding entrepreneurs with strategic insights<br />and practical business solutions.
+      </p>
+    </div>
+  </div>
+
+  <div className="one flex-shrink-0 w-[389px] h-[527px] mt-[90px] bg-[#F4F4F4] border-gray-950 shadow-md rounded-lg sm:w-[100%] sm:snap-center sm:mx-4 md:w-[30%]">
+    <div className="relative w-[283px] mx-auto mt-[61px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
+      <img src={eleventwo} alt="Mentor" className="w-full h-full object-cover transform -rotate-90 rounded-[10%]" />
+    </div>
+    <div className="subchild w-[428px] text-center mt-[50px] mx-auto sm:w-full sm:px-4">
+      <h2 className="text-[#241443] text-[35px] font-bold text-center font-poppines">Rekha</h2>
+      <h2 className="text-[#FF5C00] text-[18px] font-bold text-center font-poppines">Web Designer</h2>
+      <p className="text-[#6B7083] text-[12px] font-medium font-poppines line-height-[32px] text-center mt-[10px]">
+        Crafting visually appealing and user-friendly<br />websites for impactful online presence.
+      </p>
+    </div>
+  </div>
+
+  <div className="one flex-shrink-0 w-[389px] h-[527px] mt-[90px] bg-[#F4F4F4] border-gray-950 shadow-md rounded-lg sm:w-[100%] sm:snap-center sm:mx-4 md:w-[30%]">
+    <div className="relative w-[283px] mx-auto mt-[61px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
+      <img src={elevensix} alt="Mentor" className="w-full h-full object-cover transform -rotate-90 rounded-[10%]" />
+    </div>
+    <div className="subchild w-[428px] text-center mt-[50px] mx-auto sm:w-full sm:px-4">
+      <h2 className="text-[#241443] text-[35px] font-bold text-center font-poppines">Sara Singh</h2>
+      <h2 className="text-[#FF5C00] text-[18px] font-bold text-center font-poppines">Business Advisor</h2>
+      <p className="text-[#6B7083] text-[12px] font-medium font-poppines line-height-[32px] text-center mt-[10px]">
+        Transforming data into actionable insights<br />to drive business decisions.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div className="flex flex-row justify-center mt-[73px] sm:ml-0 sm:mt-[40px]">
           <button className="w-[240px] h-[62px] bg-[#FF5C00] rounded-full text-[#ffffff] text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
