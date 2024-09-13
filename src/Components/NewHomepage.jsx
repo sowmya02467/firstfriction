@@ -136,25 +136,6 @@ export default function NewHomepage() {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(0);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
 
 
@@ -402,9 +383,9 @@ export default function NewHomepage() {
           </h2>
         </div>
 
-        <div className="parent flex flex-col  space-x-7 lg:flex-row mt-[40px] md:mt-[65px] px-4 ">
+        <div className="parent flex flex-col  space-x-7 lg:flex-row mt-[40px] md:mt-[65px] lg:px-4 lg:ml-0 ">
 
-          <div className="childleft  w-full lg:w-[700px] mt-[40px] lg:mt-0 ml-0  order-1 sm:order-1 lg:order-1">
+          <div className="childleft  w-full lg:w-[700px] mt-[40px] lg:mt-0 ml-0  order-1 sm:order-1 lg:order-1 px-4">
             <div className="grid grid-cols-2 gap-4 md:gap-10">
               <div className="one bg-[#FFCC1F] w-full h-[150px] md:h-[200px] rounded-3xl flex items-center justify-center">
                 <h2 className="text-[#022956] text-[20px] md:text-[30px] font-black text-center font-poppines">
@@ -417,7 +398,7 @@ export default function NewHomepage() {
               <div className="two w-full h-[300px] md:h-[356px] rounded-3xl mt-[-120px] md:mt-[-150px]">
                 <img src={goalimgtwo} alt="" />
               </div>
-              <div className="one  w-full h-[150px] md:h-[150px]   gap-0  mt-[80px]    rounded-3xl flex flex-row items-center justify-around ">
+              <div className="one  w-full h-[150px] md:h-[150px]   gap-0  lg:mt-[80px] sm:mt-[-80px]   mt-[-60px] rounded-3xl flex flex-row items-center justify-around ">
                 <img src={maingoalscircle} alt="" className='w-[72px] h-[74px]  ml-[20px]' />
                 <div>
                   <h2 className="text-[#022956] text-[30px] font-black text-center font-poppines">
@@ -432,7 +413,7 @@ export default function NewHomepage() {
           </div>
 
 
-          <div className="childright  w-full lg:w-[771px] order-1 sm:order-2 lg:order-1 pr-2 px-0 ">
+          <div className="childright   lg:w-[771px] order-1 sm:order-2 lg:order-1 pr-2 px-5  sm:px-4 lg:px-0 mr-[150px]  sm:mr-[30px] lg:mr-0">
             <h2 className="text-[#241443] text-[24px] sm:text-[20px] md:text-[20px] lg:text-[40px] font-bold text-start font-poppines">
               Take the Next Step Towards Your Personal And Professional Goals With FrictionLearn
             </h2>
@@ -442,12 +423,12 @@ export default function NewHomepage() {
             <div className="subparent mt-[30px] md:mt-[40px] lg:mt-[50px]  ">
 
               <div className="childone flex flex-col-1 mb-[30px] ">
-                <img src={mindgoalimgone} alt="" className="w-[100px] md:w-[123px] h-[100px] md:h-[126px]" />
-                <div className="subchild text-start  md:ml-[10px] mt-[10px]  ml-[10px]">
+                <img src={mindgoalimgone} alt="" className="w-[100px] md:w-[123px] h-[100px] md:h-[126px]   mr-[20px]" />
+                <div className="subchild text-start  md:ml-[10px] lg:mt-[10px]  ml-[10px]">
                   <h2 className="text-[#FF5C00] text-[20px] md:text-[25px] lg:text-[30px] font-bold font-poppines">
                     Learn From Experts
                   </h2>
-                  <p className="text-[#241443] text-[14px] md:text-[15px] font-medium font-poppines leading-[22px] md:leading-[28px] lg:leading-[32px] mt-[10px]">
+                  <p className="text-[#241443] text-[13px] md:text-[15px] font-medium font-poppines  md:leading-[28px] lg:leading-[32px] lg:mt-[10px]">
                     Learn directly from industry experts, gaining valuable<br></br> insights, hands-on experience, and practical<br></br> knowledge.
                   </p>
                 </div>
@@ -456,7 +437,7 @@ export default function NewHomepage() {
 
               <div className="childtwo flex flex-col-1 mt-[30px] ">
                 <img src={mindgoalimgtwo} alt="" className="w-[100px] md:w-[123px] h-[100px] md:h-[126px]  mr-[20px]" />
-                <div className="subchild text-start md:ml-[20px] mt-[10px]  ml-[10px]">
+                <div className="subchild text-start md:ml-[20px] lg:mt-[10px]  ml-[10px]">
                   <h2 className="text-[#FF5C00] text-[20px] md:text-[25px] lg:text-[30px] font-bold font-poppines">
                     Video Tutorial
                   </h2>
@@ -622,8 +603,8 @@ export default function NewHomepage() {
 
       {/* section seven */}
 
-      {/* 
-<section   className="w-full h-[780px] mb-[20px]    ">
+      
+{/* <section   className="w-full h-auto mb-[20px]    ">
 
           <div className="mt-[82px] flex justify-center text-center md:flex-initial">
             <h2 className="text-[#022956] font-bold text-[22px] text-center lg:text-start lg:text-[40px] mb-[20px]">
@@ -653,6 +634,60 @@ export default function NewHomepage() {
         
 
 </section> */}
+
+
+
+<section className="w-full h-auto mb-[20px]  px-5">
+  <div className="mt-[82px] flex justify-center text-center md:flex-initial">
+    <h2 className="text-[#022956] font-bold text-[22px] text-center lg:text-start lg:text-[40px] mb-[20px]">
+      Training designed to meet your goals.
+    </h2>
+  </div>
+
+  <div className="mt-[49px] flex sm:flex-col justify-around lg:flex-row  flex-col">
+    <div className="left-section">
+      {contents.map((content, index) => (
+        <div
+          key={index}
+          className={`w-full sm:w-[498px] h-auto sm:h-[119px] shadow-lg flex flex-row sm:flex-row flex-col   cursor-pointer ${index === hoveredImageIndex ? 'border-2 border-orange-500' : ''} ${index > 0 ? 'mt-[23px]' : ''}`}
+          onMouseEnter={() => setHoveredImageIndex(index)}
+        >
+          <div><img
+            src={content.img}
+            alt=""
+            className="w-[48px] h-[48px] justify-center mt-[20px] sm:mt-[38px] ml-[32px]"
+          /></div>
+          <div className="ml-[23px] text-start">
+            <h3 className="text-[#F27329]  text-[15px] sm:text-[15px]       lg:text-[18px] font-semibold mt-[15px] font-lato,sans">
+              {content.title}
+            </h3>
+            <p className="text-[#1D2228]  text-[15px] sm:text-[15px]      lg:text-[14px] font-normal mt-[8px]">
+              {content.description}
+            </p>
+          </div>
+          
+          {/* Display the corresponding image inside the same card for sm and md screens */}
+          <div className="block sm:hidden md:hidden mt-[20px]">
+            <img
+              src={images[index]} 
+              alt="Selected"
+              className="w-full sm:w-[707px] h-auto sm:h-[697px] ml-0"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Display the hovered image separately only on larger screens (hidden on sm and md) */}
+    <div className="hidden sm:block md:block mt-[20px] sm:mt-0">
+      <img
+        src={images[hoveredImageIndex]}
+        alt="Selected"
+        className="w-full sm:w-[707px] h-auto sm:h-[697px] ml-0 sm:ml-[26px]"
+      />
+    </div>
+  </div>
+</section>
 
 
 
@@ -981,15 +1016,15 @@ export default function NewHomepage() {
       <section className="whydoprojects w-full sm:h-auto  mt-[80px]">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px]">
-          <h2 className="text-[#FF5C00] text-[30px] font-black text-center font-poppines">
+          <h2 className="text-[#FF5C00]   px-3 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px] font-black text-center font-poppines">
             Why do Projects
           </h2>
-          <h2 className="text-[#241443]  px-1 sm:px-4 text-[28px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">
-            Doing this Projects will Gain Hands-On real World Project Experience with <span className="text-[#FF5C00]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">Friction</span>Learn
+          <h2 className="text-[#241443]  px-5 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">
+            Doing this Projects will Gain Hands-On real World Project Experience with <span className="text-[#FF5C00]  px-1 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">Friction</span>Learn
           </h2>
         </div>
 
-        <div className="parent flex flex-row  flex-wrap gap-6  justify-evenly sm:justify-center">
+        <div className="parent flex flex-row px-5 sm:px-4 flex-wrap gap-6  justify-evenly sm:justify-center">
 
           <div className="one flex flex-col lg:w-[389px]  sm:w-[330px] min-h-[0] mt-[90px] sm:mt-[20px] p-[10px]  border border-white-950 shadow-md rounded-lg   shadow-[#874BF640]">
             <img src={whydoprojectone} alt="" className="w-[76px] h-[77px] mt-[60px] mx-auto mb-[20px]" />
@@ -1141,10 +1176,10 @@ export default function NewHomepage() {
       <section className="main w-full  sm:h-auto">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
-          <h2 className="text-[#FF5C00] text-[30px]   font-black text-center font-poppines">
+          <h2 className="text-[#FF5C00]    px-3 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px]   font-black text-center font-poppines">
             Our Career Passport/License
           </h2>
-          <h2 className="text-[#241443]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center font-poppines">
+          <h2 className="text-[#241443]  px-3 sm:px-4 text-[23px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center font-poppines">
             Digitize your resume, unlock opportunities, and streamline placements with our tech-driven passport
           </h2>
         </div>
@@ -1565,12 +1600,12 @@ export default function NewHomepage() {
 
         </div> */}
 
-<div className="parent flex sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:flex-nowrap sm:scroll-smooth mt-[90px]">
+<div className="parent  px-8 sm:px-4  gap-4 sm:gap-4    flex sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:flex-nowrap sm:scroll-smooth mt-[90px]">
   <div className="one flex-shrink-0 w-[389px] h-[527px] mt-[90px] bg-[#F4F4F4] border-gray-950 shadow-md rounded-lg sm:w-[100%] sm:snap-center sm:mx-4 md:w-[30%]">
     <div className="relative w-[283px] mx-auto mt-[61px] h-[282px] transform rotate-90 overflow-hidden rounded-[10%]">
       <img src={elevenone} alt="Mentor" className="w-full h-full object-cover transform -rotate-90 rounded-[10%]" />
     </div>
-    <div className="subchild w-[428px] text-center mt-[50px] mx-auto sm:w-full sm:px-4">
+    <div className="subchild w-[428px] text-center mt-[50px] mx-auto sm:w-full sm:px-4  mr-8">
       <h2 className="text-[#241443] text-[35px] font-bold text-center font-poppines">Johnson</h2>
       <h2 className="text-[#FF5C00] text-[18px] font-bold text-center font-poppines">Business Advisor</h2>
       <p className="text-[#6B7083] text-[12px] font-medium font-poppines line-height-[32px] text-center mt-[10px]">
@@ -1758,24 +1793,24 @@ export default function NewHomepage() {
 
 
 </section> */}
-      <section className='w-full h-[696px]'>
-        <div className="parent w-full sm:w-[90%] md:w-[80%] lg:w-[70%] h-[626px] bg-[#241443E5] mx-auto mt-[34px]  rounded-2xl">
+      <section className='lgLw-full lg:h-[700px] mb-10'>
+        <div className="parent lg:w-[1260px] sm:h-[829px] h-[246px] sm:w-[360px]  w-[360px] md:w-[80%] lg:h-[628px] bg-[#241443E5] mx-auto mt-[34px]  rounded-2xl">
 
-          <div className='mr-[60px] sm:ml-[200px] md:ml-[100px] lg:ml-[150px] flex flex-col  justify-center'>
-            <h2 className='px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  text-center sm:text-center md:text-center      sm:text-[50px] md:text-[60px] lg:text-[70px] text-[#FFFFFF] font-black mt-[50px] sm:mt-[100px] md:mt-[140px] lg:mt-[190px]'>
+          <div className='lg:ml-[200px] flex flex-col  justify-center  '>
+            <h2 className='  px-1  lg:ml-0  sm:ml-2  ml-1   mt-8  text-[30px] sm:text-[30px]  lg:text-[70px] text-[#FFFFFF] font-bold  sm:mt-[100px] md:mt-[140px] lg:mt-[190px]'>
               Ready to Start Learning?
             </h2>
-            <p className=' ml-0 mr-40  sm:ml-[100px] md:ml-[100px]  sm:text-center md:text-center        px-1 sm:px-4 text-[18px] sm:text-[30px] lg:text-[25px] text-[#FFFFFF] font-light mt-[10px] sm:mt-[15px] md:mt-[20px]'>
+            <p className=' lg:ml-0  sm:ml-10  ml-8 lg:mr-0 sm:mr-2 mr-8  text-[10px] sm:text-[30px] lg:text-[22px] text-[#FFFFFF] font-light mt-[10px] sm:mt-[15px] md:mt-[20px]  sm:text-center text-center lg:text-start'>
               Dive into our Comprehensive course catalog and begin your Gamified e-Learning Journey
             </p>
           </div>
 
 
-          <div className='ml-6 sm:ml-[100px] md:ml-[100px] lg:ml-[200px] space-x-0 sm:space-x-0 lg:space-x-9 flex flex-1  justify-center'>
-            <button className='mt-[40px] sm:mt-[50px] md:mt-[60px] lg:mt-[80px] text-[16px] sm:text-[18px] md:text-[20px] w-[150px] sm:w-[170px] md:w-[189px] h-[60px] sm:h-[65px] md:h-[70px] bg-white rounded-full border-[black]'>
+          <div className='ml-[10px] space-x-3 sm:space-x-0 lg:space-x-9 flex flex-1  justify-center'>
+            <button className='mt-[40px] sm:mt-[50px] md:mt-[60px] lg:mt-[80px] text-[16px] sm:text-[18px] md:text-[20px] lg:w-[200px]  w-[151px] sm:w-[170px] md:w-[189px]   h-[51px] lg:h-[70px] sm:h-[65px] md:h-[70px] bg-white rounded-full border-[black]'>
               Contact Us
             </button>
-            <button className='mt-[40px] sm:mt-[50px] md:mt-[60px] lg:mt-[80px] text-[16px] sm:text-[18px] md:text-[20px] w-[200px] sm:w-[220px] md:w-[253px] h-[60px] sm:h-[65px] md:h-[70px] text-[#ffffff] rounded-full border border-[white]'>
+            <button className='mt-[40px] sm:mt-[50px] md:mt-[60px] lg:mt-[80px] text-[16px] sm:text-[18px] md:text-[20px] lg:w-[200px]  w-[151px] sm:w-[170px] md:w-[189px]   h-[51px] lg:h-[70px] sm:h-[65px] md:h-[70px] text-[#ffffff] rounded-full border border-[white]'>
               Explore Courses
             </button>
           </div>

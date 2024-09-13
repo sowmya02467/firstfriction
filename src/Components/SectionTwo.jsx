@@ -118,34 +118,34 @@ export default function SectionTwo() {
 //       </div>
 //     </div>
 
-<div className="w-full flex flex-row shadow-md px-4 md:px-0">
-  <div className="sticky top-[100px] self-start w-[491px] h-auto text-start mb-[40px] mt-[40px] md:ml-[104px]">
-    <h2 className="font-bold text-[#022956] lg:text-start md:text-center text-[18px] sm:text-[20px] md:text-[30px] lg:text-[40px] text-center mb-[20px]">
+<div className="w-full flex flex-row shadow-md  md:px-0 gap-0 lg:gap-10 sm:gap-0  px-3 sm:px-5 lg:px-8">
+  <div className="sticky top-[100px] self-start lg:w-[491px]     lg:ml-[30px] h-auto text-start mb-[40px] mt-[40px]  mr-10 sm:mr-10 lg:mr-0">
+    <h2 className="font-bold text-[#FF5C00] lg:text-start sm:text-start text-start text-[15px] sm:text-[20px] md:text-[30px] lg:text-[40px]  mb-[20px]">
       What Sets FrictionLearn Apart From Other Platforms
     </h2>
 
-    <p className="lg:text-[20px] lg:text-start mt-4 md:text-center text-[14px] sm:text-[16px] md:text-[18px] text-center mb-[20px]">
+    <p className="lg:text-[20px] lg:text-start mt-4 sm:text-start  text-start text-[8px] sm:text-[16px] md:text-[18px]  mb-[20px]  text-[#241443]">
       Discover the unique features and benefits that make FrictionLearn the best platform for your learning needs.
     </p>
   </div>
   <div
     ref={scrollContainerRef}
-    className="w-full max-w-[654px] lg:overflow-y-auto md:overflow-y-visible md:mt-[100px] md:mr-[50px] lg:static"
+    className="w-full max-w-[654px] lg:overflow-y-auto md:overflow-y-visible md:mt-[100px] md:mr-[50px] lg:static ml-[-40px] sm:ml[-30px]  lg:ml-[100px]  "
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
   >
     {items.map((item, index) => (
-      <div key={index} className="flex items-center bg-white rounded-lg shadow-md w-full h-auto mb-[30px] p-4">
+      <div key={index} className="flex items-center bg-white rounded-lg shadow-md lg:w-full lg:h-auto mb-[30px] p-4 ">
         <img
           src={item.img}
           alt={item.title}
-          className="w-[52px] h-[52px] object-cover mb-4 md:mb-0 md:ml-[10px]"
+          className="lg:w-[52px] lg:h-[52px]   sm:w-[25px] sm:h-[25px]  w-[25px] h-[25px] object-cover mb-4 md:mb-0 md:ml-[10px]"
         />
         <div className="flex flex-col md:ml-[24px]">
-          <h3 className="text-[12px] sm:text-[15px] md:text-[18px] lg:text-[25px] text-[#F27329] font-semibold text-start mb-2 ml-4">
+          <h3 className="text-[8px] sm:text-[15px] md:text-[18px] lg:text-[25px] text-[#241443] font-semibold text-start mb-2 ml-4">
             {item.title}
           </h3>
-          <p className="text-[10px] sm:text-[12px] md:text-[15px] lg:text-[20px] text-[#1D2228] font-normal text-start ml-4">
+          <p className="text-[6px] sm:text-[12px] md:text-[15px] lg:text-[20px] text-[#1D2228] font-normal text-start ml-4">
             {item.description}
           </p>
         </div>
