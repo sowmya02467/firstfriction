@@ -118,13 +118,13 @@ export default function SectionTwo() {
 //       </div>
 //     </div>
 
-<div className="w-full flex flex-row shadow-md  md:px-0 gap-0 lg:gap-10 sm:gap-0  px-3 sm:px-5 lg:px-8">
-  <div className="sticky top-[100px] self-start lg:w-[491px]     lg:ml-[30px] h-auto text-start mb-[40px] mt-[40px]  mr-10 sm:mr-10 lg:mr-0">
-    <h2 className="font-bold text-[#FF5C00] lg:text-start sm:text-start text-start text-[15px] sm:text-[20px] md:text-[30px] lg:text-[40px]  mb-[20px]">
+<div className="lg:w-full flex flex-row shadow-md  md:px-0 gap-0 lg:gap-10 sm:gap-0  px-3 sm:px-5 lg:px-8">
+  <div className="sticky top-[100px] self-start lg:w-[491px] lg:ml-[30px] h-auto text-start mb-[40px] mt-[40px]  mr-10 sm:mr-10 lg:mr-0">
+    <h2 className="font-bold sm:text-[#241443] lg:text-[#FF5C00] text-[#241443] lg:text-start sm:text-start text-start text-[15px] sm:text-[20px] md:text-[30px] lg:text-[40px]  mb-[20px]  w-[159px] sm:[159px]  lg:w-[446px]  px-3 sm:px-5  lg:p-0">
       What Sets FrictionLearn Apart From Other Platforms
     </h2>
 
-    <p className="lg:text-[20px] lg:text-start mt-4 sm:text-start  text-start text-[8px] sm:text-[16px] md:text-[18px]  mb-[20px]  text-[#241443]">
+    <p className="lg:text-[20px] lg:text-start mt-4 sm:text-start  text-start text-[8px] sm:text-[16px] md:text-[18px]  mb-[20px]  text-[#FF5C00]  sm:text-[#FF5C00]    lg:text-[#241443]   w-[159px] sm:[159px]  lg:w-[446px] px-3 sm:px-5 lg:px-0">
       Discover the unique features and benefits that make FrictionLearn the best platform for your learning needs.
     </p>
   </div>

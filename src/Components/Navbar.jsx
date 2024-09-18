@@ -111,8 +111,8 @@ export default function Navbar() {
         </div>
         <div className="hidden md:block">
           <ul className="flex space-x-4">
-            <li><a href="#home" className="text-white hover:text-gray-400">Home</a></li>
-            <li><a href="#about" className="text-white hover:text-gray-400">About</a></li>
+            <li><a href="/" className="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="#aboutus" className="text-white hover:text-gray-400">About</a></li>
             <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
             <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>
           </ul>
@@ -129,7 +129,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <ul className="flex flex-col space-y-2 mt-4">
-            <li><a href="#home" className="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="/" className="text-white hover:text-gray-400">Home</a></li>
             <li><a href="#about" className="text-white hover:text-gray-400">About</a></li>
             <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
             <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>

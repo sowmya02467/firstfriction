@@ -7,6 +7,7 @@ import newsearch from "../assets/newsearch.png"
 
 function NewNavbars() {
   return (
+    
     <div className="w-full h-auto mx-auto">
       <nav className="bg-white border-b border-gray-200">
         {/* Top Section: Logo, Search Bar, Login, Signup */}
@@ -73,7 +74,7 @@ function NewNavbars() {
                   className="w-[15px] h-[10px] ml-[8px] mt-[14px]"
                 />
               </div>
-              <a href="#about" className="hover:underline">
+              <a href="#Aboutus" className="hover:underline">
                 About Us
               </a>
               <div className="flex">
@@ -123,7 +124,6 @@ function NewNavbars() {
     <span className="ml-2 text-[#241443] font-semibold">$0.36</span>
   </div>
 </div>
-
           </div>
         </div>
       </nav>

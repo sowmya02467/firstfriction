@@ -29,13 +29,20 @@
 /* Mobile screen styles only */
 @media (max-width: 640px) {
   /* Adjusting timeline vertical line */
-  .timeline::after {
-    left: 5%; /* Adjusted to keep the vertical line in place */
-  }
-
+  /* .timeline::after {
+    /* left: 5%; Adjusted to keep the vertical line in place */
+    /* right:31%; */
+  /* }  */
+  .timeline{
+    margin:50px auto;
+}
+.timeline::after{
+    /* right: 31px; */
+    left: 5%;
+}
   /* Adjust container alignment for mobile */     
   .container {
-    width: 100%; /* Full width for mobile */
+    /* width: 100%; Full width for mobile */
     padding: 10px;
     margin: 0;
     position: relative; /* For absolute positioning of child elements */
@@ -44,7 +51,7 @@
 
   /* Adjust container.one for mobile */
   .container.one {
-    margin-left: -300px; /* Move the container slightly left */
+    margin-left: -420px; /* Move the container slightly left */
     margin-right: -60px;
     display: flex;
     margin-bottom: 40px; /* Equal gap between containers */

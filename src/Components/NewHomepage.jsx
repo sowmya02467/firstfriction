@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 // import SectionTwo from "./SectionTwo";
 import content from '../assets/Content.png';
-import award from '../assets/award.png';
+import award from '../assets/purplethreeimg.png';
 import bookimg from '../assets/bookimg.png';
-import bulbimg from '../assets/bulbimg.png';
+import bulbimg from '../assets/purpletwoimg.png';
 
 import aboutskillimg from "../assets/aboutskillimg.png";
 import arrow from '../assets/arrow.png';
@@ -36,11 +36,11 @@ import tenfive from '../assets/tenfive.png';
 import tensix from '../assets/tensix.png';
 
 
-import groupone from '../assets/group.png';
-import grouponeone from '../assets/groupone.png'
-import grouptwo from '../assets/grouptwo.png';
-import groupthree from '../assets/groupthree.png';
-import group from '../assets/groupfour.png';
+import groupone from '../assets/goaltwo.png';
+import grouponeone from '../assets/goalthree.png'
+import grouptwo from '../assets/goalfour.png';
+import groupthree from '../assets/goalfive.png';
+import group from '../assets/goalone.png';
 
 import sectionthreeimage1 from '../assets/sectionthreeimgone.png';
 import sectionthreeimage2 from '../assets/sectionthreeimgtwo.png';
@@ -80,6 +80,44 @@ import NewNavbars from './NewNavbars';
 import NewHeader from './NewHeader';
 import backgroundImage from '../assets/perplebackgroundimg.png';
 
+import thirteenone from '../assets/fiveperson.png';
+import thirteentwo from '../assets/firstperson.png';
+import thirteenthree from '../assets/threeperson.png';
+import thirteenfour from '../assets/thirteenfour.png';
+import thirteenfive from '../assets/Rectangle 15.png';
+
+const testimonials = [
+  {
+    name: 'J.Rohith',
+    role: 'B.Tech(CSC) at Vignan College',
+    text: "I'm so excited to finish my studies with FrictionLearn. The progressive ideas and real-world projects are exactly what I need to prepare for my career. I can't wait to get started!",
+    image: thirteenone, // Replace with actual image paths
+  },
+  {
+    name: 'Sowmya',
+    role: 'Degree (2nd year) at Tara College',
+    text: "FrictionLearn's unique approach to education with progressive ideas and practical assessments is exactly what I was looking for. I'm ready to dive in and develop my skills further.",
+    image: thirteentwo,
+  },
+  {
+    name: 'Sanjana',
+    role: 'B.com (computers-2nd year) LNK college',
+    text: "Joining FrictionLearn has been the best decision for my academic and career growth. The hands-on projects and guidance from experienced mentors are invaluable. I'm thrilled to start this journey!",
+    image: thirteenthree,
+  },
+  {
+    name: 'Sravya',
+    role: 'B-tech(ECE) at MGIT',
+    text: "I'm excited about the opportunity to study with FrictionLearn. The well-structured courses and emphasis on real-world applications will undoubtedly prepare me for a successful career. Ready to start this now!",
+    image: thirteenfour,
+  },
+  {
+    name: 'k.Harish',
+    role: 'B Tech () at BVRIT',
+    text: "FrictionLearn provides the perfect mix of education and practical experience. I'm excited to start the courses and take on the projects that will enhance my skills and prepare me for my future. Let's get started!",
+    image: thirteenfive,
+  },
+];
 
 
 
@@ -134,6 +172,7 @@ const collaborators = [
 
 export default function NewHomepage() {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(0);
+  const [current, setCurrent] = useState(2); 
 
 
   return (
@@ -636,13 +675,16 @@ export default function NewHomepage() {
 </section> */}
 
 
-
+{/* this one is correct responsive code */}
 <section className="w-full h-auto mb-[20px]  px-5">
-  <div className="mt-[82px] flex justify-center text-center md:flex-initial">
-    <h2 className="text-[#022956] font-bold text-[22px] text-center lg:text-start lg:text-[40px] mb-[20px]">
-      Training designed to meet your goals.
-    </h2>
-  </div>
+<div className="flex  flex-col justify-center items-center text-center mt-[182px]">
+            <h2 className="text-[#FF5C00]   text-[18px] sm:text-[18px]  lg:text-[30px] font-black text-center font-poppines">
+            Tailored Training to Achieve Your Goals
+            </h2>
+            <h2 className="text-[#241443] lg:text-[40px] mt-[20px] px-1 sm:text-[23px] text-[22px] font-bold text-center font-poppines">
+            Customized Learning Paths for Your Success
+            </h2>
+          </div>
 
   <div className="mt-[49px] flex sm:flex-col justify-around lg:flex-row  flex-col">
     <div className="left-section">
@@ -652,19 +694,34 @@ export default function NewHomepage() {
           className={`w-full sm:w-[498px] h-auto sm:h-[119px] shadow-lg flex flex-row sm:flex-row flex-col   cursor-pointer ${index === hoveredImageIndex ? 'border-2 border-orange-500' : ''} ${index > 0 ? 'mt-[23px]' : ''}`}
           onMouseEnter={() => setHoveredImageIndex(index)}
         >
-          <div><img
+          <div  className='flex flex-row'><img
             src={content.img}
             alt=""
-            className="w-[48px] h-[48px] justify-center mt-[20px] sm:mt-[38px] ml-[32px]"
-          /></div>
+            className="w-[46px] h-[58px] justify-center mt-[20px] sm:mt-[38px] lg:mr-[19px] ml-5"
+          />
+          
           <div className="ml-[23px] text-start">
+            <h3 className="text-[#241443]  text-[15px] sm:text-[15px]       lg:text-[18px] font-semibold mt-[15px] font-lato,sans">
+              {content.title}
+            </h3>
+            <p className="text-[#FF5C00]  text-[10px] sm:text-[15px]      lg:text-[14px] font-normal mt-[8px]  pr-5 sm:pr-5 lg:px-1">
+              {content.description}
+            </p>
+          </div>
+          
+          
+          
+          
+          
+          </div>
+          {/* <div className="ml-[23px] text-start">
             <h3 className="text-[#F27329]  text-[15px] sm:text-[15px]       lg:text-[18px] font-semibold mt-[15px] font-lato,sans">
               {content.title}
             </h3>
             <p className="text-[#1D2228]  text-[15px] sm:text-[15px]      lg:text-[14px] font-normal mt-[8px]">
               {content.description}
             </p>
-          </div>
+          </div> */}
           
           {/* Display the corresponding image inside the same card for sm and md screens */}
           <div className="block sm:hidden md:hidden mt-[20px]">
@@ -683,7 +740,7 @@ export default function NewHomepage() {
       <img
         src={images[hoveredImageIndex]}
         alt="Selected"
-        className="w-full sm:w-[707px] h-auto sm:h-[697px] ml-0 sm:ml-[26px]"
+        className="w-full lg:w-[707px] lg:h-auto rounded-xl   sm:w-[295px]sm:h-[206px] ml-0 sm:ml-[26px]"
       />
     </div>
   </div>
@@ -1763,8 +1820,103 @@ export default function NewHomepage() {
 
 
 
+{/* ourtestomonials section */}
+  {/* <section>
+    
+  <div className="relative w-[full] h-[798px]">
+        <div className=" flex flex-col  justify-center  text-center mt-[80px]">
+          <h2 className="text-[#022956] text-[40px] font-semibold font-sans font-lato">
+            Experience Our Impact Through Their Words
+          </h2>
+        </div>
+        <div className="flex overflow-hidden justify-center items-center  w-[full] h-[380px]  space-x-7">
+          {testimonials.map((testimonial, index) => {
+            const isActive = index === current;
+
+            return (
+              <div
+                key={index}
+                className={`transition-all duration-500 ease-in-out gap-[90px] ${isActive ? 'scale-110' : 'scale-75 blur-sm'} ${isActive ? 'opacity-100' : 'opacity-50'
+                  }`}
+                style={{
+                  transform: isActive ? 'scale(1.1)' : 'scale(0.75)',
+                  opacity: isActive ? 1 : 0.5,
+                  width: isActive ? '186px' : '150px',
+                  height: isActive ? '205px' : '150px',
+                }}
+                onMouseEnter={() => handleMouseEnter(index)}
+              >
+                <div className="rounded-lg gap-[50px] mx-2 flex flex-col items-center w-[195px] h-[205px]">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className={`${isActive ? 'filter-none' : 'filter grayscale'}`}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className=" text-center">
+          <h3 className="text-[#1D2228] font-medium text-[20px]">{testimonials[current].name}</h3>
+          <p className="text-[#1D2228] text-[16px] font-medium">{testimonials[current].role}</p>
+        </div>
+        <div className="mt-[50px] mx-[20px] text-center  font-medium">
+          <p className="text-[#1D2228] text-[36px] ml-[100px] mr-[100px] font-light">{testimonials[current].text}</p>
+        </div>
+      </div>
 
 
+
+
+  </section> */}
+
+{/* <section>
+  <div className="relative w-full h-auto">
+    <div className="flex flex-col justify-center text-center mt-[80px]">
+      <h2 className="text-[#022956] text-[40px] sm:text-[28px] md:text-[32px] font-semibold font-sans font-lato">
+        Experience Our Impact Through Their Words
+      </h2>
+    </div>
+    <div className="flex overflow-hidden justify-center items-center w-full h-[380px] space-x-7 sm:h-[280px] md:h-[320px]">
+      {testimonials.map((testimonial, index) => {
+        const isActive = index === current;
+
+        return (
+          <div
+            key={index}
+            className={`transition-all duration-500 ease-in-out gap-[90px] ${isActive ? 'scale-110' : 'scale-75 blur-sm'} ${isActive ? 'opacity-100' : 'opacity-50'
+              }`}
+            style={{
+              transform: isActive ? 'scale(1.1)' : 'scale(0.75)',
+              opacity: isActive ? 1 : 0.5,
+              width: isActive ? '186px' : '150px',
+              height: isActive ? '205px' : '150px',
+            }}
+            onMouseEnter={() => handleMouseEnter(index)}
+          >
+            <div className="rounded-lg gap-[50px] mx-2 flex flex-col items-center w-[195px] h-[205px] sm:w-[150px] sm:h-[180px] md:w-[170px] md:h-[190px]">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className={`${isActive ? 'filter-none' : 'filter grayscale'}`}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+    <div className="text-center">
+      <h3 className="text-[#1D2228] font-medium text-[20px] sm:text-[16px] md:text-[18px]">{testimonials[current].name}</h3>
+      <p className="text-[#1D2228] text-[16px] font-medium sm:text-[14px] md:text-[15px]">{testimonials[current].role}</p>
+    </div>
+    <div className="mt-[50px] mx-[20px] text-center font-medium">
+      <p className="text-[#1D2228] text-[36px] sm:text-[24px] md:text-[30px] ml-[100px] mr-[100px] font-light sm:ml-[20px] sm:mr-[20px] md:ml-[50px] md:mr-[50px]">
+        {testimonials[current].text}
+      </p>
+    </div>
+  </div>
+</section> */}
 
 
 
