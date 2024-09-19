@@ -55,6 +55,9 @@ import SectionTwo from './SectionTwo';
 import Section from './Section';
 import Footer from './Footer';
 import starImage from '../assets/star.png';
+import incubationimg from '../assets/imcubationimg.png';
+
+import sucess from '../assets/sucessimg.png';
 
 
 import sectioneleventhone from "../assets/sectioneleventhone.png";
@@ -85,6 +88,7 @@ import thirteentwo from '../assets/firstperson.png';
 import thirteenthree from '../assets/threeperson.png';
 import thirteenfour from '../assets/thirteenfour.png';
 import thirteenfive from '../assets/Rectangle 15.png';
+import star from "../assets/star.png";
 
 const testimonials = [
   {
@@ -509,127 +513,127 @@ export default function NewHomepage() {
 
       <section>
 
-        <div className="bg-white py-20 px-6 lg:px-16">
-          {/* Section Title */}
-          <div className="text-center mb-16">
-            <h3 className="text-[#FF5C00] text-[30px] font-black font-Lato">
-              Top Class Courses
+      <div className="bg-white py-20 px-6 lg:px-16">
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h3 className="text-[#FF5C00] text-[30px] font-black font-Lato">
+          Top Class Courses
+        </h3>
+        <h2 className="text-[36px] lg:text-[40px] font-semibold text-[#241443] mt-4">
+          Explore 40,000+ Free Gamified Online<br /> Courses
+        </h2>
+        <p className="mt-6 text-[21px] text-[#241443] font-medium leading-relaxed">
+          Take the next step towards achieving your personal & professional aspirations with FrictionLearn.
+        </p>
+      </div>
+
+      {/* Course Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        {/* Art & Design */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#B3A7FA]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#B3A7FA] flex items-center justify-center">
+              <img src={sectionfifth} alt="Art & Design Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Art & Design
             </h3>
-            <h2 className="text-[36px] lg:text-[40px] font-semibold text-[#241443] mt-4">
-              Explore 40,000+ Free Gamified Online<br /> Courses
-            </h2>
-            <p className="mt-6 text-[21px] text-[#241443] font-medium leading-relaxed">
-              Take the next step towards achieving your personal & professional aspirations with FrictionLearn.
-            </p>
-          </div>
-
-          {/* Course Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Art & Design */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#B3A7FA]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#B3A7FA] flex items-center justify-center">
-                  <img src={sectionfifth} alt="Art & Design Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Art & Design
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
-              </div>
-            </div>
-
-            {/* Business */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#F7847C]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#F7847C] flex items-center justify-center">
-                  <img src={sectionfifthone} alt="Business Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Business
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">11 Courses</p>
-              </div>
-            </div>
-
-            {/* Development */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#5FD2CC]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#5FD2CC] flex items-center justify-center">
-                  <img src={sectionfifthtwo} alt="Development Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Development
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
-              </div>
-            </div>
-
-            {/* Data Science */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#FFAF41]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#FFAF41] flex items-center justify-center">
-                  <img src={sectionfifththree} alt="Data Science Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Data Science
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
-              </div>
-            </div>
-
-            {/* Finance & Market */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#F78ED8]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#F78ED8] flex items-center justify-center">
-                  <img src={sectionfifthfour} alt="Finance & Market Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Finance & Market
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">25 Courses</p>
-              </div>
-            </div>
-
-            {/* Technology */}
-            <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#59CDFE]">
-              <div className="flex-shrink-0">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#59CDFE] flex items-center justify-center">
-                  <img src={sectionfifthfive} alt="Technology Icon" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
-                  Technology
-                </h3>
-                <p className="text-[#000000] text-[15px] font-Poppins">5 Courses</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Explore More Button */}
-          <div className="text-center mt-16">
-            <p className="mb-4 text-gray-500">& Many more</p>
-            <div className="">
-              <a
-                href="#"
-                className="inline-flex bg-[#FF5C00] text-white px-6 py-3 text-[20px] rounded-full shadow-md hover:bg-orange-600 transition"
-              >
-                Explore All
-
-                <img src={arrowone} alt="Arrow" className="w-4 h-3 ml-3 mt-1" />
-              </a></div>
+            <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
           </div>
         </div>
+
+        {/* Business */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#F7847C]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#F7847C] flex items-center justify-center">
+              <img src={sectionfifthone} alt="Business Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Business
+            </h3>
+            <p className="text-[#000000] text-[15px] font-Poppins">11 Courses</p>
+          </div>
+        </div>
+
+        {/* Development */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#5FD2CC]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#5FD2CC] flex items-center justify-center">
+              <img src={sectionfifthtwo} alt="Development Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Development
+            </h3>
+            <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
+          </div>
+        </div>
+
+        {/* Data Science */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#FFAF41]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#FFAF41] flex items-center justify-center">
+              <img src={sectionfifththree} alt="Data Science Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Data Science
+            </h3>
+            <p className="text-[#000000] text-[15px] font-Poppins">8 Courses</p>
+          </div>
+        </div>
+
+        {/* Finance & Market */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#F78ED8]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#F78ED8] flex items-center justify-center">
+              <img src={sectionfifthfour} alt="Finance & Market Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Finance & Market
+            </h3>
+            <p className="text-[#000000] text-[15px] font-Poppins">25 Courses</p>
+          </div>
+        </div>
+
+        {/* Technology */}
+        <div className="flex items-center border rounded-lg p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg h-[166px] w-full hover:border-[#59CDFE]">
+          <div className="flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-[#59CDFE] flex items-center justify-center">
+              <img src={sectionfifthfive} alt="Technology Icon" className="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div className="ml-6">
+            <h3 className="text-[23px] font-semibold text-[#241443] font-Poppins">
+              Technology
+            </h3>
+            <p className="text-[#000000] text-[15px] font-Poppins">5 Courses</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Explore More Button */}
+      <div className="text-center mt-16">
+        <p className="mb-4 text-gray-500">& Many more</p>
+        <div className="">
+            <a
+          href="#"
+          className="inline-flex bg-[#FF5C00] text-white px-6 py-3 text-[20px] rounded-full shadow-md hover:bg-orange-600 transition"
+        >
+          Explore All
+
+          <img src={arrowone} alt="Arrow" className="w-4 h-3 ml-3 mt-1" />
+        </a></div>
+      </div>
+    </div>
       </section>
 
 
@@ -911,8 +915,108 @@ export default function NewHomepage() {
 
 
 
+{/* our sucess and startegys */}
+
+
+<section  className='w-full  h-auto '>
+
+
+
+<div className="flex flex-col justify-center text-center">
+
+<div className="relative">
+  <img 
+    src={star} 
+    alt="star" 
+    className="absolute w-[36px] h-[36px] sm:left-[15px]  left-[19px]  lg:left-[450px] mt-[24px] top-[50%] translate-y-[-50%]" 
+  />
+ <h2 className="text-[#FF5C00] mt-[52px]  text-[18px] sm:text-[30px] lg:text-[30px]   text-Poppins  font-black">Our Strategic Success Framework</h2>
+</div>
+          {/* <h2 className="text-[#FF5C00] mt-[52px]  text-[21px] sm:text-[30px] lg:text-[30px]   text-Poppins  font-black">Our Strategic Success Framework</h2> */}
+          <h3 className=" px-3 sm:px-2 text-[20px] sm:text-[38px] lg:text-[40px]   text-Poppins text-center text-[#241443] font-bold mt-[10px]">
+            Experience the Structure, Embrace the Success
+          </h3>
+        </div>
+
+
+  <div  className=' flex lg:flex-row   sm:flex-col flex-col    justify-evenly mt-[128px]'>
+
+<div className="leftsidechil">
+  <img src={sucess} alt="" />
+  </div>
+
+<div className="rightsidechild lg:space-y-9   space-x-1 sm:space-x-3">
+
+  <div  className='p-5 sm:p-5 lg:p-0'>
+    <h2  className="text-[#241443]  lg:text-[28px]  text-[18px] sm:text-[18px]  font-bold font-poppines" >
+      1.Engaging Learning Experience:
+    </h2>
+    <p  className='lg:w-[656px]   w-[332px] sm:w-[332px] text-[#FF5C00] lg:text-[18px] text-[11px] sm:text-[11px] lg:ml-[54px] sm:ml-3 ml-3 mt-[16px] font-semibold'>   
+      "FrictionLearn” transforms traditional education into an engaging, fun, and motivating gamified learning journey."</p>
+  </div>
+
+  <div   className='p-5 sm:p-5 lg:p-0'>
+    <h2  className="text-[#241443]  lg:text-[28px]  text-[18px] sm:text-[18px]  font-bold font-poppines" >
+    2.Structured Course Levels:
+    </h2>
+    <p  className='lg:w-[656px]   w-[332px] sm:w-[332px] text-[#FF5C00] lg:text-[18px] text-[11px] sm:text-[11px] lg:ml-[54px] sm:ml-3 ml-3 mt-[16px] font-semibold'>   
+    Our 24-level courses guide students from 1st to 3rd year in exploring future paths, with welcome kits promoting professional growth." 
+    </p>
+  </div>
+
+
+  <div   className='p-5 sm:p-5 lg:p-0'>
+    <h2  className="text-[#241443] lg:text-[28px]  text-[18px] sm:text-[18px]  font-bold font-poppines" >
+   3.AI-Focused Learning Support:
+    </h2>
+    <p   className='lg:w-[656px]   w-[332px] sm:w-[332px] text-[#FF5C00] lg:text-[18px] text-[11px] sm:text-[11px] lg:ml-[54px] sm:ml-3 ml-3 mt-[16px] font-semibold'>   
+    FrictionLearn uses dedicated own AI to clarify doubts and offer personalized support, enhancing students' learning experience.
+      </p>
+  </div>
+
+  <div   className='p-5 sm:p-5 lg:p-0'>
+    <h2  className="text-[#241443] lg:text-[28px]  text-[18px] sm:text-[18px]  font-bold font-poppines" >
+  4.Incubation for Idea Generators:
+    </h2>
+    <p  className='lg:w-[656px]   w-[332px] sm:w-[332px] text-[#FF5C00] lg:text-[18px] text-[11px] sm:text-[11px] lg:ml-[54px] sm:ml-3 ml-3 mt-[16px] font-semibold'>   
+    Starting in the second year, our Incubation programs provide mentorship and resources to help students develop innovative ideas.</p>
+  </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+  <div className="mt-[60px]  align-middle   lg:ml-[500px] ml-[60px]  sm:ml-[60px]">
+
+<div className="flex flex-row items-center justify-center md:justify-start mt-4  w-[188px] sm:w-[188px] lg:w-[264px]">
+  <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+    <span>Explore Courses</span>
+    <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+  </button>
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
 
       {/* section nine tvs */}
+
+
+{/* 
+      
       <section className="w-full h-auto mx-0 mt-[82px] min-w-screen-lg  px-4">
 
         <div className="flex flex-col justify-center text-center">
@@ -925,7 +1029,7 @@ export default function NewHomepage() {
 
 
         <div className="space-y-[50px] md:space-y-[160px]">
-          {/* <!-- First section --> */}
+
           <div className="flex flex-col md:flex-row md:items-center md:space-x-5 lg:flex-row lg:justify-evenly lg:space-x-9 lg:mt-[50px]">
             <div className="content flex flex-col justify-center lg:text-center sm:text-start md:text-start md:order-1">
               <h2 className="text-[#241443]  px-1    ml-0 sm:ml-20  mt-1 sm:mt-20 sm:px-4 text-[18px] sm:text-[30px] lg:text-[40px]   text-Poppins  lg:text-center font-semibold font-sans font-lato w-full md:w-[616px] sm:text-start md:text-start">
@@ -941,7 +1045,7 @@ export default function NewHomepage() {
           </div>
 
 
-          {/* <!-- Second section --> */}
+
           <div className="flex flex-col-reverse lg:flex-row justify-evenly    lg:ml-[80px] lg:space-x-9 lg:mt-[50px] md:space-x-0 md:space-y-[50px]">
   <div>
     <img src={sectionFourimgtwo} alt="" className="w-full lg:w-[500px] lg:h-[304px] object-cover  mt-[20px] lg:mt-0" />
@@ -959,7 +1063,7 @@ export default function NewHomepage() {
 </div>
 
 
-          {/* <!-- Third section --> */}
+
 
           <div className="flex flex-col md:flex-row md:items-center md:space-x-5 lg:flex-row lg:justify-evenly lg:space-x-9 lg:mt-[50px]  ">
             <div className="content flex flex-col justify-center lg:text-center md:order-1">
@@ -977,7 +1081,7 @@ export default function NewHomepage() {
           </div>
 
 
-          {/* <!-- Fourth section --> */}
+
           <div className="flex flex-col-reverse lg:flex-row lg:justify-evenly lg:space-x-9 lg:mt-[50px] md:space-x-0 sm:mt-[-50px]">
   <div>
     <img src={sectionFourimgtwo} alt="" className="w-full lg:w-[500px] lg:h-[304px] object-cover mt-[-20px] lg:mt-0" />
@@ -994,7 +1098,7 @@ export default function NewHomepage() {
 
         </div>
 
-      </section>
+      </section> */}
 
 
 
@@ -1226,10 +1330,6 @@ export default function NewHomepage() {
 
 </section> */}
 
-
-
-
-
       <section className="main w-full  sm:h-auto">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
@@ -1311,7 +1411,7 @@ export default function NewHomepage() {
                 </div>
               </div>
             </div>
-
+{/* 
             <div className="mt-[103px] text-center">
               <h6 className="text-[#F27329] text-[13px]  ml-[20px] font-bold font-poppines line-height-[32px] text-start">Apply for Passport/License</h6>
               <div className="flex flex-row justify-center items-center gap-8 ml-[-30px]   mt-[20px] ">
@@ -1320,7 +1420,7 @@ export default function NewHomepage() {
                   <img src={arrow} alt="" className="w-[26px] h-[18px] ml-2" />
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="childright   sm:w-full md:w-1/2 flex ">
@@ -1328,6 +1428,17 @@ export default function NewHomepage() {
           </div>
 
         </div>
+        
+        <div className="mt-[30px]  ml-[30px] ">
+
+<div className="flex flex-col md:justify-start mt-4">
+<h6 className="text-[#F27329] text-[13px]  ml-[20px] font-bold font-poppines line-height-[32px] text-start">Apply for Passport/License</h6>
+  <button className="  w-[180px]  sm:w-[130px] md:w-[264px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+    <span>Get Your License</span>
+    <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+  </button>
+</div>
+</div>
 
       </section>
 
@@ -1411,78 +1522,76 @@ export default function NewHomepage() {
 
       {/* why choose us seems */}
 
-
       <div className="bg-[#241443] mx-auto text-white p-8">
-        <h1 className="text-[30px] font-black text-center mb-4 text-[#FF5C00] ml-[50px]">Why Choose Us!</h1>
-        <p className="text-[30px] text-left mb-2 font-semibold text-Poppins ml-[50px]">
-          Don't Know How To Start With<br /> FrictionLearn
-        </p>
+      <h1 className="text-[30px] font-black text-center mb-4 text-[#FF5C00] ml-[50px]">Why Choose Us!</h1>
+      <p className="text-[30px] text-left mb-2 font-semibold text-Poppins ml-[50px]">
+        Don't Know How To Start With<br /> FrictionLearn
+      </p>
+      
+      <p className="text-[20px] text-left font-normal text-Poppins ml-[50px] mb-8">
+        Discover FrictionLearn: Gamified learning, expert guidance, and job<br /> opportunities—all in one platform.
+      </p>
 
-        <p className="text-[20px] text-left font-normal text-Poppins ml-[50px] mb-8">
-          Discover FrictionLearn: Gamified learning, expert guidance, and job<br /> opportunities—all in one platform.
-        </p>
-
-        <div className="flex flex-col md:flex-row justify-between items-start">
-          {/* Left side with text content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex flex-col items-start ml-[50px]">
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="Special Gamified Courses" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">Special Gamified Courses</h3>
+      <div className="flex flex-col md:flex-row justify-between items-start">
+        {/* Left side with text content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex flex-col items-start ml-[50px]">
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="Special Gamified Courses" className="w-[12px] h-[11px]" />
               </div>
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="Share Ideas & Get Incubation" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">Share Ideas & Get Incubation</h3>
-              </div>
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="Connect with Communities" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">Connect with Communities</h3>
-              </div>
+              <h3 className="text-[22px] font-regular">Special Gamified Courses</h3>
             </div>
-
-            <div className="flex flex-col items-start">
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="21 Language Model Learning" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">21 Language Model Learning</h3>
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="Share Ideas & Get Incubation" className="w-[12px] h-[11px]" />
               </div>
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="Post Projects/ Hire Experts" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">Post Projects/ Hire Experts</h3>
+              <h3 className="text-[22px] font-regular">Share Ideas & Get Incubation</h3>
+            </div>
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="Connect with Communities" className="w-[12px] h-[11px]" />
               </div>
-              <div className='flex gap-2 mb-4 items-center'>
-                <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
-                  <img src={righticon} alt="Get Advance Skills & Get License/Passport with Levels" className="w-[12px] h-[11px]" />
-                </div>
-                <h3 className="text-[22px] font-regular">
-                  Get Advance Skills & Get <br /> License/Passport with Levels
-                </h3>
-              </div>
+              <h3 className="text-[22px] font-regular">Connect with Communities</h3>
             </div>
           </div>
 
-          {/* Right side with image */}
-          <div className="flex items-center justify-center p-4 rounded-xl md:ml-16 w-full md:w-auto mr-[50px] mt-[-100px]">
-            <img src={choose} alt="Why Choose Us" className="w-full h-auto object-cover rounded-xl md:max-w-[600px]" />
+          <div className="flex flex-col items-start">
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="21 Language Model Learning" className="w-[12px] h-[11px]" />
+              </div>
+              <h3 className="text-[22px] font-regular">21 Language Model Learning</h3>
+            </div>
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="Post Projects/ Hire Experts" className="w-[12px] h-[11px]" />
+              </div>
+              <h3 className="text-[22px] font-regular">Post Projects/ Hire Experts</h3>
+            </div>
+            <div className='flex gap-2 mb-4 items-center'>
+              <div className="w-[24px] h-[24px] bg-blue-500 rounded-full flex items-center justify-center">
+                <img src={righticon} alt="Get Advance Skills & Get License/Passport with Levels" className="w-[12px] h-[11px]" />
+              </div>
+              <h3 className="text-[22px] font-regular">
+                Get Advance Skills & Get <br /> License/Passport with Levels
+              </h3>
+            </div>
           </div>
         </div>
 
-        <div className="text-left mb-8 ml-[50px] ">
-          <button className="bg-white text-[#022956] px-6 py-2 rounded-full text-[16px] font-semibold text-Poppins">
-            Explore All Courses
-          </button>
+        {/* Right side with image */}
+        <div className="flex items-center justify-center p-4 rounded-xl md:ml-16 w-full md:w-auto mr-[50px] mt-[-100px]">
+          <img src={choose} alt="Why Choose Us" className="w-full h-auto object-cover rounded-xl md:max-w-[600px]" />
         </div>
       </div>
 
+      <div className="text-left mb-8 ml-[50px] ">
+        <button className="bg-white text-[#022956] px-6 py-2 rounded-full text-[16px] font-semibold text-Poppins">
+          Explore All Courses
+        </button>
+      </div>
+    </div>
 
 
 
@@ -1726,7 +1835,93 @@ export default function NewHomepage() {
 
 
       {/* section thirteen */}
-      <Section />
+      {/* <Section /> */}
+
+
+{/* 
+      <section className="main w-full sm:h-auto">
+<div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
+          <h2 className="text-[#FF5C00] text-[30px] font-bold text-center font-poppines">
+          Our Incubator Program
+          </h2>
+          <h2 className="text-[#241443]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  font-bold text-center font-poppines">
+          "Fuel Innovation, Turn Ideas Into Reality"
+          </h2>
+          <p className="text-[#24144399] lg:w-[869px] h-[48] px-1 sm:px-4 text-[12px] sm:text-[30px] lg:text-[20px]  font-medium font-poppines line-height-[32px] text-center mt-[20px] sm:w-full  md:w-[80%] md:px-8">
+          "Nurturing innovative ideas through guided incubation for success."
+          </p>
+        </div>
+
+<div className="parent  flex flex-row ">
+
+<div className="left  ml-[45px]   mt-[191px]">
+  <h1  className='text-[#FF5C00] text-[50px] font-bold w-[646px] h-[256px]'>
+  We Help Early Stage
+ Startups to Define Their 
+Goals & Get Daily
+Funding....
+  </h1>
+</div>
+
+<div className="right   mt-[91px]">
+  <img src={incubationimg} alt="" className='w-[721px] h-[481px]'/>
+</div>
+</div>
+
+<div className="mt-[30px] ml-[45px] ">
+
+<div className="flex flex-row items-center justify-center md:justify-start mt-4">
+  <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+    <span>About Incubator Program</span>
+    <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+  </button>
+</div>
+</div>
+
+</section> */}
+<section className="main w-full sm:h-auto"> 
+  <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
+    <h2 className="text-[#FF5C00]   text-[18px] sm:text-[18px]   md:text-[30px] font-bold text-center font-poppins">
+      Our Incubator Program
+    </h2>
+    <h2 className="text-[#241443] px-1 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px] font-bold text-center font-poppins">
+      "Fuel Innovation, Turn Ideas Into Reality"
+    </h2>
+    <p className="text-[#24144399] lg:w-[869px] h-[48] px-1 sm:px-4 text-[12px] sm:text-[18px] lg:text-[20px] font-medium font-poppins leading-[32px] text-center mt-[20px] sm:w-full md:w-[80%] md:px-8">
+      "Nurturing innovative ideas through guided incubation for success."
+    </p>
+  </div>
+
+  <div className="parent flex flex-col sm:flex-row items-center mt-[40px] sm:mt-[60px]">
+    <div className="left ml-[45px]">
+      <h1 className='text-[#FF5C00] sm:text-[20px]  text-[25px] md:text-[50px] font-bold  md:w-[646px]  sm:w-[315px] w-[315px] text-start'>
+        We Help Early Stage
+        Startups to Define Their 
+        Goals & Get Daily
+        Funding....
+      </h1>
+    </div>
+
+    <div className="right mt-4 sm:mt-[91px] flex justify-center sm:justify-end">
+      <img src={incubationimg} alt="" className='w-full sm:w-[721px] h-auto' />
+    </div>
+  </div>
+
+  <div className="mt-[30px]">
+    <div className="flex flex-row items-center justify-center md:justify-start mt-4">
+      <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppins flex flex-row justify-center items-center">
+        <span>About Incubator Program</span>
+        <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
 
       {/* become an instructor */}
@@ -1776,46 +1971,65 @@ export default function NewHomepage() {
 
 
 
-      <section className="main w-full h-[800px] sm:h-auto sm:mr-0  ">
+<section className="main w-full h-[800px] sm:h-auto sm:mr-0  ">
 
-        <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[60px] md:mt-[90px]">
-          <h2 className="text-[#FF5C00] px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px] font-semibold text-center font-poppines">
-            Become an Instructor/Mentor
-          </h2>
-        </div>
+<div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[60px] md:mt-[90px]">
+  <h2 className="text-[#FF5C00] px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px] font-semibold text-center font-poppines">
+    Become an Instructor/Mentor
+  </h2>
+</div>
 
-        <div className="parent flex flex-col sm:flex-col md:flex-row  mt-[100px] sm:mt-[40px] md:mt-[60px]">
+<div className="parent flex flex-col  justify-around sm:flex-col md:flex-row  mt-[100px] sm:mt-[40px] md:mt-[60px]">
 
-          <div className="childleft  sm:px-4 sm:text-center md:ml-0 ">
-            <h2 className="text-[#022956] px-1 sm:px-4 text-[22px] sm:text-[30px] lg:text-[40px]  font-bold text-start  font-poppines">
-              Let's Join Us & Spread Your<br /> Knowledge
-            </h2>
+  <div className="childleft sm:text-center md:ml-0   px-5 sm:px-5 lg:px-0   lg:ml-10">
+    <h2 className="text-[#022956] px-1 sm:px-4 text-[22px] sm:text-[30px] lg:text-[40px]  font-bold text-start  font-poppines">
+      Let's Join Us & Spread Your<br /> Knowledge
+    </h2>
 
-            <h6 className="text-[#FF5C00] px-1 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px]  font-bold font-poppines line-height-[32px] text-start">
-              Welcome to FrictionLearn's Mentor Program!
-            </h6>
-            <p className="text-[#6B7083] w-full lg:w-[689px] h-auto px-1 sm:px-4 text-[12px] sm:text-[30px] lg:text-[25px] font-medium font-poppines line-height-[32px] text-start mt-[20px]">
-              Empower the next generation by sharing your expertise. Guide learners through personalized insights and real-world experiences. Expand your network by connecting with ambitious students and professionals. Join us in shaping careers and making a meaningful impact on future talent.
-            </p>
+    <h6 className="text-[#FF5C00] px-1 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px]  font-bold font-poppines line-height-[32px] text-start">
+      Welcome to FrictionLearn's Mentor Program!
+    </h6>
+    <p className="text-[#6B7083] w-full lg:w-[689px] h-auto px-1 sm:px-4 text-[12px] sm:text-[30px] lg:text-[25px] font-medium font-poppines line-height-[32px] text-start mt-[20px]">
+      Empower the next generation by sharing your expertise. Guide learners through personalized insights and real-world experiences. Expand your network by connecting with ambitious students and professionals. Join us in shaping careers and making a meaningful impact on future talent.
+    </p>
 
-            <div className="mt-[30px]">
+    {/* <div className="mt-[30px]">
 
-              <div className="flex flex-row items-center justify-center md:justify-start mt-4">
-                <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
-                  <span>Become an Instructor</span>
-                  <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
-                </button>
-              </div>
-            </div>
-          </div>
+      <div className="flex flex-row items-center justify-center md:justify-start mt-4">
+        <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+          <span>Become an Instructor</span>
+          <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+        </button>
+      </div>
+    </div> */}
+  </div>
 
-          <div className="childright mt-4 sm:mx-auto   ">
-            <img src={mentor} alt="passportimg" className="w-[80%] md:w-[416px] h-auto md:h-[416px] " />
-          </div>
+  <div className="childright lg:mt-4  mt-8 sm:mt-9 sm:mx-auto ml-10 sm:ml-10 lg:ml-20 ">
+    <img src={mentor} alt="passportimg" className="w-[80%] md:w-[416px] h-auto md:h-[416px] " />
+  </div>
 
-        </div>
+  {/* <div className="mt-[30px]">
 
-      </section>
+<div className="flex flex-row items-center justify-center md:justify-start mt-4">
+  <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+    <span>Become an Instructor</span>
+    <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+  </button>
+</div>
+</div> */}
+
+</div>
+<div className="mt-[30px]  mb-10  ml-20">
+
+<div className="flex flex-row items-center justify-center md:justify-start mt-4">
+  <button className="w-full md:w-[340px] h-[62px] gap-5 bg-[#241443] rounded-full text-[#ffffff] text-[16px] md:text-[18px] font-medium font-poppines flex flex-row justify-center items-center">
+    <span>Become an Instructor</span>
+    <img src={arrow} alt="" className="w-[20px] md:w-[26px] h-[14px] md:h-[18px] ml-2" />
+  </button>
+</div>
+</div>
+
+</section>
 
 
 

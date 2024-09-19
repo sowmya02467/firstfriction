@@ -69,64 +69,64 @@ export default function Header() {
 
   return (
     <div className="w-full h-auto">
-      <div
-        className="w-full h-[769px] bg-cover bg-center transition-all duration-1000 relative"
-        style={{ backgroundImage: slides[currentSlide].backgroundImage }}
-      >
-        {/* Carousel Content */}
-        <div className="relative z-10 flex flex-col items-start justify-center h-full ml-10">
-          <h2 className="text-[#241443] text-[52px] font-semibold text-Poppins">
-            {slides[currentSlide].title}
-          </h2>
-          <h3
-            className="text-[#241443] text-[20px]  mt-4 font-medium text-Poppins"
-            dangerouslySetInnerHTML={{
-              __html: slides[currentSlide].subtitle,
-            }}
-          ></h3>
-          <div className="mt-8 text-center md:text-left">
-            <a
-              href="#"
-              className="inline-flex items-center px-6 py-3 bg-[#F27329] text-white text-[18px] font-semibold rounded-full hover:bg-orange-400 transition-colors"
-            >
-              Become an Instructor
-              <img src={arrowone} alt="Arrow" className="w-4 h-3 ml-3" />
-            </a>
-          </div>
-
-          <div className="flex mt-10 space-x-10">
-            <div className="text-white text-center">
-              <h4 className="text-[52px] font-medium bold text-[#241443] text-Poppins">
-                1k+
-              </h4>
-              <p className="text-[16px] font-semibold text-Poppins text-[#241443]">
-                Active Learner
-              </p>
-            </div>
-            <div className="text-[#241443] text-center">
-              <h4 className="text-[52px] font-medium bold text-[#241443] text-Poppins">
-                3k+
-              </h4>
-              <p className="text-[16px] font-semibold text-Poppins text-[#241443]">
-                Certified Students
-              </p>
-            </div>
-          </div>
+    <div
+      className="w-full h-[769px] bg-cover bg-center transition-all duration-1000 relative"
+      style={{ backgroundImage: slides[currentSlide].backgroundImage }}
+    >
+      {/* Carousel Content */}
+      <div className="relative z-10 flex flex-col items-start justify-center h-full ml-10">
+        <h2 className="text-[#241443] text-[52px] font-semibold text-Poppins">
+          {slides[currentSlide].title}
+        </h2>
+        <h3
+          className="text-[#241443] text-[20px]  mt-4 font-medium text-Poppins"
+          dangerouslySetInnerHTML={{
+            __html: slides[currentSlide].subtitle,
+          }}
+        ></h3>
+        <div className="mt-8 text-center md:text-left">
+          <a
+            href="#"
+            className="inline-flex items-center px-6 py-3 bg-[#F27329] text-white text-[18px] font-semibold rounded-full hover:bg-orange-400 transition-colors"
+          >
+            Become an Instructor
+            <img src={arrowone} alt="Arrow" className="w-4 h-3 ml-3" />
+          </a>
         </div>
 
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-4 h-4 rounded-full cursor-pointer ${
-                index === currentSlide ? "bg-[#F2F2F2]" : "bg-[#F2F2F2]"
-              }`}
-            ></div>
-          ))}
+        <div className="flex mt-10 space-x-10">
+          <div className="text-white text-center">
+            <h4 className="text-[52px] font-medium bold text-[#241443] text-Poppins">
+              1k+
+            </h4>
+            <p className="text-[16px] font-semibold text-Poppins text-[#241443]">
+              Active Learner
+            </p>
+          </div>
+          <div className="text-[#241443] text-center">
+            <h4 className="text-[52px] font-medium bold text-[#241443] text-Poppins">
+              3k+
+            </h4>
+            <p className="text-[16px] font-semibold text-Poppins text-[#241443]">
+              Certified Students
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-4 h-4 rounded-full cursor-pointer ${
+              index === currentSlide ? "bg-[#F2F2F2]" : "bg-[#F2F2F2]"
+            }`}
+          ></div>
+        ))}
+      </div>
     </div>
+  </div>
   );
 }

@@ -349,9 +349,17 @@ export default function Aboutus() {
   <div className='w-full max-w-[1218px] h-auto bg-[#241443] mt-[60px] p-4'>
     {/* Header Section */}
     <div className="flex flex-col justify-center items-center text-center mt-[42px]">
-      <h2 className="text-[#FF5C00] text-[18px] sm:text-[28px] md:text-[30px] font-black font-poppines">
-        Meet Our Team
-      </h2>
+      
+    <div className="relative">
+  <img 
+    src={star} 
+    alt="star" 
+    className="absolute w-[36px] h-[36px] left-[-26px] top-[50%] translate-y-[-50%]" 
+  />
+  <h2 className="text-[#FF5C00] text-[18px] sm:text-[28px] md:text-[30px] font-black font-poppines relative">
+    Meet Our Team
+  </h2>
+</div>
       <h2 className="text-[#F6F1FF] text-[20px] sm:text-[20px] md:text-[23px] lg:text-[40px] mt-[20px] px-1 font-bold font-poppines">
         "Introducing the Visionaries Behind FrictionLearn"
       </h2>

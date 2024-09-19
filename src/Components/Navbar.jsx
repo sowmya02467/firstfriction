@@ -47,124 +47,148 @@ export default function Navbar() {
 
   return (
     <div className="w-full">
-      <div
-        className="w-full h-[769px] bg-cover bg-center align-middle transition-all duration-1000"
-        style={{ backgroundImage: `url(${slides[currentSlide].backgroundImage})` }}
-      >
-        {/* <Header /> */}
-        <nav className="h-[95px] flex items-center">
-          <div className="ml-[146px] mr-[47px] w-[157px] h-[64px]  hidden sm:block md:visible lg:visible">
-            <img
-              src={logo}
-              alt="friction learn logo"
-              className="w-[157px] h-[64px] transparent opacity-75"
-            />
-          </div>
-
-          <div
-            style={{ display: window.innerWidth <= 390 ? 'none' : 'block' }}
-            className="flex justify-center items-center bg-white bg-opacity-75 rounded-md w-[790px] h-[62px] ml-[10px]"
-          >
-            <ul className="flex justify-between text-center gap-5 search mt-[-10px]">
-              <li className="flex flex-col-reverse text-[#1D2228] text-[18px] font-bold ml-[20px] my-[28px]">
-                <a href="/Courses" className="flex items-center">
-                  Courses
-                  <img src={arr} alt="" className="w-[11.13px] h-[7.13px] ml-[10px]" />
-                </a>
-              </li>
-              <li className="text-[#1D2228] text-[18px] font-bold mr-[10px] ml-[10px] my-[28px]">
-                <a href="/Community">Communities</a>
-              </li>
-              <li className="text-[#1D2228] text-[18px] font-bold my-[28px]">
-                <a href="/Incubation">Incubation</a>
-              </li>
-              <div className="inline-flex items-center bg-white rounded-2xl border border-solid border-cyan-400 opacity-25 w-[328.14px] h-[42px] my-[21px]">
-                <img src={searchicon} alt="Search Icon" className="w-[20px] h-[20px] ml-[10px]" />
-                <input
-                  type="text"
-                  placeholder="Search for Courses"
-                  className="border-none outline-none w-[300px] h-[19px] rounded-lg shadow-2xl mr-[20px] ml-[20px]"
-                />
-              </div>
-            </ul>
-          </div>
-
-          <div
-            style={{ display: window.innerWidth <= 390 ? 'none' : 'block' }}
-            className="w-[261px] h-[64px] bg-[#FFFFFF] flex transparent opacity-75 rounded-md ml-[30px] hidden sm:flex"
-          >
-            <button
-              className="w-[236px] h-[42px] mt-[11px] mb-[11px] mr-[12px] ml-[12px] bg-[#022956] text-[#FFFFFF] text-[16px] font-bold rounded-md"
-              onClick={() => navigate("/signup")}
-            >
-              Get Started
-            </button>
-          </div>
-        </nav>
-
-
-        <nav className="bg-gray-800 p-4  block  sm:hidden">
-      <div className="flex items-center justify-between">
-        <div className="text-white text-xl">
-          {/* <img src={} alt="" /> */}
-          {/* <img src={} alt="" /> */}
+    <div
+      className="w-full h-[769px] bg-cover bg-center align-middle transition-all duration-1000"
+      style={{ backgroundImage: slides[currentSlide].backgroundImage }}
+    >
+      <nav className="h-[95px] flex items-center justify-between px-4 lg:px-[146px]">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={friction}
+            alt="friction learn logo"
+            className="w-[120px] h-[50px] mt-[20px] lg:w-[157px] lg:h-[64px]"
+          />
         </div>
-        <div className="hidden md:block">
-          <ul className="flex space-x-4">
-            <li><a href="/" className="text-white hover:text-gray-400">Home</a></li>
-            <li><a href="#aboutus" className="text-white hover:text-gray-400">About</a></li>
-            <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
-            <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center bg-white bg-opacity-75 rounded-md w-[402px] h-[62px] ml-[10px] mt-[20px]">
+          <ul className="flex justify-between gap-5 search">
+            <li className="text-[#1D2228] text-[18px] font-bold ml-[20px] my-[28px] flex">
+              <Link to="/courses" className="flex items-center">
+                Courses
+                <img
+                  src={arr}
+                  alt=""
+                  className="w-[15px] h-[10px] ml-[8px] mt-[5px]"
+                />
+              </Link>
+            </li>
+            <li className="text-[#1D2228] text-[18px] font-bold mr-[10px] ml-[10px] my-[28px]">
+              <Link to="/community">Communities</Link>
+            </li>
+            <li className="text-[#1D2228] text-[18px] font-bold my-[28px]">
+              <Link to="/incubation">Incubation</Link>
+            </li>
           </ul>
         </div>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
-            </svg>
+
+        {/* Mobile Menu */}
+        <div className="lg:hidden flex items-center">
+          <button
+            onClick={handleMenuToggle}
+            className="focus:outline-none ml-auto"
+          >
+            <img
+              src={Hamburgericon} // Use a hamburger icon for the menu button
+              alt="Menu"
+              className="w-[30px] h-[30px]"
+            />
           </button>
         </div>
-      </div>
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <ul className="flex flex-col space-y-2 mt-4">
-            <li><a href="/" className="text-white hover:text-gray-400">Home</a></li>
-            <li><a href="#about" className="text-white hover:text-gray-400">About</a></li>
-            <li><a href="#services" className="text-white hover:text-gray-400">Services</a></li>
-            <li><a href="#contact" className="text-white hover:text-gray-400">Contact</a></li>
+
+        {/* Search Bar */}
+        <div className="hidden lg:flex justify-end mt-3 ml-[30px] w-full lg:w-[529px]">
+          <div
+            className={`relative flex items-center justify-end ml-auto bg-white bg-opacity-75 rounded-md h-[62px] px-4  ${
+              isOpen ? "w-[557px]" : "w-[250px]"
+            }`}
+          >
+            <div
+              className={`flex items-center rounded-2xl border border-solid transition-all duration-300 mr-[10px] ${
+                isOpen ? "w-[350px]" : "w-[40px]"
+              } h-[42px] ml-auto`}
+              style={{ position: "relative" }}
+            >
+              <img
+                src={searchicon}
+                alt="Search Icon"
+                className="w-[20px] h-[20px] ml-1 mr-2 cursor-pointer"
+                onClick={handleToggle}
+                style={{ order: 1 }}
+              />
+              <input
+                type="text"
+                placeholder="Search here"
+                className={`border-none outline-none h-full transition-all duration-300 rounded-full ${
+                  isOpen ? "w-[312px] px-4" : "w-0 px-0"
+                }`}
+                style={{ order: 2 }}
+              />
+              <img
+                src={closeicon}
+                alt="Close Icon"
+                className="w-[20px] h-[20px] ml-2 cursor-pointer"
+                onClick={handleToggle}
+                style={{
+                  order: 3,
+                  visibility: isOpen ? "visible" : "hidden",
+                }}
+              />
+            </div>
+            <div className="text-[16px]">
+              <button className="w-[180px] h-[42px] px-[20px] py-[10px] bg-[#022956] text-white rounded-md">
+                Join Community
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-white bg-opacity-75 rounded-md mt-2 p-4 absolute w-full z-10">
+          <ul className="flex flex-col gap-4">
+            <li className="text-[#1D2228] text-[18px] font-bold">
+              <Link to="/courses">Courses</Link>
+            </li>
+            <li className="text-[#1D2228] text-[18px] font-bold">
+              <Link to="/community">Communities</Link>
+            </li>
+            <li className="text-[#1D2228] text-[18px] font-bold">
+              <Link to="/incubation">Incubation</Link>
+            </li>
           </ul>
         </div>
       )}
-    </nav>
 
-
-
-
-
-
-
-        <div className="relative text-center mt-[201px]">
-          <h2 className="text-[#FFFFFF] text-[40px] font-semibold sm:text-[20px] lg:text-[70px]">
+      {/* Carousel Content */}
+      <div className="relative">
+        <div className="text-center mt-[201px]">
+          <h2 className="text-[#FFFFFF] text-[40px] font-semibold sm:text-[20px] lg:text-[90px]">
             {slides[currentSlide].title}
           </h2>
           <h3
             className="text-[#FFFFFF] lg:text-[40px] lg:font-semibold sm:text-[40px] lg:mt-[50px]"
-            dangerouslySetInnerHTML={{ __html: slides[currentSlide].subtitle }}
+            dangerouslySetInnerHTML={{
+              __html: slides[currentSlide].subtitle,
+            }}
           ></h3>
         </div>
+      </div>
 
-        <div className="flex justify-center mt-[50px]">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`w-[10px] h-[10px] mx-[5px] mt-[50px] ${
-                index === currentSlide ? 'bg-white' : 'bg-gray-400'
-              }`}
-            ></div>
-          ))}
-        </div>
+      {/* Carousel Indicators */}
+      <div className="flex justify-center mt-[50px]">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            className={`w-[10px] h-[10px] mx-[5px] mt-[50px] ${
+              index === currentSlide ? "bg-white" : "bg-gray-400"
+            }`}
+          ></div>
+        ))}
       </div>
     </div>
+  </div>
   );
 }
