@@ -4,8 +4,8 @@ import NewNavbars from './NewNavbars';
 import communityimgs from "../assets/Incubation/incubationimg.png";
 import backgroundImage from '../assets/Incubation/incubationbgimg.png';
 
-import star from "../assets/star.png";
-import success from "../assets/incubation/sucess.png"
+
+import success from "../assets/incubation/success.png"
 import menimg from "../assets/incubation/menimg.png"
 
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
