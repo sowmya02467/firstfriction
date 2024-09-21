@@ -13,11 +13,11 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import arr from "../assets/arr.png";
 import sectionimg from "../assets/Communityimgs/sectionimg.png";
 
-import eventone from "../assets/communityimgs/eventone.png";
-import eventtwo from "../assets/communityimgs/eventtwo.png";
-import eventthree from "../assets/communityimgs/eventthree.png";
+import eventone from "../assets/Communityimgs/eventone.png";
+import eventtwo from "../assets/Communityimgs/eventtwo.png";
+import eventthree from "../assets/Communityimgs/eventthree.png";
 
-import dream from "../assets/communityimgs/dream.png";
+import dream from "../assets/Communityimgs/dream.png";
 // import abc from "../assets/community/abc.png";
 // import abcone from "../assets/community/abcone.png";
 // import abctwo from "../assets/community/abctwo.png";
