@@ -5,8 +5,8 @@ import communityimgs from "../assets/Incubation/incubationimg.png";
 import backgroundImage from '../assets/Incubation/incubationbgimg.png';
 
 
-import success from "../assets/incubation/success.png"
-import menimg from "../assets/incubation/menimg.png"
+import success from "../assets/Incubation/success.png";
+import menimg from "../assets/Incubation/menimg.png"
 
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import arr from "../assets/arr.png";
