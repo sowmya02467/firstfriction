@@ -13,6 +13,17 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import arr from "../assets/arr.png";
 import sectionimg from "../assets/Communityimgs/sectionimg.png";
 
+import eventone from "../assets/communityimgs/eventone.png";
+import eventtwo from "../assets/communityimgs/eventtwo.png";
+import eventthree from "../assets/communityimgs/eventthree.png";
+
+import dream from "../assets/communityimgs/dream.png";
+// import abc from "../assets/community/abc.png";
+// import abcone from "../assets/community/abcone.png";
+// import abctwo from "../assets/community/abctwo.png";
+// import bc from "../assets/community/bc.png";
+
+
 export default function NewCommunity() {
     return (
         <div>
@@ -318,9 +329,165 @@ export default function NewCommunity() {
   
 </section>
 
+{/* seema sections */}
 
 
 
+    <div>
+      <div className="flex flex-col items-center px-6 py-12 md:px-12 lg:px-24">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-[#FF5C00] text-[15px] lg:text-[30px] font-black font-Lato font-sans">
+            Looking for Inspiration? Discover the Power of Our Events!
+          </h2>
+          <h1 className="text-[20px] md:text-[40px] font-semibold mt-4 text-[#241443] text-Poppins">
+            Unlock Practical Knowledge and Real-World Insights at
+            ‘FrictionLearn’ Events!
+          </h1>
+        </div>
+
+        {/* Cards Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+          {/* Card 1 */}
+          <div className="flex flex-col items-center p-6 border border-green-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+            <img
+              src={eventone}
+              alt="Meet Industry Experts"
+              className="mb-4 w-[140px] h-1[72px]"
+            />
+            <h3 className="text-[14px] lg:text-[23px] font-semibold text-[#241443] mb-2 font-Poppins">
+              Meet Industry Experts
+            </h3>
+            <p className="text-[#FF5C00] text-center text-[14px] lg:text-[16px] font-Poppins">
+              "Learn directly from experts shaping the future."
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-center p-6 border border-red-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+            <img
+              src={eventtwo}
+              alt="Share Idea with Others"
+              className="mb-4 w-[97px] h-[97px]"
+            />
+            <h3 className="text-[14px] lg:text-[23px] font-semibold text-[#241443] mb-2 font-Poppins">
+              Share Idea with Others
+            </h3>
+            <p className="text-[#FF5C00] text-center text-[14px] lg:text-[16px] font-Poppins">
+              "Collaborate, grow, and share ideas with inspiring experts."
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-center p-6 border border-yellow-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+            <img
+              src={eventthree}
+              alt="Get your Business Partner"
+              className="mb-4 w-[132px] h-[91px]"
+            />
+            <h3 className="text-[14px] lg:text-[23px] font-semibold text-[#241443] mb-2 font-Poppins">
+              Get your Business Partner
+            </h3>
+            <p className="text-[#FF5C00] text-center text-[14px] lg:text-[16px] font-Poppins">
+              "Find the right partner to grow your business."
+            </p>
+          </div>
+        </div>
+
+        {/* Button Section */}
+        <button className="mt-12 bg-[#FF5C00] text-white py-3 px-8 rounded-full hover:bg-orange-600 text-[18px] font-semibold">
+          Explore Events &rarr;
+        </button>
+      </div>
+
+      {/* section two */}
+
+      <div className="flex flex-col items-center py-8 ">
+        {/* Header Section */}
+        <div className="text-center mb-6">
+          <h1 className="text-[30] lg:text-[75px] font-semibold mb-4 font-kalnia text-[#241443]">
+            Present your Passion in a <br /> Unique Outstanding mind
+          </h1>
+          <p className="text-[#FF5C00] font-semibold text-[14px] lg:text-[20px] mb-6">
+            A platform where you can find events according to your passion
+          </p>
+        </div>
+
+        {/* Button on top of Green Section */}
+        {/* <button className="bg-[#241443] text-white py-2 px-4 rounded-full hover:bg-indigo-900  font-poppins text-[15px] lg:text-[23px] font-semibold">
+          Search Events
+        </button> */}
+<div className="relative w-full bg-green-600 h-64 md:h-96 lg:h-128 rounded-lg mb-8">
+  {/* Green Section (Placeholder for Image/Content) */}
+  
+  {/* Button */}
+  <button className=" w-[280px] h-[65px] absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#241443] text-white py-2 px-4 rounded-full hover:bg-indigo-900 font-poppins text-[15px] lg:text-[25px] font-semibold border-b-8 border-r-[12px] border-l-[12px] border-white">
+    Search Events
+  </button>
+</div>
+
+
+        {/* Powered By Logos */}
+        <div className="flex justify-center items-center space-x-4 mb-8">
+          {/* Replace these with actual logos */}
+          <img
+            src={dream}
+            alt="Logo 1"
+            className="lg:w-[205px] lg:h-[55px] w-[100px] h-[25px]"
+          />
+          <img
+            src={dream}
+            alt="Logo 2"
+            className="lg:w-[205px] lg:h-[55px] w-[100px] h-[25px]"
+          />
+          <img
+            src={dream}
+            alt="Logo 3"
+            className="lg:w-[205px] lg:h-[55px] w-[100px] h-[25px]"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="flex flex-col md:flex-row items-center w-full">
+          {/* Left Side Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0 ml-[60px]">
+            <h2 className="text-[26px] lg:text-[46px] font-black font-Lato font-sans text-[#241443] mb-4 ml-auto">
+              We Plan Event You <br></br>Can Celebrate
+            </h2>
+            <p className="text-[#FF5C00] mb-6 text-[15px] lg:text-[21px] font-poppins font-normal">
+              FrictionLearn provides various kinds of events and<br></br> is
+              attended by millions of people. <br />
+              So you can start looking for<br></br> events according to your
+              passion.
+            </p>
+          </div>
+
+          {/* Right Side Image */}
+          {/* <div className="w-full md:w-1/2 flex justify-center md:justify-end  mr-[80px]">
+
+            <img
+              src={abc}
+              alt="Right Section Image"
+              className="w-[292px] h-[137px]  object-cover  mt-16"
+            />
+            <div className="flex mr-auto mt-[100px]">
+              <img src={abcone} alt="" className="w-[95px] h-[100px] "></img>
+              <img
+                src={bc}
+                alt=""
+                className="w-[107px] h-[114px] mt-[-100px]"
+              ></img>
+
+              <img src={abctwo} alt="" className="w-[90px] h-[95px]  "></img>
+            </div>
+          </div> */}
+
+        </div>
+        <button className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600">
+          Choose Passion
+        </button>
+      </div>
+    </div>
 
 
 

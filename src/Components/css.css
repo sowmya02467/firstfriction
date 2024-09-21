@@ -1,0 +1,123 @@
+@media (max-width: 640px) {
+    /* Adjusting timeline vertical line */
+    .timeline::after {
+      left: 5%; 
+      right:31%;
+      height: 100%;
+    } 
+    /* .timeline{
+      margin:50px auto;
+  } */
+  /* .timeline::after{
+  
+      left: 5%;
+      height: 100%;
+  } */
+    /* Adjust container alignment for mobile */     
+    .container {
+      width: 100%; 
+      padding: 10px;
+      margin: 0;
+      position: relative; /* For absolute positioning of child elements */
+      margin-bottom: 40px; /* Equal gap between all containers */
+    }
+  
+    /* Adjust container.one for mobile */
+    .container.one {
+      margin-left: -320px; /* Move the container slightly left */
+      margin-right: -30px;
+      display: flex;
+      margin-bottom: 40px; /* Equal gap between containers */
+    }
+  
+    .container.two {
+      margin-left: 10px; /* No left margin */
+      margin-right: -20px; /* Adjust the right margin */
+      display: flex;
+      position: relative;
+      margin-bottom: 40px; /* Equal gap between containers */
+      
+      /* Add a gap between the number image and the content image */
+      justify-content: space-between; /* Ensures gap between child elements */
+    }
+    
+    /* Adjust the number image inside .container.two */
+    .container.two .number-img {
+      margin-right: 190px; /* Adds a gap to the right of the number image */
+    }
+    
+    /* Adjust the content image inside .container.two */
+    .container.two .content-imag {
+      margin-left: 100px; /* Adds a gap to the left of the content image */
+    }
+    
+  
+  
+    /* Ensure the image aligns with the timeline */
+    .container .img {
+      position: absolute; /* Absolute positioning for precise alignment */
+      top: 0; /* Align at the top */
+      left: 0;
+      margin-left: -10px;
+    }
+  
+    /* Adjust the image size */
+    .container .img img {
+      width: 80px; /* Smaller image size for mobile */
+      height: 80px;
+    }
+  
+    /* Adjust text box styling for mobile */
+    .container .text-box {
+      width: 100%; /* Full width for mobile */
+      text-align: left;
+      margin-top: -40px;
+    }
+  
+   
+  
+    /* Ensure equal gap between text elements */
+    .container .text-box .content h3,
+    .container .text-box .content p { 
+      margin-left: 0;
+      margin-right: auto;
+      text-align: left;
+      font-size: 14px;
+      width: 259px;
+      height: 33px;
+      text-align: start;
+      margin-bottom: 20px; /* Equal gap between headings and paragraphs */
+    } 
+  
+    /* Adjust image size inside text box */
+    .container .text-box .content img {
+      width: 215px;
+      height: 179px;
+      align-items: center;
+      margin-right: -40px;
+    }
+  
+    /* Adjust individual margins */
+    .container .text-box .content h3 {
+      margin-top: 30px;
+      margin-left: 110px;
+      font-size: 16px;
+    }
+  
+    .container .text-box .content p {
+      margin-top: 15px;
+      font-size: 14px;
+      margin-left: 60px;
+      text-align: center;
+      margin-bottom: 20px; /* Equal gap between text elements */
+    }
+    .middle-content h3{
+      text-align: center; /* Move text to the right side */
+      margin-left: 90px; /* Optional: Adjust spacing to the right */
+    }
+    /* Hide specific elements on mobile */
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  

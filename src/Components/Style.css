@@ -4,7 +4,9 @@
     }
     .timeline::after{
         right: 31px;
+        left: 5%;
     }
+      
     .container{
         width: 100%;
         padding-left: 80px;
@@ -21,28 +23,27 @@
         left: 10px;
 
     }
-} */
+}  */
 
 
 
 /* Mobile view styles */
-/* Mobile screen styles only */
 @media (max-width: 640px) {
-  /* Adjusting timeline vertical line */
-  /* .timeline::after {
-    /* left: 5%; Adjusted to keep the vertical line in place */
-    /* right:31%; */
-  /* }  */
-  .timeline{
-    margin:50px auto;
-}
-.timeline::after{
-    /* right: 31px; */
-    left: 5%;
-}
-  /* Adjust container alignment for mobile */     
+  /* Ensure the timeline container is positioned relatively */
+  .timeline {
+    margin: 50px auto;
+
+  }
+
+  /* Adjust the timeline vertical line */
+  .timeline::after {
+  
+    left: 31px; /* Align the line to the left side at 5% */
+ 
+  }
+
   .container {
-    /* width: 100%; Full width for mobile */
+    width: 100%; 
     padding: 10px;
     margin: 0;
     position: relative; /* For absolute positioning of child elements */
@@ -51,11 +52,44 @@
 
   /* Adjust container.one for mobile */
   .container.one {
-    margin-left: -420px; /* Move the container slightly left */
-    margin-right: -60px;
+    margin-left: 0; /* Remove negative margin */
+    margin-right: 0;
+    left: 0%;
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Target heading, image, and paragraph within the container */
+.container.one .text-box {
+    margin-left: 50px; /* Remove existing margin */
     display: flex;
-    margin-bottom: 40px; /* Equal gap between containers */
-  }
+    flex-direction: column;
+    align-items: flex-center; /* Align items to the left */
+    text-align: center; /* Left align text */
+}
+
+/* Left-align the heading */
+.container.one .text-box .content h3 {
+    font-size: 16px; /* Adjust font size if necessary */
+    margin-left: 20px; /* Remove left margin */
+}
+
+/* Left-align the image */
+.container.one .text-box .content img.content-imag {
+    margin-left: 20px;
+   /* Remove left margin */
+   /* align-items: start; */
+   width: 215px;
+   height: 179px;
+}
+
+/* Left-align the paragraph */
+.container.one .text-box .content p {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Left-align the text */
+    font-size: 14px;
+    
+}
+
 
   .container.two {
     margin-left: 10px; /* No left margin */
@@ -68,6 +102,13 @@
     justify-content: space-between; /* Ensures gap between child elements */
   }
   
+
+  .container.two .text-box .content h3 {
+    font-size: 16px; /* Adjust font size if necessary */
+    margin-right: 190px; /* Remove left margin */
+    align-items: center;
+}
+
   /* Adjust the number image inside .container.two */
   .container.two .number-img {
     margin-right: 190px; /* Adds a gap to the right of the number image */
@@ -105,7 +146,7 @@
 
   /* Ensure equal gap between text elements */
   .container .text-box .content h3,
-  .container .text-box .content p {
+  .container .text-box .content p { 
     margin-left: 0;
     margin-right: auto;
     text-align: left;
@@ -114,7 +155,7 @@
     height: 33px;
     text-align: start;
     margin-bottom: 20px; /* Equal gap between headings and paragraphs */
-  }
+  } 
 
   /* Adjust image size inside text box */
   .container .text-box .content img {
@@ -128,13 +169,13 @@
   .container .text-box .content h3 {
     margin-top: 30px;
     margin-left: 110px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .container .text-box .content p {
     margin-top: 15px;
     font-size: 14px;
-    margin-left: 60px;
+    margin-left: 80px;
     text-align: center;
     margin-bottom: 20px; /* Equal gap between text elements */
   }
@@ -143,8 +184,14 @@
     margin-left: 90px; /* Optional: Adjust spacing to the right */
   }
   /* Hide specific elements on mobile */
-  .hide-on-mobile {
-    display: none;
-  }
+
+ 
 }
 
+
+
+@media (max-width: 640px) {
+  .hide-on-mobile {
+      display: none;
+  }
+}

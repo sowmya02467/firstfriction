@@ -98,6 +98,11 @@ module.exports = {
       //   'lg': '1204px', // Standard value for large screens
       //   // 'xl': '1280px', // Standard value for extra large screens
       // },
+
+      fontFamily: {
+        kalnia: ['Kalnia', 'sans-serif'],  // Add your custom font
+        poppins: ["poppins", "sans-serif"]
+      },
     },
   },
   variants: {

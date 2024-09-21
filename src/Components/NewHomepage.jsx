@@ -83,11 +83,11 @@ import NewNavbars from './NewNavbars';
 import NewHeader from './NewHeader';
 import backgroundImage from '../assets/perplebackgroundimg.png';
 
-import thirteenone from '../assets/fiveperson.png';
-import thirteentwo from '../assets/firstperson.png';
-import thirteenthree from '../assets/threeperson.png';
-import thirteenfour from '../assets/thirteenfour.png';
-import thirteenfive from '../assets/Rectangle 15.png';
+import thirteenone from '../assets/lastone.png';
+import thirteentwo from '../assets/lasttwo.png';
+import thirteenthree from '../assets/lastthree.png';
+import thirteenfour from '../assets/lastfour.png';
+import thirteenfive from '../assets/lastfive.png';
 import star from "../assets/star.png";
 
 const testimonials = [
@@ -208,7 +208,10 @@ export default function NewHomepage() {
       <section className=" dark:bg-gray-900 ">
         <div className="py-4 px-4 mx-auto max-w-screen-lg lg:py-8">
           <div className="relative flex justify-center items-center h-[60px]  bg-center" >
+          <div  className="flex items-center justify-center">
+          <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
             <h1 className="text-[30px] font-black text-[#FF5C00]">What We Offer</h1>
+          </div>
           </div>
           <p
             className="text-center  lg:text-[40px] sm:text-[20px] md:text-[30px]  text-[21px] font-semibold text-[#241443] 
@@ -266,9 +269,12 @@ export default function NewHomepage() {
 
         <div>
           <div className="flex  flex-col justify-center items-center text-center mt-[182px]">
+          <div  className="flex items-center justify-center">
+          <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
             <h2 className="text-[#FF5C00] text-[30px] font-black text-center font-poppines">
               About Us
             </h2>
+            </div>
             <h2 className="text-[#241443] lg:text-[40px] mt-[20px] px-1 sm:text-[23px] text-[22px] font-bold text-center font-poppines">
               Empowering Minds, Shaping <br></br> FuturesMeet the FrictionLearn Plan
             </h2>
@@ -421,9 +427,12 @@ export default function NewHomepage() {
 
       <section className="w-full h-auto mt-[40px] sm:mt-[120px] md:mt-[120px] lg:mt-[40px]">
         <div className="heading flex justify-center items-center text-center">
+        <div  className="flex items-center justify-center">
+        <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
           <h2 className="text-[#FF5C00] text-[24px] md:text-[30px] font-black font-poppines">
             What’s Our Main Goal
           </h2>
+          </div>
         </div>
 
         <div className="parent flex flex-col  space-x-7 lg:flex-row mt-[40px] md:mt-[65px] lg:px-4 lg:ml-0 ">
@@ -516,9 +525,12 @@ export default function NewHomepage() {
       <div className="bg-white py-20 px-6 lg:px-16">
       {/* Section Title */}
       <div className="text-center mb-16">
+      <div  className="flex items-center justify-center">
+      <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
         <h3 className="text-[#FF5C00] text-[30px] font-black font-Lato">
           Top Class Courses
         </h3>
+        </div>
         <h2 className="text-[36px] lg:text-[40px] font-semibold text-[#241443] mt-4">
           Explore 40,000+ Free Gamified Online<br /> Courses
         </h2>
@@ -682,9 +694,12 @@ export default function NewHomepage() {
 {/* this one is correct responsive code */}
 <section className="w-full h-auto mb-[20px]  px-5">
 <div className="flex  flex-col justify-center items-center text-center mt-[182px]">
+<div  className="flex items-center justify-center">
+<img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
             <h2 className="text-[#FF5C00]   text-[18px] sm:text-[18px]  lg:text-[30px] font-black text-center font-poppines">
             Tailored Training to Achieve Your Goals
             </h2>
+            </div>
             <h2 className="text-[#241443] lg:text-[40px] mt-[20px] px-1 sm:text-[23px] text-[22px] font-bold text-center font-poppines">
             Customized Learning Paths for Your Success
             </h2>
@@ -1177,9 +1192,12 @@ export default function NewHomepage() {
       <section className="whydoprojects w-full sm:h-auto  mt-[80px]">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px]">
+        <div  className="flex items-center justify-center">
+        <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-20px]" />
           <h2 className="text-[#FF5C00]   px-3 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px] font-black text-center font-poppines">
             Why do Projects
           </h2>
+          </div>
           <h2 className="text-[#241443]  px-5 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">
             Doing this Projects will Gain Hands-On real World Project Experience with <span className="text-[#FF5C00]  px-1 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center">Friction</span>Learn
           </h2>
@@ -1333,9 +1351,12 @@ export default function NewHomepage() {
       <section className="main w-full  sm:h-auto">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
+        <div  className="flex items-center justify-center">
+        <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-25px]" />
           <h2 className="text-[#FF5C00]    px-3 sm:px-4 text-[18px] sm:text-[30px] lg:text-[30px]   font-black text-center font-poppines">
             Our Career Passport/License
           </h2>
+          </div>
           <h2 className="text-[#241443]  px-3 sm:px-4 text-[23px] sm:text-[30px] lg:text-[40px]   text-Poppins font-bold text-center font-poppines">
             Digitize your resume, unlock opportunities, and streamline placements with our tech-driven passport
           </h2>
@@ -1456,9 +1477,12 @@ export default function NewHomepage() {
 
 
         <div className="bg-white p-4 sm:p-6 lg:p-8">
+        <div  className="flex items-center justify-center">
+        <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px] mb-8" />
           <h1 className="text-[24px] sm:text-[28px] lg:text-[30px] font-black text-center mb-4 sm:mb-6 font-Lato font-sans text-[#FF5C00]">
             Our Community
           </h1>
+          </div>
           <p className="text-[28px] sm:text-[34px] lg:text-[40px] text-center font-semibold text-Poppins mb-3 sm:mb-4 lg:mb-6 text-[#241443]">
             Join India's Smartest Student Community
           </p>
@@ -1523,7 +1547,10 @@ export default function NewHomepage() {
       {/* why choose us seems */}
 
       <div className="bg-[#241443] mx-auto text-white p-8">
+      <div  className="flex items-center justify-center">
+      <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-55px]" />
       <h1 className="text-[30px] font-black text-center mb-4 text-[#FF5C00] ml-[50px]">Why Choose Us!</h1>
+</div>
       <p className="text-[30px] text-left mb-2 font-semibold text-Poppins ml-[50px]">
         Don't Know How To Start With<br /> FrictionLearn
       </p>
@@ -1697,9 +1724,12 @@ export default function NewHomepage() {
       <section className="main w-full sm:h-auto">
 
         <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
-          <h2 className="text-[#FF5C00] text-[30px] font-bold text-center font-poppines">
+        <div  className="flex items-center justify-center">
+        <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
+          <h2 className="text-[#FF5C00] text-[30px] font-black text-center font-poppines ">
             Our Instructor/Mentors
           </h2>
+</div>
           <h2 className="text-[#241443]  px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px]  font-bold text-center font-poppines">
             From The FrictionLearn Community Mentors
           </h2>
@@ -1881,9 +1911,12 @@ Funding....
 </section> */}
 <section className="main w-full sm:h-auto"> 
   <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[40px] md:mt-[60px]">
-    <h2 className="text-[#FF5C00]   text-[18px] sm:text-[18px]   md:text-[30px] font-bold text-center font-poppins">
+  <div  className="flex items-center justify-center">
+  <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
+    <h2 className="text-[#FF5C00]   text-[18px] sm:text-[18px]   md:text-[30px] font-black text-center font-poppins">
       Our Incubator Program
     </h2>
+    </div>
     <h2 className="text-[#241443] px-1 sm:px-4 text-[20px] sm:text-[30px] lg:text-[40px] font-bold text-center font-poppins">
       "Fuel Innovation, Turn Ideas Into Reality"
     </h2>
@@ -1974,9 +2007,12 @@ Funding....
 <section className="main w-full h-[800px] sm:h-auto sm:mr-0  ">
 
 <div className="flex flex-col justify-center items-center text-center mt-[182px] sm:mt-[60px] md:mt-[90px]">
-  <h2 className="text-[#FF5C00] px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px] font-semibold text-center font-poppines">
+<div  className="flex items-center justify-center">
+<img src={star} alt="star" className="w-[36px] h-[36px] mr-[-25px]" />
+  <h2 className="text-[#FF5C00] px-1 sm:px-4 text-[25px] sm:text-[30px] lg:text-[40px] font-black text-center font-poppines">
     Become an Instructor/Mentor
   </h2>
+  </div>
 </div>
 
 <div className="parent flex flex-col  justify-around sm:flex-col md:flex-row  mt-[100px] sm:mt-[40px] md:mt-[60px]">
@@ -2133,7 +2169,61 @@ Funding....
 </section> */}
 
 
+<div className="relative w-full h-auto pb-16">
+        <div className="flex flex-col justify-center text-center mt-[20px] md:mt-[40px]">
+         <div  className="flex items-center justify-center">
+         <img src={star} alt="star" className="w-[36px] h-[36px] mr-[-10px]" />
+         <h1 className="text-[#FF5C00] text-[15px] lg:text-[30px] text-center font-black">Our Testimonials</h1>
+         </div>
+          <h2 className="text-[#022956] text-[20px] lg:text-[40px] font-semibold font-sans font-lato">
+            Experience Our Impact Through Their Words
+          </h2>
+        </div>
+        <div className="flex overflow justify-center items-center w-full h-auto space-x-4 md:space-x-7 mt-6 md:mt-8">
+          {testimonials.map((testimonial, index) => {
+            const isActive = index === current;
 
+            return (
+              <div
+                key={index}
+                className={`transition-all duration-500 ease-in-out ${
+                  isActive ? "scale-110" : "scale-75 blur-sm"
+                } ${isActive ? "opacity-100" : "opacity-50"}`}
+                style={{
+                  transform: isActive ? "scale(1.1)" : "scale(0.75)",
+                  opacity: isActive ? 1 : 0.5,
+                  width: isActive ? "186px" : "150px",
+                  height: isActive ? "205px" : "150px",
+                }}
+                onMouseEnter={() => handleMouseEnterIn(index)}
+              >
+                <div className="rounded-lg flex flex-col items-center md:w-[195px]  sm:w-[90px]  w-[190px] h-auto mx-2">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className={`${
+                      isActive ? "filter-none" : "filter grayscale"
+                    }`}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="text-center mt-4 md:mt-6">
+          <h3 className="text-[#1D2228] text-[16px] md:text-[20px] font-medium">
+            {testimonials[current].name}
+          </h3>
+          <p className="text-[#1D2228] text-[14px] md:text-[16px] font-light">
+            {testimonials[current].role}
+          </p>
+        </div>
+        <div className="mt-[20px] md:mt-[50px] mx-4 md:mx-[20px] text-center font-medium">
+          <p className="text-[#1D2228] text-[14px] md:text-[36px] mx-2 md:mx-[100px] font-light">
+            {testimonials[current].text}
+          </p>
+        </div>
+      </div>
 
 
 
